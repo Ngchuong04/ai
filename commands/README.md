@@ -31,6 +31,8 @@ git clone https://github.com/wpank/ai ~/.ai-skills
 
 ### Cursor (per-project)
 
+From your project root:
+
 ```bash
 mkdir -p .cursor/commands
 cp -r ~/.ai-skills/commands/* .cursor/commands/
@@ -44,6 +46,8 @@ cp -r ~/.ai-skills/commands/* ~/.cursor/commands/
 ```
 
 ### Claude Code (per-project)
+
+From your project root:
 
 ```bash
 mkdir -p .claude/commands
@@ -102,4 +106,4 @@ cp -r ~/.ai-skills/commands/* ~/.claude/commands/
 | Resource | Path | Description |
 |----------|------|-------------|
 | Agents | [../agents/](../agents/) | 16 agents that invoke these commands |
-| Skills | [../skills/](../skills/) | 118 skills |
+| Skills | [../skills/](../skills/) | 115 skills |
