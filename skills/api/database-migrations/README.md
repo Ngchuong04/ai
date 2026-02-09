@@ -31,14 +31,36 @@ skills add database-migrations
 
 ### Manual Installation
 
-Copy this directory to your project:
+#### Cursor (per-project)
+
+From your project root:
 
 ```bash
-# Cursor
-cp -r ~/.skills/ai/skills/api/database-migrations .cursor/rules/database-migrations
+mkdir -p .cursor/skills
+cp -r ~/.ai-skills/skills/api/database-migrations .cursor/skills/database-migrations
+```
 
-# Claude Code  
-cp -r ~/.skills/ai/skills/api/database-migrations .agents/skills/database-migrations
+#### Cursor (global)
+
+```bash
+mkdir -p ~/.cursor/skills
+cp -r ~/.ai-skills/skills/api/database-migrations ~/.cursor/skills/database-migrations
+```
+
+#### Claude Code (per-project)
+
+From your project root:
+
+```bash
+mkdir -p .claude/skills
+cp -r ~/.ai-skills/skills/api/database-migrations .claude/skills/database-migrations
+```
+
+#### Claude Code (global)
+
+```bash
+mkdir -p ~/.claude/skills
+cp -r ~/.ai-skills/skills/api/database-migrations ~/.claude/skills/database-migrations
 ```
 
 ## Related Skills

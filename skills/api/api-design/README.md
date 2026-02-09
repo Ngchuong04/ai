@@ -32,14 +32,36 @@ skills add api-design
 
 ### Manual Installation
 
-Copy this directory to your project:
+#### Cursor (per-project)
+
+From your project root:
 
 ```bash
-# Cursor
-cp -r ~/.skills/ai/skills/api/api-design .cursor/rules/api-design
+mkdir -p .cursor/skills
+cp -r ~/.ai-skills/skills/api/api-design .cursor/skills/api-design
+```
 
-# Claude Code  
-cp -r ~/.skills/ai/skills/api/api-design .agents/skills/api-design
+#### Cursor (global)
+
+```bash
+mkdir -p ~/.cursor/skills
+cp -r ~/.ai-skills/skills/api/api-design ~/.cursor/skills/api-design
+```
+
+#### Claude Code (per-project)
+
+From your project root:
+
+```bash
+mkdir -p .claude/skills
+cp -r ~/.ai-skills/skills/api/api-design .claude/skills/api-design
+```
+
+#### Claude Code (global)
+
+```bash
+mkdir -p ~/.claude/skills
+cp -r ~/.ai-skills/skills/api/api-design ~/.claude/skills/api-design
 ```
 
 ## Related Skills

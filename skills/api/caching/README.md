@@ -33,14 +33,36 @@ skills add caching
 
 ### Manual Installation
 
-Copy this directory to your project:
+#### Cursor (per-project)
+
+From your project root:
 
 ```bash
-# Cursor
-cp -r ~/.skills/ai/skills/api/caching .cursor/rules/caching
+mkdir -p .cursor/skills
+cp -r ~/.ai-skills/skills/api/caching .cursor/skills/caching
+```
 
-# Claude Code  
-cp -r ~/.skills/ai/skills/api/caching .agents/skills/caching
+#### Cursor (global)
+
+```bash
+mkdir -p ~/.cursor/skills
+cp -r ~/.ai-skills/skills/api/caching ~/.cursor/skills/caching
+```
+
+#### Claude Code (per-project)
+
+From your project root:
+
+```bash
+mkdir -p .claude/skills
+cp -r ~/.ai-skills/skills/api/caching .claude/skills/caching
+```
+
+#### Claude Code (global)
+
+```bash
+mkdir -p ~/.claude/skills
+cp -r ~/.ai-skills/skills/api/caching ~/.claude/skills/caching
 ```
 
 ## Related Skills

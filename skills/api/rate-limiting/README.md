@@ -32,14 +32,36 @@ skills add rate-limiting
 
 ### Manual Installation
 
-Copy this directory to your project:
+#### Cursor (per-project)
+
+From your project root:
 
 ```bash
-# Cursor
-cp -r ~/.skills/ai/skills/api/rate-limiting .cursor/rules/rate-limiting
+mkdir -p .cursor/skills
+cp -r ~/.ai-skills/skills/api/rate-limiting .cursor/skills/rate-limiting
+```
 
-# Claude Code  
-cp -r ~/.skills/ai/skills/api/rate-limiting .agents/skills/rate-limiting
+#### Cursor (global)
+
+```bash
+mkdir -p ~/.cursor/skills
+cp -r ~/.ai-skills/skills/api/rate-limiting ~/.cursor/skills/rate-limiting
+```
+
+#### Claude Code (per-project)
+
+From your project root:
+
+```bash
+mkdir -p .claude/skills
+cp -r ~/.ai-skills/skills/api/rate-limiting .claude/skills/rate-limiting
+```
+
+#### Claude Code (global)
+
+```bash
+mkdir -p ~/.claude/skills
+cp -r ~/.ai-skills/skills/api/rate-limiting ~/.claude/skills/rate-limiting
 ```
 
 ## Related Skills

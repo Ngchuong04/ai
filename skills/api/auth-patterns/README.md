@@ -31,14 +31,36 @@ skills add auth-patterns
 
 ### Manual Installation
 
-Copy this directory to your project:
+#### Cursor (per-project)
+
+From your project root:
 
 ```bash
-# Cursor
-cp -r ~/.skills/ai/skills/api/auth-patterns .cursor/rules/auth-patterns
+mkdir -p .cursor/skills
+cp -r ~/.ai-skills/skills/api/auth-patterns .cursor/skills/auth-patterns
+```
 
-# Claude Code  
-cp -r ~/.skills/ai/skills/api/auth-patterns .agents/skills/auth-patterns
+#### Cursor (global)
+
+```bash
+mkdir -p ~/.cursor/skills
+cp -r ~/.ai-skills/skills/api/auth-patterns ~/.cursor/skills/auth-patterns
+```
+
+#### Claude Code (per-project)
+
+From your project root:
+
+```bash
+mkdir -p .claude/skills
+cp -r ~/.ai-skills/skills/api/auth-patterns .claude/skills/auth-patterns
+```
+
+#### Claude Code (global)
+
+```bash
+mkdir -p ~/.claude/skills
+cp -r ~/.ai-skills/skills/api/auth-patterns ~/.claude/skills/auth-patterns
 ```
 
 ## Related Skills

@@ -31,14 +31,36 @@ skills add error-handling
 
 ### Manual Installation
 
-Copy this directory to your project:
+#### Cursor (per-project)
+
+From your project root:
 
 ```bash
-# Cursor
-cp -r ~/.skills/ai/skills/api/error-handling .cursor/rules/error-handling
+mkdir -p .cursor/skills
+cp -r ~/.ai-skills/skills/api/error-handling .cursor/skills/error-handling
+```
 
-# Claude Code  
-cp -r ~/.skills/ai/skills/api/error-handling .agents/skills/error-handling
+#### Cursor (global)
+
+```bash
+mkdir -p ~/.cursor/skills
+cp -r ~/.ai-skills/skills/api/error-handling ~/.cursor/skills/error-handling
+```
+
+#### Claude Code (per-project)
+
+From your project root:
+
+```bash
+mkdir -p .claude/skills
+cp -r ~/.ai-skills/skills/api/error-handling .claude/skills/error-handling
+```
+
+#### Claude Code (global)
+
+```bash
+mkdir -p ~/.claude/skills
+cp -r ~/.ai-skills/skills/api/error-handling ~/.claude/skills/error-handling
 ```
 
 ## Related Skills

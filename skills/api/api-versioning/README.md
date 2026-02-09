@@ -31,14 +31,36 @@ skills add api-versioning
 
 ### Manual Installation
 
-Copy this directory to your project:
+#### Cursor (per-project)
+
+From your project root:
 
 ```bash
-# Cursor
-cp -r ~/.skills/ai/skills/api/api-versioning .cursor/rules/api-versioning
+mkdir -p .cursor/skills
+cp -r ~/.ai-skills/skills/api/api-versioning .cursor/skills/api-versioning
+```
 
-# Claude Code  
-cp -r ~/.skills/ai/skills/api/api-versioning .agents/skills/api-versioning
+#### Cursor (global)
+
+```bash
+mkdir -p ~/.cursor/skills
+cp -r ~/.ai-skills/skills/api/api-versioning ~/.cursor/skills/api-versioning
+```
+
+#### Claude Code (per-project)
+
+From your project root:
+
+```bash
+mkdir -p .claude/skills
+cp -r ~/.ai-skills/skills/api/api-versioning .claude/skills/api-versioning
+```
+
+#### Claude Code (global)
+
+```bash
+mkdir -p ~/.claude/skills
+cp -r ~/.ai-skills/skills/api/api-versioning ~/.claude/skills/api-versioning
 ```
 
 ## Related Skills

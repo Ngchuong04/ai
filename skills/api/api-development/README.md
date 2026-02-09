@@ -25,14 +25,36 @@ skills add api-development
 
 ### Manual Installation
 
-Copy this directory to your project:
+#### Cursor (per-project)
+
+From your project root:
 
 ```bash
-# Cursor
-cp -r ~/.skills/ai/skills/api/api-development .cursor/rules/api-development
+mkdir -p .cursor/skills
+cp -r ~/.ai-skills/skills/api/api-development .cursor/skills/api-development
+```
 
-# Claude Code  
-cp -r ~/.skills/ai/skills/api/api-development .agents/skills/api-development
+#### Cursor (global)
+
+```bash
+mkdir -p ~/.cursor/skills
+cp -r ~/.ai-skills/skills/api/api-development ~/.cursor/skills/api-development
+```
+
+#### Claude Code (per-project)
+
+From your project root:
+
+```bash
+mkdir -p .claude/skills
+cp -r ~/.ai-skills/skills/api/api-development .claude/skills/api-development
+```
+
+#### Claude Code (global)
+
+```bash
+mkdir -p ~/.claude/skills
+cp -r ~/.ai-skills/skills/api/api-development ~/.claude/skills/api-development
 ```
 
 ## Related Skills
