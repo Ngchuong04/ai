@@ -1,0 +1,137 @@
+[
+  {
+    "id": "chain-of-thought-01",
+    "pattern": "chain-of-thought",
+    "description": "Test CoT prompting for multi-step math reasoning",
+    "input": "Let's think step by step. A store sells shirts for $25 each. If you buy 3 shirts and have a 20% discount coupon, how much do you pay?",
+    "expected_output_contains": ["step", "75", "15", "60"],
+    "criteria": ["shows intermediate calculation steps", "computes total before discount", "applies discount correctly", "arrives at correct final answer of $60"],
+    "difficulty": "easy"
+  },
+  {
+    "id": "chain-of-thought-02",
+    "pattern": "chain-of-thought",
+    "description": "Test CoT for logical deduction with multiple constraints",
+    "input": "Let's think step by step. Alice is taller than Bob. Charlie is shorter than Bob. Dana is taller than Alice. Who is the tallest? Who is the shortest?",
+    "expected_output_contains": ["Dana", "tallest", "Charlie", "shortest"],
+    "criteria": ["establishes ordering between all individuals", "correctly identifies Dana as tallest", "correctly identifies Charlie as shortest", "reasoning is traceable"],
+    "difficulty": "medium"
+  },
+  {
+    "id": "few-shot-01",
+    "pattern": "few-shot",
+    "description": "Test few-shot classification with sentiment examples",
+    "input": "Classify the sentiment as positive, negative, or neutral.\n\nExample 1: \"This product is amazing!\" -> positive\nExample 2: \"Terrible experience, never again.\" -> negative\nExample 3: \"The package arrived on Tuesday.\" -> neutral\n\nNow classify: \"I can't believe how good the customer support was!\"",
+    "expected_output_contains": ["positive"],
+    "criteria": ["follows the output format from examples", "correctly classifies as positive", "does not include unnecessary explanation unless asked"],
+    "difficulty": "easy"
+  },
+  {
+    "id": "few-shot-02",
+    "pattern": "few-shot",
+    "description": "Test few-shot pattern for structured data extraction",
+    "input": "Extract the name and age from each sentence.\n\nExample: \"Maria is 32 years old.\" -> {\"name\": \"Maria\", \"age\": 32}\nExample: \"At 45, John decided to retire.\" -> {\"name\": \"John\", \"age\": 45}\n\nNow extract: \"Sarah celebrated her 28th birthday last week.\"",
+    "expected_output_contains": ["Sarah", "28"],
+    "criteria": ["outputs valid JSON format", "correctly extracts name", "correctly extracts age", "matches the structure shown in examples"],
+    "difficulty": "medium"
+  },
+  {
+    "id": "zero-shot-01",
+    "pattern": "zero-shot",
+    "description": "Test zero-shot task completion without examples",
+    "input": "Translate the following English sentence to French: \"The weather is beautiful today.\"",
+    "expected_output_contains": ["temps", "beau", "aujourd'hui"],
+    "criteria": ["produces grammatically correct French", "preserves the meaning of the original sentence", "does not include English in the translation output"],
+    "difficulty": "easy"
+  },
+  {
+    "id": "role-playing-01",
+    "pattern": "role-playing",
+    "description": "Test persona-based prompting for domain expertise",
+    "input": "You are a senior database administrator with 15 years of experience in PostgreSQL. A junior developer asks you: 'Should I add an index to every column in my users table?' Provide your expert advice.",
+    "expected_output_contains": ["index", "performance", "write"],
+    "criteria": ["responds in character as an experienced DBA", "advises against indexing every column", "explains trade-offs between read and write performance", "provides actionable guidance"],
+    "difficulty": "medium"
+  },
+  {
+    "id": "structured-output-01",
+    "pattern": "structured-output",
+    "description": "Test enforcing JSON output format with a schema",
+    "input": "Return a JSON object describing this book with the fields: title, author, year, genre.\n\nBook: '1984' by George Orwell, published in 1949. It is a dystopian novel.\n\nRespond ONLY with valid JSON, no other text.",
+    "expected_output_contains": ["1984", "George Orwell", "1949", "dystopian"],
+    "criteria": ["output is valid JSON", "includes all four required fields", "values are accurate", "no extraneous text outside the JSON object"],
+    "difficulty": "easy"
+  },
+  {
+    "id": "structured-output-02",
+    "pattern": "structured-output",
+    "description": "Test structured output with nested objects and arrays",
+    "input": "Parse this meeting note into structured JSON with fields: date, attendees (array), action_items (array of {task, owner, due_date}).\n\nMeeting on 2025-03-15 with Alice, Bob, and Carol. Alice will prepare the Q1 report by March 20. Bob will fix the login bug by March 18. Carol will schedule the client demo by March 22.\n\nRespond ONLY with valid JSON.",
+    "expected_output_contains": ["2025-03-15", "Alice", "Bob", "Carol", "action_items"],
+    "criteria": ["output is valid JSON", "attendees is an array with three names", "action_items has three entries with task, owner, and due_date", "dates and names are accurate"],
+    "difficulty": "medium"
+  },
+  {
+    "id": "system-prompt-01",
+    "pattern": "system-prompt",
+    "description": "Test system prompt for constraining response behavior",
+    "input": "[System] You are a helpful assistant that answers questions about cooking. You must decline any questions not related to cooking by saying 'I can only help with cooking-related questions.'\n\n[User] What is the capital of France?",
+    "expected_output_contains": ["cooking"],
+    "criteria": ["declines the off-topic question", "references its cooking-only constraint", "does not answer the geography question", "remains polite and helpful in tone"],
+    "difficulty": "easy"
+  },
+  {
+    "id": "temperature-guidance-01",
+    "pattern": "temperature-guidance",
+    "description": "Test explicit creativity constraints in the prompt",
+    "input": "Generate exactly 3 unique business name ideas for a sustainable coffee shop. Be creative and unconventional. Each name should be one to three words. List them as a numbered list, nothing else.",
+    "expected_output_contains": ["1.", "2.", "3."],
+    "criteria": ["produces exactly three names", "names are distinct from each other", "names relate to coffee or sustainability themes", "output is a clean numbered list with no extra commentary"],
+    "difficulty": "easy"
+  },
+  {
+    "id": "context-window-01",
+    "pattern": "context-window-management",
+    "description": "Test summarize-then-query pattern for long context handling",
+    "input": "Here is a summary of a 50-page technical report on cloud migration:\n- Company X migrated 120 services from on-prem to AWS over 18 months\n- Total cost savings: 34% reduction in infrastructure spend\n- Main challenges: legacy database migration, team retraining, compliance requirements\n- 3 services were rolled back due to latency issues\n- Post-migration uptime improved from 99.2% to 99.95%\n\nBased on this summary, what were the top two challenges and what was the uptime improvement?",
+    "expected_output_contains": ["legacy database", "retraining", "99.2%", "99.95%"],
+    "criteria": ["correctly identifies challenges from the summary", "accurately states both uptime figures", "does not hallucinate details not in the summary", "answer is concise and directly addresses the question"],
+    "difficulty": "medium"
+  },
+  {
+    "id": "error-handling-01",
+    "pattern": "error-handling",
+    "description": "Test graceful handling of ambiguous or incomplete input",
+    "input": "You are a precise assistant. If a question is ambiguous or lacks information needed for a definitive answer, say so explicitly and ask for clarification rather than guessing.\n\nQuestion: What's the best programming language?",
+    "expected_output_contains": ["depends", "clarif"],
+    "criteria": ["acknowledges the question is too broad or subjective", "asks for clarification or context", "does not give a single definitive answer without caveats", "suggests factors that influence the choice"],
+    "difficulty": "easy"
+  },
+  {
+    "id": "error-handling-02",
+    "pattern": "error-handling",
+    "description": "Test handling of contradictory instructions in prompts",
+    "input": "Respond in exactly one sentence. Provide a detailed 500-word essay on climate change.\n\nNote: If you receive contradictory instructions, acknowledge the conflict and ask for clarification.",
+    "expected_output_contains": ["contradict"],
+    "criteria": ["identifies the conflicting requirements", "does not attempt to satisfy both impossible constraints", "asks for clarification on which instruction to follow", "handles the situation gracefully"],
+    "difficulty": "hard"
+  },
+  {
+    "id": "iterative-refinement-01",
+    "pattern": "iterative-refinement",
+    "description": "Test self-critique and revision prompting pattern",
+    "input": "Write a one-sentence product description for a noise-canceling headphone. Then critique your description for clarity, persuasiveness, and accuracy. Finally, write an improved version based on your critique.\n\nLabel each section: [Draft], [Critique], [Revised].",
+    "expected_output_contains": ["[Draft]", "[Critique]", "[Revised]"],
+    "criteria": ["includes all three labeled sections", "critique identifies specific weaknesses in the draft", "revised version is demonstrably different from the draft", "revised version addresses points raised in the critique"],
+    "difficulty": "medium"
+  },
+  {
+    "id": "iterative-refinement-02",
+    "pattern": "iterative-refinement",
+    "description": "Test progressive detail-adding through multi-turn simulation",
+    "input": "Step 1: Write a 1-sentence summary of what an API gateway does.\nStep 2: Expand that into a 3-sentence explanation adding key features.\nStep 3: Add one concrete example of when to use an API gateway.\n\nComplete all three steps, labeling each as [Step 1], [Step 2], [Step 3].",
+    "expected_output_contains": ["[Step 1]", "[Step 2]", "[Step 3]", "API gateway"],
+    "criteria": ["each step builds on the previous one", "step 2 is a superset of step 1 in content", "step 3 includes a concrete, realistic example", "the progression shows increasing detail without contradiction"],
+    "difficulty": "medium"
+  }
+]
