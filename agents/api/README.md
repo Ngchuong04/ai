@@ -30,34 +30,25 @@ Autonomous workflow for designing, specifying, implementing, testing, and docume
 
 ## Installation
 
-### Using the skills CLI
-
-```bash
-skills init cursor   # or: skills init agents
-skills add api
-```
-
-### Manual: Cursor
-
-Copy this agent into your project as a rule so the AI gets the workflow as context:
+### Cursor
 
 ```bash
 mkdir -p .cursor/rules
-cp -r ~/.skills/ai/agents/api .cursor/rules/api-agent
+cp -r ~/.ai-skills/agents/api .cursor/rules/api-agent
 ```
 
-### Manual: Claude Code
-
-Copy into project or global skills so Claude Code can load the workflow:
+### Claude Code (per-project)
 
 ```bash
-# Project
-mkdir -p .claude/skills
-cp -r ~/.skills/ai/agents/api .claude/skills/api-agent
+mkdir -p .claude/agents
+cp -r ~/.ai-skills/agents/api .claude/agents/api
+```
 
-# Global
-mkdir -p ~/.claude/skills
-cp -r ~/.skills/ai/agents/api ~/.claude/skills/api-agent
+### Claude Code (global)
+
+```bash
+mkdir -p ~/.claude/agents
+cp -r ~/.ai-skills/agents/api ~/.claude/agents/api
 ```
 
 For best results, also install the skills this agent references (see Skills Used above).

@@ -30,30 +30,25 @@ Autonomous workflow for generating comprehensive test suites, identifying untest
 
 ## Installation
 
-### Using the skills CLI
-
-```bash
-skills init cursor   # or: skills init agents
-skills add testing
-```
-
-### Manual: Cursor
+### Cursor
 
 ```bash
 mkdir -p .cursor/rules
-cp -r ~/.skills/ai/agents/testing .cursor/rules/testing-agent
+cp -r ~/.ai-skills/agents/testing .cursor/rules/testing-agent
 ```
 
-### Manual: Claude Code
+### Claude Code (per-project)
 
 ```bash
-# Project
-mkdir -p .claude/skills
-cp -r ~/.skills/ai/agents/testing .claude/skills/testing-agent
+mkdir -p .claude/agents
+cp -r ~/.ai-skills/agents/testing .claude/agents/testing
+```
 
-# Global
-mkdir -p ~/.claude/skills
-cp -r ~/.skills/ai/agents/testing ~/.claude/skills/testing-agent
+### Claude Code (global)
+
+```bash
+mkdir -p ~/.claude/agents
+cp -r ~/.ai-skills/agents/testing ~/.claude/agents/testing
 ```
 
 For best results, also install the skills this agent references (see Skills Used above).

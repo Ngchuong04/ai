@@ -2,7 +2,7 @@
 
 16 autonomous workflow agents that orchestrate skills and commands into end-to-end workflows. Each agent is a multi-phase process that loads relevant skills for domain knowledge and can invoke slash commands for structured sub-tasks.
 
-**Note:** Agents are specific to this repository. They are not published to [skills.sh](https://skills.sh); use the project's `skills` CLI or manual copy to install them into Cursor or Claude Code.
+> **Note:** Agents are not published to [skills.sh](https://skills.sh). Install them by cloning this repo and copying the agent directory into your project.
 
 ---
 
@@ -31,72 +31,55 @@
 
 ## Installation
 
-### Using the project's `skills` CLI
-
-From the skills repo root (or after `npm link` from another project with `SKILLS_HOME` set):
+### Step 1: Clone this repo
 
 ```bash
-# Initialize for Cursor (writes to .cursor/rules/)
-skills init cursor
-
-# Initialize for Claude Code (writes to .agents/skills/)
-skills init agents
-
-# Add one or more agents by name
-skills add api
-skills add frontend debugging
-skills add --category agents   # add all agents (if supported)
+git clone https://github.com/wustep/ai-agent-toolkit ~/.ai-skills
 ```
 
-The CLI copies the agent directory (e.g. `ai/agents/api/`) into your project's rules/skills directory so the agent's `AGENT.md` is available as context.
+### Step 2: Copy agents into your project
 
-### Manual installation (Cursor)
+#### Cursor
 
-Use agents as Cursor rules so the agent gets the workflow as context:
+Copy an agent into `.cursor/rules/` so Cursor loads the workflow as context:
 
 ```bash
-# From your project root; clone the repo first if needed
-git clone <repo-url> ~/.skills
-# Copy a single agent
-cp -r ~/.skills/ai/agents/api .cursor/rules/api-agent
-# Or create .cursor/rules first
+# Single agent
 mkdir -p .cursor/rules
-cp -r ~/.skills/ai/agents/frontend .cursor/rules/frontend-agent
+cp -r ~/.ai-skills/agents/api .cursor/rules/api-agent
+
+# All agents
+cp -r ~/.ai-skills/agents/* .cursor/rules/
 ```
 
-Cursor will load `.cursor/rules/*` as rule context. Naming the folder with a `-agent` suffix helps distinguish agents from skill rules.
+#### Claude Code (per-project)
 
-### Manual installation (Claude Code)
-
-Use agents as project-level skills so Claude Code can load the workflow:
+Copy into `.claude/agents/` in your project root:
 
 ```bash
-# From your project root
-mkdir -p .claude/skills
-cp -r ~/.skills/ai/agents/api .claude/skills/api-agent
+mkdir -p .claude/agents
+cp -r ~/.ai-skills/agents/api .claude/agents/api
 ```
 
-Or install globally for Claude Code:
+#### Claude Code (global)
+
+Copy into `~/.claude/agents/` to make agents available in all projects:
 
 ```bash
-mkdir -p ~/.claude/skills
-cp -r ~/.skills/ai/agents/api ~/.claude/skills/api-agent
+mkdir -p ~/.claude/agents
+cp -r ~/.ai-skills/agents/api ~/.claude/agents/api
 ```
 
-Claude Code discovers skills in `.claude/skills/` (project) or `~/.claude/skills/` (global). Each agent directory should contain `AGENT.md`; the folder name (e.g. `api-agent`) is how you refer to it.
-
-### Not on skills.sh
-
-Agents are not published to [skills.sh](https://skills.sh). The Vercel `npx skills` CLI only supports skills (repos with `SKILL.md` files). To use these agents you must use this repo's `skills` CLI or copy the `ai/agents/<name>/` directories manually as above.
+> Each agent directory contains `AGENT.md` (the workflow definition) and `README.md`. For best results, also install the skills each agent references — see the agent's README for the list.
 
 ---
 
 ## How Agents Work
 
-Each agent is defined in `ai/agents/<name>/AGENT.md` and follows a consistent pattern:
+Each agent is defined in `agents/<name>/AGENT.md` and follows a consistent pattern:
 
-1. **Skills** — The agent loads relevant skills from `ai/skills/` for domain knowledge (listed in "Before Starting").
-2. **Commands** — The agent can invoke slash commands from `ai/commands/` for structured sub-workflows.
+1. **Skills** — The agent loads relevant skills from `skills/` for domain knowledge (listed in "Before Starting").
+2. **Commands** — The agent can invoke slash commands from `commands/` for structured sub-workflows.
 3. **Workflow** — A multi-phase process with checkpoints and quality gates (design, implementation, verification, etc.).
 
 When you install an agent as a rule or skill, you're giving the AI the full `AGENT.md` so it can follow that workflow. For best results, also install the skills that agent references (see each agent's README for the list).
@@ -105,7 +88,7 @@ When you install an agent as a rule or skill, you're giving the AI the full `AGE
 
 ## Model Tiers
 
-Each agent declares per-phase model tier recommendations in its YAML frontmatter (`models:`). This allows different phases to use different model tiers for cost/speed. See the root [MODEL-TIERS.md](../../MODEL-TIERS.md) for the tier reference.
+Each agent declares per-phase model tier recommendations in its YAML frontmatter (`models:`). This allows different phases to use different model tiers for cost/speed.
 
 | Phase type | Typical tier | Rationale |
 |------------|--------------|-----------|
@@ -121,6 +104,4 @@ Each agent declares per-phase model tier recommendations in its YAML frontmatter
 | Resource | Path | Description |
 |----------|------|-------------|
 | Skills catalog | [../skills/](../skills/) | 118 skills by category |
-| Commands reference | [../COMMANDS.md](../COMMANDS.md) | 50 slash commands |
-| Model tiers | [../../MODEL-TIERS.md](../../MODEL-TIERS.md) | Tier definitions and platform mapping |
-| Agent template | [../templates/agent-template.md](../templates/agent-template.md) | Template for creating new agents |
+| Commands reference | [../commands/](../commands/) | 50 slash commands |

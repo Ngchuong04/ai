@@ -37,30 +37,25 @@ Autonomous workflow for creating and optimizing marketing pages, copy, and conve
 
 ## Installation
 
-### Using the skills CLI
-
-```bash
-skills init cursor   # or: skills init agents
-skills add marketing
-```
-
-### Manual: Cursor
+### Cursor
 
 ```bash
 mkdir -p .cursor/rules
-cp -r ~/.skills/ai/agents/marketing .cursor/rules/marketing-agent
+cp -r ~/.ai-skills/agents/marketing .cursor/rules/marketing-agent
 ```
 
-### Manual: Claude Code
+### Claude Code (per-project)
 
 ```bash
-# Project
-mkdir -p .claude/skills
-cp -r ~/.skills/ai/agents/marketing .claude/skills/marketing-agent
+mkdir -p .claude/agents
+cp -r ~/.ai-skills/agents/marketing .claude/agents/marketing
+```
 
-# Global
-mkdir -p ~/.claude/skills
-cp -r ~/.skills/ai/agents/marketing ~/.claude/skills/marketing-agent
+### Claude Code (global)
+
+```bash
+mkdir -p ~/.claude/agents
+cp -r ~/.ai-skills/agents/marketing ~/.claude/agents/marketing
 ```
 
 For best results, also install the skills this agent references (see Skills Used above).

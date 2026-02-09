@@ -28,30 +28,25 @@ Autonomous workflow for planning and executing multi-step migrations with rollba
 
 ## Installation
 
-### Using the skills CLI
-
-```bash
-skills init cursor   # or: skills init agents
-skills add migration
-```
-
-### Manual: Cursor
+### Cursor
 
 ```bash
 mkdir -p .cursor/rules
-cp -r ~/.skills/ai/agents/migration .cursor/rules/migration-agent
+cp -r ~/.ai-skills/agents/migration .cursor/rules/migration-agent
 ```
 
-### Manual: Claude Code
+### Claude Code (per-project)
 
 ```bash
-# Project
-mkdir -p .claude/skills
-cp -r ~/.skills/ai/agents/migration .claude/skills/migration-agent
+mkdir -p .claude/agents
+cp -r ~/.ai-skills/agents/migration .claude/agents/migration
+```
 
-# Global
-mkdir -p ~/.claude/skills
-cp -r ~/.skills/ai/agents/migration ~/.claude/skills/migration-agent
+### Claude Code (global)
+
+```bash
+mkdir -p ~/.claude/agents
+cp -r ~/.ai-skills/agents/migration ~/.claude/agents/migration
 ```
 
 For best results, also install the skills this agent references (see Skills Used above). Ensure git is clean and tests pass before starting a migration.

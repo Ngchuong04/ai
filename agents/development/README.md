@@ -28,30 +28,25 @@ Autonomous workflow for docs-first feature development. Handles feature planning
 
 ## Installation
 
-### Using the skills CLI
-
-```bash
-skills init cursor   # or: skills init agents
-skills add development
-```
-
-### Manual: Cursor
+### Cursor
 
 ```bash
 mkdir -p .cursor/rules
-cp -r ~/.skills/ai/agents/development .cursor/rules/development-agent
+cp -r ~/.ai-skills/agents/development .cursor/rules/development-agent
 ```
 
-### Manual: Claude Code
+### Claude Code (per-project)
 
 ```bash
-# Project
-mkdir -p .claude/skills
-cp -r ~/.skills/ai/agents/development .claude/skills/development-agent
+mkdir -p .claude/agents
+cp -r ~/.ai-skills/agents/development .claude/agents/development
+```
 
-# Global
-mkdir -p ~/.claude/skills
-cp -r ~/.skills/ai/agents/development ~/.claude/skills/development-agent
+### Claude Code (global)
+
+```bash
+mkdir -p ~/.claude/agents
+cp -r ~/.ai-skills/agents/development ~/.claude/agents/development
 ```
 
 For best results, also install the skills this agent references (see Skills Used above). Commands: `/new-feature`. Requires `docs/` structure (run bootstrap-docs if missing).

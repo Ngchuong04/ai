@@ -23,30 +23,25 @@ Autonomous workflow for scaffolding new projects with opinionated structure, doc
 
 ## Installation
 
-### Using the skills CLI
-
-```bash
-skills init cursor   # or: skills init agents
-skills add bootstrap
-```
-
-### Manual: Cursor
+### Cursor
 
 ```bash
 mkdir -p .cursor/rules
-cp -r ~/.skills/ai/agents/bootstrap .cursor/rules/bootstrap-agent
+cp -r ~/.ai-skills/agents/bootstrap .cursor/rules/bootstrap-agent
 ```
 
-### Manual: Claude Code
+### Claude Code (per-project)
 
 ```bash
-# Project
-mkdir -p .claude/skills
-cp -r ~/.skills/ai/agents/bootstrap .claude/skills/bootstrap-agent
+mkdir -p .claude/agents
+cp -r ~/.ai-skills/agents/bootstrap .claude/agents/bootstrap
+```
 
-# Global
-mkdir -p ~/.claude/skills
-cp -r ~/.skills/ai/agents/bootstrap ~/.claude/skills/bootstrap-agent
+### Claude Code (global)
+
+```bash
+mkdir -p ~/.claude/agents
+cp -r ~/.ai-skills/agents/bootstrap ~/.claude/agents/bootstrap
 ```
 
 For best results, also install the skills this agent references (see Skills Used above). Commands used by this agent live in `ai/commands/bootstrap/`.

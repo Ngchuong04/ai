@@ -26,30 +26,25 @@ Autonomous workflow for systematic code refactoring with test coverage verificat
 
 ## Installation
 
-### Using the skills CLI
-
-```bash
-skills init cursor   # or: skills init agents
-skills add refactoring
-```
-
-### Manual: Cursor
+### Cursor
 
 ```bash
 mkdir -p .cursor/rules
-cp -r ~/.skills/ai/agents/refactoring .cursor/rules/refactoring-agent
+cp -r ~/.ai-skills/agents/refactoring .cursor/rules/refactoring-agent
 ```
 
-### Manual: Claude Code
+### Claude Code (per-project)
 
 ```bash
-# Project
-mkdir -p .claude/skills
-cp -r ~/.skills/ai/agents/refactoring .claude/skills/refactoring-agent
+mkdir -p .claude/agents
+cp -r ~/.ai-skills/agents/refactoring .claude/agents/refactoring
+```
 
-# Global
-mkdir -p ~/.claude/skills
-cp -r ~/.skills/ai/agents/refactoring ~/.claude/skills/refactoring-agent
+### Claude Code (global)
+
+```bash
+mkdir -p ~/.claude/agents
+cp -r ~/.ai-skills/agents/refactoring ~/.claude/agents/refactoring
 ```
 
 For best results, also install the skills this agent references (see Skills Used above). Requires a clean git tree and passing tests before starting.

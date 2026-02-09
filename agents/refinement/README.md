@@ -24,30 +24,25 @@ Autonomous workflow for consolidating and refining extracted skills from staging
 
 ## Installation
 
-### Using the skills CLI
-
-```bash
-skills init cursor   # or: skills init agents
-skills add refinement
-```
-
-### Manual: Cursor
+### Cursor
 
 ```bash
 mkdir -p .cursor/rules
-cp -r ~/.skills/ai/agents/refinement .cursor/rules/refinement-agent
+cp -r ~/.ai-skills/agents/refinement .cursor/rules/refinement-agent
 ```
 
-### Manual: Claude Code
+### Claude Code (per-project)
 
 ```bash
-# Project
-mkdir -p .claude/skills
-cp -r ~/.skills/ai/agents/refinement .claude/skills/refinement-agent
+mkdir -p .claude/agents
+cp -r ~/.ai-skills/agents/refinement .claude/agents/refinement
+```
 
-# Global
-mkdir -p ~/.claude/skills
-cp -r ~/.skills/ai/agents/refinement ~/.claude/skills/refinement-agent
+### Claude Code (global)
+
+```bash
+mkdir -p ~/.claude/agents
+cp -r ~/.ai-skills/agents/refinement ~/.claude/agents/refinement
 ```
 
 For best results, also install the skills this agent references (see Skills Used above). Commands: `/list-staging`, `/analyze-patterns`. Requires `ai/staging/` structure in this repo.

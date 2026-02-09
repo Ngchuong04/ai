@@ -27,30 +27,25 @@ Autonomous workflow for configuring CI/CD pipelines, containerizing applications
 
 ## Installation
 
-### Using the skills CLI
-
-```bash
-skills init cursor   # or: skills init agents
-skills add deployment
-```
-
-### Manual: Cursor
+### Cursor
 
 ```bash
 mkdir -p .cursor/rules
-cp -r ~/.skills/ai/agents/deployment .cursor/rules/deployment-agent
+cp -r ~/.ai-skills/agents/deployment .cursor/rules/deployment-agent
 ```
 
-### Manual: Claude Code
+### Claude Code (per-project)
 
 ```bash
-# Project
-mkdir -p .claude/skills
-cp -r ~/.skills/ai/agents/deployment .claude/skills/deployment-agent
+mkdir -p .claude/agents
+cp -r ~/.ai-skills/agents/deployment .claude/agents/deployment
+```
 
-# Global
-mkdir -p ~/.claude/skills
-cp -r ~/.skills/ai/agents/deployment ~/.claude/skills/deployment-agent
+### Claude Code (global)
+
+```bash
+mkdir -p ~/.claude/agents
+cp -r ~/.ai-skills/agents/deployment ~/.claude/agents/deployment
 ```
 
 For best results, also install the skills this agent references (see Skills Used above).

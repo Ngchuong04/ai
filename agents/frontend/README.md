@@ -34,30 +34,25 @@ Autonomous workflow for designing, building, and polishing production-grade fron
 
 ## Installation
 
-### Using the skills CLI
-
-```bash
-skills init cursor   # or: skills init agents
-skills add frontend
-```
-
-### Manual: Cursor
+### Cursor
 
 ```bash
 mkdir -p .cursor/rules
-cp -r ~/.skills/ai/agents/frontend .cursor/rules/frontend-agent
+cp -r ~/.ai-skills/agents/frontend .cursor/rules/frontend-agent
 ```
 
-### Manual: Claude Code
+### Claude Code (per-project)
 
 ```bash
-# Project
-mkdir -p .claude/skills
-cp -r ~/.skills/ai/agents/frontend .claude/skills/frontend-agent
+mkdir -p .claude/agents
+cp -r ~/.ai-skills/agents/frontend .claude/agents/frontend
+```
 
-# Global
-mkdir -p ~/.claude/skills
-cp -r ~/.skills/ai/agents/frontend ~/.claude/skills/frontend-agent
+### Claude Code (global)
+
+```bash
+mkdir -p ~/.claude/agents
+cp -r ~/.ai-skills/agents/frontend ~/.claude/agents/frontend
 ```
 
 For best results, also install the skills this agent references (see Skills Used above).

@@ -28,30 +28,25 @@ Autonomous workflow for systematic performance profiling, bottleneck analysis, i
 
 ## Installation
 
-### Using the skills CLI
-
-```bash
-skills init cursor   # or: skills init agents
-skills add performance
-```
-
-### Manual: Cursor
+### Cursor
 
 ```bash
 mkdir -p .cursor/rules
-cp -r ~/.skills/ai/agents/performance .cursor/rules/performance-agent
+cp -r ~/.ai-skills/agents/performance .cursor/rules/performance-agent
 ```
 
-### Manual: Claude Code
+### Claude Code (per-project)
 
 ```bash
-# Project
-mkdir -p .claude/skills
-cp -r ~/.skills/ai/agents/performance .claude/skills/performance-agent
+mkdir -p .claude/agents
+cp -r ~/.ai-skills/agents/performance .claude/agents/performance
+```
 
-# Global
-mkdir -p ~/.claude/skills
-cp -r ~/.skills/ai/agents/performance ~/.claude/skills/performance-agent
+### Claude Code (global)
+
+```bash
+mkdir -p ~/.claude/agents
+cp -r ~/.ai-skills/agents/performance ~/.claude/agents/performance
 ```
 
 For best results, also install the skills this agent references (see Skills Used above). Ensure the app builds and runs and git is clean before profiling.

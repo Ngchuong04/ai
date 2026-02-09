@@ -35,30 +35,25 @@ Autonomous workflow for designing, implementing, and hardening production-grade 
 
 ## Installation
 
-### Using the skills CLI
-
-```bash
-skills init cursor   # or: skills init agents
-skills add backend
-```
-
-### Manual: Cursor
+### Cursor
 
 ```bash
 mkdir -p .cursor/rules
-cp -r ~/.skills/ai/agents/backend .cursor/rules/backend-agent
+cp -r ~/.ai-skills/agents/backend .cursor/rules/backend-agent
 ```
 
-### Manual: Claude Code
+### Claude Code (per-project)
 
 ```bash
-# Project
-mkdir -p .claude/skills
-cp -r ~/.skills/ai/agents/backend .claude/skills/backend-agent
+mkdir -p .claude/agents
+cp -r ~/.ai-skills/agents/backend .claude/agents/backend
+```
 
-# Global
-mkdir -p ~/.claude/skills
-cp -r ~/.skills/ai/agents/backend ~/.claude/skills/backend-agent
+### Claude Code (global)
+
+```bash
+mkdir -p ~/.claude/agents
+cp -r ~/.ai-skills/agents/backend ~/.claude/agents/backend
 ```
 
 For best results, also install the skills this agent references (see Skills Used above).

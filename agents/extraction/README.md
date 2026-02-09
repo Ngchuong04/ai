@@ -23,30 +23,25 @@ Autonomous workflow for extracting reusable patterns from codebases into skills 
 
 ## Installation
 
-### Using the skills CLI
-
-```bash
-skills init cursor   # or: skills init agents
-skills add extraction
-```
-
-### Manual: Cursor
+### Cursor
 
 ```bash
 mkdir -p .cursor/rules
-cp -r ~/.skills/ai/agents/extraction .cursor/rules/extraction-agent
+cp -r ~/.ai-skills/agents/extraction .cursor/rules/extraction-agent
 ```
 
-### Manual: Claude Code
+### Claude Code (per-project)
 
 ```bash
-# Project
-mkdir -p .claude/skills
-cp -r ~/.skills/ai/agents/extraction .claude/skills/extraction-agent
+mkdir -p .claude/agents
+cp -r ~/.ai-skills/agents/extraction .claude/agents/extraction
+```
 
-# Global
-mkdir -p ~/.claude/skills
-cp -r ~/.skills/ai/agents/extraction ~/.claude/skills/extraction-agent
+### Claude Code (global)
+
+```bash
+mkdir -p ~/.claude/agents
+cp -r ~/.ai-skills/agents/extraction ~/.claude/agents/extraction
 ```
 
 For best results, also install the skills this agent references (see Skills Used above). Commands: `/extract-discovery`, `/extract-categorize`.
