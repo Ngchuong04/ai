@@ -1,0 +1,739 @@
+# =============================================================================
+# GraphQL Schema Template
+# =============================================================================
+#
+# A production-ready GraphQL schema template demonstrating best practices for
+# type design, pagination, error handling, mutations, and subscriptions.
+#
+# Usage: Copy this file and customize the types/fields for your domain.
+# Search for "CUSTOMIZE" to find values you should change.
+#
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# Custom Scalar Types
+# -----------------------------------------------------------------------------
+# Define custom scalars for domain-specific validation. Each scalar needs a
+# corresponding resolver/serializer in your server implementation.
+
+"""ISO 8601 date-time string (e.g., 2025-01-15T09:30:00Z)"""
+scalar DateTime
+
+"""RFC 5322 compliant email address"""
+scalar Email
+
+"""RFC 3986 compliant URL"""
+scalar URL
+
+"""Arbitrary JSON object for flexible metadata storage.
+Use sparingly — prefer strongly typed fields when the shape is known."""
+scalar JSON
+
+# -----------------------------------------------------------------------------
+# Enums
+# -----------------------------------------------------------------------------
+# Use enums for fields with a fixed set of allowed values. Enums provide
+# type safety and self-documenting schemas.
+
+"""Status of a user account. CUSTOMIZE: Add/remove statuses for your domain."""
+enum UserStatus {
+  ACTIVE
+  INACTIVE
+  SUSPENDED
+  PENDING_VERIFICATION
+}
+
+"""Status of a published post. CUSTOMIZE: Adjust to match your content workflow."""
+enum PostStatus {
+  DRAFT
+  PUBLISHED
+  ARCHIVED
+  UNDER_REVIEW
+}
+
+"""Available sort fields for user queries."""
+enum UserSortField {
+  CREATED_AT
+  UPDATED_AT
+  NAME
+  EMAIL
+}
+
+"""Available sort fields for post queries."""
+enum PostSortField {
+  CREATED_AT
+  UPDATED_AT
+  TITLE
+  LIKE_COUNT
+}
+
+"""Sort direction for ordered queries."""
+enum SortDirection {
+  ASC
+  DESC
+}
+
+"""Role-based access control roles. CUSTOMIZE: Define roles for your system."""
+enum Role {
+  USER
+  MODERATOR
+  ADMIN
+}
+
+# -----------------------------------------------------------------------------
+# Interfaces
+# -----------------------------------------------------------------------------
+# Use interfaces when multiple types share common fields. This enables
+# polymorphic queries and consistent patterns across your schema.
+
+"""
+Node interface for globally unique identification (Relay specification).
+All entity types should implement this interface to enable generic lookups.
+"""
+interface Node {
+  """Globally unique identifier for the object."""
+  id: ID!
+}
+
+"""
+Timestamped interface for entities that track creation and modification times.
+Most persistent entities should implement this interface.
+"""
+interface Timestamped {
+  """When the entity was first created."""
+  createdAt: DateTime!
+
+  """When the entity was last modified."""
+  updatedAt: DateTime!
+}
+
+# -----------------------------------------------------------------------------
+# Entity Types
+# -----------------------------------------------------------------------------
+# Design types around your domain entities. Follow these conventions:
+# - Use non-null (!) for fields that are always present
+# - Use nullable for optional or conditionally loaded fields
+# - Add relationship fields with pagination for collections
+
+"""
+User entity representing an authenticated account.
+CUSTOMIZE: Add/remove fields to match your user model.
+"""
+type User implements Node & Timestamped {
+  id: ID!
+  createdAt: DateTime!
+  updatedAt: DateTime!
+
+  """User's email address, unique across the system."""
+  email: Email!
+
+  """Display name shown in the UI."""
+  name: String!
+
+  """Optional URL to the user's avatar image."""
+  avatarUrl: URL
+
+  """Short biography or description. Max 500 characters."""
+  bio: String
+
+  """Current account status."""
+  status: UserStatus!
+
+  """User's assigned role for access control."""
+  role: Role!
+
+  # ---- Relationships ----
+  # Always paginate collection relationships to prevent unbounded queries.
+  # Use Relay-style connections for cursor-based pagination.
+
+  """Posts authored by this user."""
+  posts(
+    first: Int = 10
+    after: String
+    status: PostStatus
+  ): PostConnection!
+
+  """Comments written by this user."""
+  comments(first: Int = 10, after: String): CommentConnection!
+
+  # ---- Computed Fields ----
+  # Computed fields are resolved server-side and not stored directly.
+
+  """Total number of posts by this user. Resolved without loading all posts."""
+  postCount: Int!
+}
+
+"""
+Post entity representing a content item authored by a user.
+CUSTOMIZE: Add/remove fields to match your content model.
+"""
+type Post implements Node & Timestamped {
+  id: ID!
+  createdAt: DateTime!
+  updatedAt: DateTime!
+
+  """Post title. Must be between 1 and 200 characters."""
+  title: String!
+
+  """Full post content, supports markdown formatting."""
+  content: String!
+
+  """Short summary or excerpt of the post. Auto-generated if not provided."""
+  excerpt: String
+
+  """Current publication status."""
+  status: PostStatus!
+
+  """Tags associated with this post for categorization."""
+  tags: [String!]!
+
+  # ---- Relationships ----
+
+  """The user who authored this post."""
+  author: User!
+
+  """Comments on this post, ordered by creation time."""
+  comments(first: Int = 20, after: String): CommentConnection!
+
+  # ---- Computed Fields ----
+
+  """Number of likes on this post."""
+  likeCount: Int!
+
+  """Number of comments on this post."""
+  commentCount: Int!
+
+  """Whether the currently authenticated user has liked this post.
+  Returns null if not authenticated."""
+  isLikedByViewer: Boolean
+}
+
+"""
+Comment entity representing a user's response to a post.
+CUSTOMIZE: Adjust fields for your commenting system.
+"""
+type Comment implements Node & Timestamped {
+  id: ID!
+  createdAt: DateTime!
+  updatedAt: DateTime!
+
+  """Comment text content. Max 2000 characters."""
+  body: String!
+
+  """The user who wrote this comment."""
+  author: User!
+
+  """The post this comment belongs to."""
+  post: Post!
+
+  """Parent comment if this is a reply, null for top-level comments."""
+  parentComment: Comment
+
+  """Replies to this comment."""
+  replies(first: Int = 10, after: String): CommentConnection!
+}
+
+# -----------------------------------------------------------------------------
+# Union Types
+# -----------------------------------------------------------------------------
+# Use unions when a field can return completely different types that don't
+# share common fields. Clients use inline fragments to handle each case.
+
+"""Search results can contain any of these entity types."""
+union SearchResult = User | Post | Comment
+
+# -----------------------------------------------------------------------------
+# Relay-Style Pagination (Connections)
+# -----------------------------------------------------------------------------
+# Cursor-based pagination following the Relay specification. This pattern
+# provides efficient pagination for large datasets and supports bidirectional
+# navigation.
+#
+# Key concepts:
+# - Connection: The paginated list wrapper
+# - Edge: Wraps each item with its cursor position
+# - PageInfo: Metadata about the current page
+# - Cursors: Opaque strings representing positions in the dataset
+
+"""Pagination metadata shared across all connection types."""
+type PageInfo {
+  """Whether more items exist after the last edge in this page."""
+  hasNextPage: Boolean!
+
+  """Whether more items exist before the first edge in this page."""
+  hasPreviousPage: Boolean!
+
+  """Cursor of the first edge in this page, null if empty."""
+  startCursor: String
+
+  """Cursor of the last edge in this page, null if empty."""
+  endCursor: String
+}
+
+"""Paginated list of users."""
+type UserConnection {
+  """List of user edges in this page."""
+  edges: [UserEdge!]!
+
+  """Pagination metadata."""
+  pageInfo: PageInfo!
+
+  """Total number of users matching the query (across all pages)."""
+  totalCount: Int!
+}
+
+"""A single user within a paginated list."""
+type UserEdge {
+  """The user entity."""
+  node: User!
+
+  """Opaque cursor for this position. Use with 'after' or 'before' arguments."""
+  cursor: String!
+}
+
+"""Paginated list of posts."""
+type PostConnection {
+  edges: [PostEdge!]!
+  pageInfo: PageInfo!
+  totalCount: Int!
+}
+
+type PostEdge {
+  node: Post!
+  cursor: String!
+}
+
+"""Paginated list of comments."""
+type CommentConnection {
+  edges: [CommentEdge!]!
+  pageInfo: PageInfo!
+  totalCount: Int!
+}
+
+type CommentEdge {
+  node: Comment!
+  cursor: String!
+}
+
+# -----------------------------------------------------------------------------
+# Error Handling Pattern
+# -----------------------------------------------------------------------------
+# Return errors in mutation payloads instead of relying solely on GraphQL's
+# top-level errors array. This gives clients structured, field-level error
+# information they can act on programmatically.
+
+"""Structured error returned in mutation payloads."""
+type UserError {
+  """
+  The input field that caused the error (dot-separated path).
+  Example: "input.email" or "input.profile.bio"
+  Null for errors not tied to a specific field.
+  """
+  field: String
+
+  """Human-readable error message suitable for display."""
+  message: String!
+
+  """
+  Machine-readable error code for programmatic handling.
+  Example: VALIDATION_ERROR, NOT_FOUND, UNAUTHORIZED, CONFLICT
+  """
+  code: String!
+}
+
+# -----------------------------------------------------------------------------
+# Input Types for Mutations
+# -----------------------------------------------------------------------------
+# Always use dedicated input types for mutations. This provides:
+# - Clear separation between read and write shapes
+# - Independent evolution of input and output types
+# - Better validation and documentation
+
+"""Input for creating a new user. CUSTOMIZE: Match your registration fields."""
+input CreateUserInput {
+  """User's email address. Must be unique."""
+  email: String!
+
+  """Display name. 1-100 characters."""
+  name: String!
+
+  """Password. Minimum 8 characters. Will be hashed server-side."""
+  password: String!
+
+  """Optional short biography. Max 500 characters."""
+  bio: String
+
+  """Optional avatar image URL."""
+  avatarUrl: String
+}
+
+"""Input for updating an existing user. All fields are optional — only
+provided fields will be updated (patch semantics)."""
+input UpdateUserInput {
+  """New display name. 1-100 characters."""
+  name: String
+
+  """New biography. Max 500 characters. Pass null to clear."""
+  bio: String
+
+  """New avatar URL. Pass null to remove."""
+  avatarUrl: String
+
+  """New account status. Only ADMIN role can change this."""
+  status: UserStatus
+}
+
+"""Input for creating a new post. CUSTOMIZE: Match your content fields."""
+input CreatePostInput {
+  """Post title. 1-200 characters."""
+  title: String!
+
+  """Post content in markdown format."""
+  content: String!
+
+  """Optional excerpt. Auto-generated from content if not provided."""
+  excerpt: String
+
+  """Tags for categorization. Max 10 tags."""
+  tags: [String!]
+
+  """Initial status. Defaults to DRAFT if not specified."""
+  status: PostStatus = DRAFT
+}
+
+"""Input for updating an existing post."""
+input UpdatePostInput {
+  """New title. 1-200 characters."""
+  title: String
+
+  """New content in markdown format."""
+  content: String
+
+  """New excerpt. Pass null to auto-generate."""
+  excerpt: String
+
+  """Updated tags. Replaces all existing tags."""
+  tags: [String!]
+
+  """New publication status."""
+  status: PostStatus
+}
+
+"""Input for creating a comment."""
+input CreateCommentInput {
+  """The ID of the post to comment on."""
+  postId: ID!
+
+  """Comment text. 1-2000 characters."""
+  body: String!
+
+  """Parent comment ID for replies. Null for top-level comments."""
+  parentCommentId: ID
+}
+
+"""Input for updating a comment."""
+input UpdateCommentInput {
+  """Updated comment text. 1-2000 characters."""
+  body: String!
+}
+
+# -----------------------------------------------------------------------------
+# Mutation Payloads
+# -----------------------------------------------------------------------------
+# Every mutation returns a payload type containing:
+# 1. The affected entity (nullable — null when errors occur)
+# 2. A list of structured errors
+# 3. A success boolean for quick checks
+#
+# This pattern allows clients to handle both success and failure in a
+# single response without checking the top-level errors array.
+
+type CreateUserPayload {
+  """The created user, or null if creation failed."""
+  user: User
+
+  """List of errors that occurred. Empty on success."""
+  errors: [UserError!]!
+
+  """Whether the mutation succeeded."""
+  success: Boolean!
+}
+
+type UpdateUserPayload {
+  user: User
+  errors: [UserError!]!
+  success: Boolean!
+}
+
+type DeleteUserPayload {
+  """The ID of the deleted user."""
+  deletedUserId: ID
+
+  errors: [UserError!]!
+  success: Boolean!
+}
+
+type CreatePostPayload {
+  post: Post
+  errors: [UserError!]!
+  success: Boolean!
+}
+
+type UpdatePostPayload {
+  post: Post
+  errors: [UserError!]!
+  success: Boolean!
+}
+
+type DeletePostPayload {
+  deletedPostId: ID
+  errors: [UserError!]!
+  success: Boolean!
+}
+
+type CreateCommentPayload {
+  comment: Comment
+  errors: [UserError!]!
+  success: Boolean!
+}
+
+type UpdateCommentPayload {
+  comment: Comment
+  errors: [UserError!]!
+  success: Boolean!
+}
+
+type DeleteCommentPayload {
+  deletedCommentId: ID
+  errors: [UserError!]!
+  success: Boolean!
+}
+
+# -----------------------------------------------------------------------------
+# Queries
+# -----------------------------------------------------------------------------
+
+type Query {
+  # ---- Node lookup ----
+  # Generic lookup by global ID (Relay specification).
+  # Allows clients to refetch any entity by its ID.
+
+  """Fetch any entity by its globally unique ID."""
+  node(id: ID!): Node
+
+  # ---- User queries ----
+
+  """Fetch a single user by ID. Returns null if not found."""
+  user(id: ID!): User
+
+  """Fetch a single user by email. Returns null if not found."""
+  userByEmail(email: Email!): User
+
+  """
+  List users with pagination, filtering, and sorting.
+  CUSTOMIZE: Adjust filters and defaults for your use case.
+  """
+  users(
+    """Maximum number of items to return (forward pagination). Default: 20, Max: 100."""
+    first: Int = 20
+
+    """Cursor to start after (forward pagination)."""
+    after: String
+
+    """Maximum number of items to return (backward pagination)."""
+    last: Int
+
+    """Cursor to start before (backward pagination)."""
+    before: String
+
+    """Filter by account status."""
+    status: UserStatus
+
+    """Filter by role."""
+    role: Role
+
+    """Full-text search across name and email."""
+    search: String
+
+    """Field to sort by. Default: CREATED_AT."""
+    sortBy: UserSortField = CREATED_AT
+
+    """Sort direction. Default: DESC."""
+    sortDirection: SortDirection = DESC
+  ): UserConnection!
+
+  # ---- Post queries ----
+
+  """Fetch a single post by ID. Returns null if not found."""
+  post(id: ID!): Post
+
+  """List posts with pagination, filtering, and sorting."""
+  posts(
+    first: Int = 20
+    after: String
+    last: Int
+    before: String
+    status: PostStatus
+    authorId: ID
+    tag: String
+    search: String
+    sortBy: PostSortField = CREATED_AT
+    sortDirection: SortDirection = DESC
+  ): PostConnection!
+
+  # ---- Search ----
+
+  """
+  Search across all entity types. Returns a mixed list of users, posts,
+  and comments matching the query string.
+  """
+  search(
+    """Search query string. Min 2 characters."""
+    query: String!
+
+    """Maximum results to return."""
+    first: Int = 20
+
+    """Cursor for pagination."""
+    after: String
+  ): SearchResultConnection!
+}
+
+"""Paginated search results containing mixed entity types."""
+type SearchResultConnection {
+  edges: [SearchResultEdge!]!
+  pageInfo: PageInfo!
+  totalCount: Int!
+}
+
+type SearchResultEdge {
+  node: SearchResult!
+  cursor: String!
+
+  """Relevance score for this result (0.0 to 1.0)."""
+  score: Float!
+}
+
+# -----------------------------------------------------------------------------
+# Mutations
+# -----------------------------------------------------------------------------
+
+type Mutation {
+  # ---- User mutations ----
+
+  """Create a new user account."""
+  createUser(input: CreateUserInput!): CreateUserPayload!
+
+  """Update an existing user. Only provided fields are modified."""
+  updateUser(id: ID!, input: UpdateUserInput!): UpdateUserPayload!
+
+  """Permanently delete a user and all associated data."""
+  deleteUser(id: ID!): DeleteUserPayload!
+
+  # ---- Post mutations ----
+
+  """Create a new post. The authenticated user is set as the author."""
+  createPost(input: CreatePostInput!): CreatePostPayload!
+
+  """Update an existing post. Only the author or an admin can update."""
+  updatePost(id: ID!, input: UpdatePostInput!): UpdatePostPayload!
+
+  """Delete a post. Only the author or an admin can delete."""
+  deletePost(id: ID!): DeletePostPayload!
+
+  # ---- Comment mutations ----
+
+  """Add a comment to a post."""
+  createComment(input: CreateCommentInput!): CreateCommentPayload!
+
+  """Update a comment. Only the comment author can update."""
+  updateComment(id: ID!, input: UpdateCommentInput!): UpdateCommentPayload!
+
+  """Delete a comment. Only the comment author or an admin can delete."""
+  deleteComment(id: ID!): DeleteCommentPayload!
+
+  # ---- Engagement mutations ----
+
+  """Toggle a like on a post. Returns the updated post."""
+  togglePostLike(postId: ID!): TogglePostLikePayload!
+}
+
+type TogglePostLikePayload {
+  """The post with updated like count."""
+  post: Post
+
+  """Whether the post is now liked by the current user."""
+  isLiked: Boolean!
+
+  errors: [UserError!]!
+  success: Boolean!
+}
+
+# -----------------------------------------------------------------------------
+# Subscriptions
+# -----------------------------------------------------------------------------
+# Subscriptions enable real-time updates over WebSocket connections.
+# Keep subscription payloads focused and small to minimize bandwidth.
+
+type Subscription {
+  """
+  Emitted when a new post is published (status changes to PUBLISHED).
+  Useful for real-time feeds. Optionally filter by author.
+  """
+  postPublished(authorId: ID): Post!
+
+  """
+  Emitted when a post is updated. Subscribe to a specific post by ID.
+  """
+  postUpdated(postId: ID!): Post!
+
+  """
+  Emitted when a new comment is added to a specific post.
+  Useful for live comment streams.
+  """
+  commentAdded(postId: ID!): Comment!
+
+  """
+  Emitted when a user's online status changes.
+  Useful for presence indicators.
+  """
+  userPresenceChanged(userId: ID!): UserPresence!
+}
+
+"""Real-time presence information for a user."""
+type UserPresence {
+  """The user whose presence changed."""
+  userId: ID!
+
+  """Whether the user is currently online."""
+  online: Boolean!
+
+  """When the user was last seen online."""
+  lastSeen: DateTime!
+}
+
+# -----------------------------------------------------------------------------
+# Directives
+# -----------------------------------------------------------------------------
+# Custom directives extend the schema with cross-cutting concerns like
+# authorization, caching, and rate limiting.
+
+"""Restrict field access to users with the specified role."""
+directive @auth(
+  """Minimum required role. Defaults to USER (any authenticated user)."""
+  requires: Role = USER
+) on FIELD_DEFINITION | OBJECT
+
+"""Cache the field result for the specified duration."""
+directive @cacheControl(
+  """Maximum age in seconds."""
+  maxAge: Int!
+
+  """Cache scope: PUBLIC (shared) or PRIVATE (per-user)."""
+  scope: CacheScope = PUBLIC
+) on FIELD_DEFINITION | OBJECT
+
+enum CacheScope {
+  PUBLIC
+  PRIVATE
+}

@@ -1,0 +1,833 @@
+# =============================================================================
+# OpenAPI 3.0 Specification Template
+# =============================================================================
+#
+# A production-ready OpenAPI spec template with CRUD endpoints, authentication,
+# error handling, pagination, and rate limiting.
+#
+# Search for "# CUSTOMIZE" to find values you should change for your API.
+#
+# Usage:
+#   1. Copy this file to your project
+#   2. Replace all # CUSTOMIZE values
+#   3. Add/remove paths and schemas for your resources
+#   4. Generate client SDKs or server stubs with openapi-generator
+#
+# Validate: https://editor.swagger.io/
+# =============================================================================
+
+openapi: "3.0.3"
+
+# =============================================================================
+# API Metadata
+# =============================================================================
+info:
+  title: Users API  # CUSTOMIZE: Your API name
+  description: |
+    RESTful API for managing user resources.
+
+    ## Authentication
+    This API supports Bearer token (JWT), API key, and OAuth2 authentication.
+    Include your credentials in every request.
+
+    ## Rate Limiting
+    All endpoints are rate-limited. Check the `X-RateLimit-*` response headers
+    for your current usage. See the 429 response for details.
+
+    ## Pagination
+    Collection endpoints return paginated results. Use `page` and `page_size`
+    query parameters to navigate through results.
+  version: 1.0.0  # CUSTOMIZE: Your API version
+  contact:
+    name: API Support  # CUSTOMIZE: Your team name
+    email: api-support@example.com  # CUSTOMIZE: Your support email
+    url: https://api.example.com/support  # CUSTOMIZE: Your support URL
+  license:
+    name: MIT  # CUSTOMIZE: Your license
+    url: https://opensource.org/licenses/MIT
+  termsOfService: https://example.com/terms  # CUSTOMIZE: Your terms URL
+
+# =============================================================================
+# Server Definitions
+# =============================================================================
+servers:
+  - url: https://api.example.com/v1  # CUSTOMIZE: Your production URL
+    description: Production
+  - url: https://staging-api.example.com/v1  # CUSTOMIZE: Your staging URL
+    description: Staging
+  - url: http://localhost:8000/v1  # CUSTOMIZE: Your local dev port
+    description: Local Development
+
+# =============================================================================
+# Tags
+# =============================================================================
+tags:
+  - name: Users
+    description: User account management operations
+  - name: Health
+    description: API health and status endpoints
+
+# =============================================================================
+# Authentication Schemes
+# =============================================================================
+security:
+  - BearerAuth: []  # CUSTOMIZE: Choose your default auth scheme
+
+components:
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT  # CUSTOMIZE: Your token format
+      description: |
+        JWT access token. Obtain via the `/auth/login` endpoint.
+        Include as: `Authorization: Bearer <token>`
+
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: X-API-Key  # CUSTOMIZE: Your API key header name
+      description: |
+        API key for server-to-server communication.
+        Include as: `X-API-Key: <your-api-key>`
+
+    OAuth2:
+      type: oauth2
+      description: OAuth 2.0 authorization code flow.
+      flows:
+        authorizationCode:
+          authorizationUrl: https://auth.example.com/authorize  # CUSTOMIZE: Your OAuth URL
+          tokenUrl: https://auth.example.com/token  # CUSTOMIZE: Your token URL
+          refreshUrl: https://auth.example.com/token  # CUSTOMIZE: Your refresh URL
+          scopes:  # CUSTOMIZE: Your OAuth scopes
+            users:read: Read user information
+            users:write: Create and modify users
+            users:delete: Delete users
+            admin: Full administrative access
+
+  # ===========================================================================
+  # Reusable Parameters
+  # ===========================================================================
+  parameters:
+    PathUserId:
+      name: user_id
+      in: path
+      required: true
+      description: Unique identifier of the user.
+      schema:
+        type: string
+        format: uuid  # CUSTOMIZE: Your ID format (uuid, integer, etc.)
+        example: "550e8400-e29b-41d4-a716-446655440000"
+
+    QueryPage:
+      name: page
+      in: query
+      required: false
+      description: Page number for pagination (1-indexed).
+      schema:
+        type: integer
+        minimum: 1
+        default: 1
+        example: 1
+
+    QueryPageSize:
+      name: page_size
+      in: query
+      required: false
+      description: Number of items per page.
+      schema:
+        type: integer
+        minimum: 1
+        maximum: 100  # CUSTOMIZE: Your max page size
+        default: 20  # CUSTOMIZE: Your default page size
+        example: 20
+
+    QuerySort:
+      name: sort
+      in: query
+      required: false
+      description: |
+        Field to sort by. Prefix with `-` for descending order.
+        Example: `-created_at` for newest first.
+      schema:
+        type: string
+        enum:
+          - created_at
+          - -created_at
+          - name
+          - -name
+          - email
+          - -email
+        default: "-created_at"
+
+    QuerySearch:
+      name: search
+      in: query
+      required: false
+      description: Full-text search query across name and email fields.
+      schema:
+        type: string
+        minLength: 1
+        maxLength: 200
+        example: "alice"
+
+    QueryStatus:
+      name: status
+      in: query
+      required: false
+      description: Filter by user status.
+      schema:
+        $ref: "#/components/schemas/UserStatus"
+
+  # ===========================================================================
+  # Response Headers
+  # ===========================================================================
+  headers:
+    X-RateLimit-Limit:
+      description: Maximum number of requests allowed in the current window.
+      schema:
+        type: integer
+        example: 1000
+
+    X-RateLimit-Remaining:
+      description: Number of requests remaining in the current window.
+      schema:
+        type: integer
+        example: 742
+
+    X-RateLimit-Reset:
+      description: Unix timestamp (seconds) when the rate limit window resets.
+      schema:
+        type: integer
+        example: 1700000000
+
+    X-Request-Id:
+      description: Unique identifier for this request, useful for debugging.
+      schema:
+        type: string
+        format: uuid
+        example: "f47ac10b-58cc-4372-a567-0e02b2c3d479"
+
+  # ===========================================================================
+  # Reusable Schemas
+  # ===========================================================================
+  schemas:
+    # ---- Enums ----
+
+    UserStatus:
+      type: string
+      description: Current status of the user account.
+      enum:  # CUSTOMIZE: Your user statuses
+        - active
+        - inactive
+        - suspended
+        - pending_verification
+      example: active
+
+    # ---- Core Resource Schemas ----
+
+    User:
+      type: object
+      description: A user account resource.
+      required:
+        - id
+        - email
+        - name
+        - status
+        - created_at
+        - updated_at
+      properties:
+        id:
+          type: string
+          format: uuid
+          description: Unique identifier for the user.
+          readOnly: true
+          example: "550e8400-e29b-41d4-a716-446655440000"
+        email:
+          type: string
+          format: email
+          description: User's email address. Must be unique.
+          example: "alice@example.com"
+        name:
+          type: string
+          description: User's display name.
+          minLength: 1
+          maxLength: 100  # CUSTOMIZE: Your name length limits
+          example: "Alice Johnson"
+        status:
+          $ref: "#/components/schemas/UserStatus"
+        avatar_url:
+          type: string
+          format: uri
+          nullable: true
+          description: URL to the user's avatar image.
+          example: "https://cdn.example.com/avatars/alice.jpg"
+        bio:
+          type: string
+          nullable: true
+          description: Short biography or description.
+          maxLength: 500
+          example: "Software engineer and open-source contributor."
+        created_at:
+          type: string
+          format: date-time
+          description: When the user account was created.
+          readOnly: true
+          example: "2025-01-15T09:30:00Z"
+        updated_at:
+          type: string
+          format: date-time
+          description: When the user account was last modified.
+          readOnly: true
+          example: "2025-06-20T14:15:00Z"
+
+    # ---- Request Body Schemas ----
+
+    CreateUserRequest:
+      type: object
+      description: Request body for creating a new user.
+      required:
+        - email
+        - name
+        - password
+      properties:
+        email:
+          type: string
+          format: email
+          description: Email address. Must be unique.
+          example: "alice@example.com"
+        name:
+          type: string
+          minLength: 1
+          maxLength: 100
+          description: Display name.
+          example: "Alice Johnson"
+        password:
+          type: string
+          format: password
+          minLength: 8  # CUSTOMIZE: Your password requirements
+          description: Account password. Minimum 8 characters.
+          example: "secureP@ssw0rd"
+        bio:
+          type: string
+          maxLength: 500
+          description: Optional short biography.
+          example: "Software engineer."
+        avatar_url:
+          type: string
+          format: uri
+          description: Optional avatar image URL.
+          example: "https://cdn.example.com/avatars/alice.jpg"
+
+    UpdateUserRequest:
+      type: object
+      description: |
+        Request body for updating a user. All fields are optional.
+        Only provided fields will be modified (patch semantics).
+      properties:
+        name:
+          type: string
+          minLength: 1
+          maxLength: 100
+          description: Updated display name.
+          example: "Alice M. Johnson"
+        bio:
+          type: string
+          nullable: true
+          maxLength: 500
+          description: Updated biography. Send null to clear.
+          example: "Senior software engineer."
+        avatar_url:
+          type: string
+          format: uri
+          nullable: true
+          description: Updated avatar URL. Send null to remove.
+        status:
+          $ref: "#/components/schemas/UserStatus"
+
+    # ---- Pagination Schemas ----
+
+    PaginationMeta:
+      type: object
+      description: Pagination metadata included in all collection responses.
+      required:
+        - page
+        - page_size
+        - total
+        - pages
+      properties:
+        page:
+          type: integer
+          description: Current page number.
+          example: 1
+        page_size:
+          type: integer
+          description: Number of items per page.
+          example: 20
+        total:
+          type: integer
+          description: Total number of items across all pages.
+          example: 150
+        pages:
+          type: integer
+          description: Total number of pages.
+          example: 8
+        has_next:
+          type: boolean
+          description: Whether a next page exists.
+          example: true
+        has_prev:
+          type: boolean
+          description: Whether a previous page exists.
+          example: false
+
+    UserListResponse:
+      type: object
+      description: Paginated list of users.
+      required:
+        - items
+        - meta
+      properties:
+        items:
+          type: array
+          items:
+            $ref: "#/components/schemas/User"
+        meta:
+          $ref: "#/components/schemas/PaginationMeta"
+
+    # ---- Error Schemas ----
+
+    ErrorResponse:
+      type: object
+      description: Standard error response returned for all error status codes.
+      required:
+        - error
+        - message
+      properties:
+        error:
+          type: string
+          description: Machine-readable error code.
+          example: "VALIDATION_ERROR"
+        message:
+          type: string
+          description: Human-readable error description.
+          example: "Request validation failed."
+        details:
+          type: array
+          description: Field-level error details (for validation errors).
+          items:
+            $ref: "#/components/schemas/ErrorDetail"
+        timestamp:
+          type: string
+          format: date-time
+          description: When the error occurred.
+          example: "2025-06-20T14:15:00Z"
+        path:
+          type: string
+          description: The request path that triggered the error.
+          example: "/v1/users"
+        request_id:
+          type: string
+          format: uuid
+          description: Unique request identifier for debugging.
+          example: "f47ac10b-58cc-4372-a567-0e02b2c3d479"
+
+    ErrorDetail:
+      type: object
+      description: Details about a single field-level error.
+      required:
+        - field
+        - message
+      properties:
+        field:
+          type: string
+          description: The field that caused the error.
+          example: "email"
+        message:
+          type: string
+          description: Human-readable description of the issue.
+          example: "Invalid email format."
+        code:
+          type: string
+          description: Machine-readable error code for this field.
+          example: "INVALID_FORMAT"
+        value:
+          description: The rejected value (omitted for sensitive fields).
+          example: "not-an-email"
+
+    # ---- Health Check Schema ----
+
+    HealthResponse:
+      type: object
+      required:
+        - status
+        - version
+        - timestamp
+      properties:
+        status:
+          type: string
+          enum: [healthy, degraded, unhealthy]
+          example: healthy
+        version:
+          type: string
+          example: "1.0.0"
+        timestamp:
+          type: string
+          format: date-time
+          example: "2025-06-20T14:15:00Z"
+
+  # ===========================================================================
+  # Reusable Responses
+  # ===========================================================================
+  responses:
+    BadRequest:
+      description: |
+        **400 Bad Request** - The request was malformed or missing required fields.
+      headers:
+        X-Request-Id:
+          $ref: "#/components/headers/X-Request-Id"
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/ErrorResponse"
+          example:
+            error: "BAD_REQUEST"
+            message: "Malformed request body."
+            timestamp: "2025-06-20T14:15:00Z"
+            path: "/v1/users"
+            request_id: "f47ac10b-58cc-4372-a567-0e02b2c3d479"
+
+    Unauthorized:
+      description: |
+        **401 Unauthorized** - Authentication is required or the provided
+        credentials are invalid.
+      headers:
+        X-Request-Id:
+          $ref: "#/components/headers/X-Request-Id"
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/ErrorResponse"
+          example:
+            error: "UNAUTHORIZED"
+            message: "Authentication required. Provide a valid Bearer token."
+            timestamp: "2025-06-20T14:15:00Z"
+            path: "/v1/users"
+            request_id: "f47ac10b-58cc-4372-a567-0e02b2c3d479"
+
+    Forbidden:
+      description: |
+        **403 Forbidden** - The authenticated user does not have permission
+        to perform this action.
+      headers:
+        X-Request-Id:
+          $ref: "#/components/headers/X-Request-Id"
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/ErrorResponse"
+          example:
+            error: "FORBIDDEN"
+            message: "You do not have permission to access this resource."
+            timestamp: "2025-06-20T14:15:00Z"
+            path: "/v1/users/550e8400-e29b-41d4-a716-446655440000"
+            request_id: "f47ac10b-58cc-4372-a567-0e02b2c3d479"
+
+    NotFound:
+      description: |
+        **404 Not Found** - The requested resource does not exist.
+      headers:
+        X-Request-Id:
+          $ref: "#/components/headers/X-Request-Id"
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/ErrorResponse"
+          example:
+            error: "NOT_FOUND"
+            message: "User not found."
+            timestamp: "2025-06-20T14:15:00Z"
+            path: "/v1/users/nonexistent-id"
+            request_id: "f47ac10b-58cc-4372-a567-0e02b2c3d479"
+
+    ValidationError:
+      description: |
+        **422 Unprocessable Entity** - The request body failed validation.
+      headers:
+        X-Request-Id:
+          $ref: "#/components/headers/X-Request-Id"
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/ErrorResponse"
+          example:
+            error: "VALIDATION_ERROR"
+            message: "Request validation failed."
+            details:
+              - field: "email"
+                message: "Invalid email format."
+                code: "INVALID_FORMAT"
+                value: "not-an-email"
+              - field: "password"
+                message: "Must be at least 8 characters."
+                code: "TOO_SHORT"
+            timestamp: "2025-06-20T14:15:00Z"
+            path: "/v1/users"
+            request_id: "f47ac10b-58cc-4372-a567-0e02b2c3d479"
+
+    RateLimited:
+      description: |
+        **429 Too Many Requests** - Rate limit exceeded. Retry after the
+        duration specified in the `Retry-After` header.
+      headers:
+        Retry-After:
+          description: Seconds to wait before retrying.
+          schema:
+            type: integer
+            example: 60
+        X-RateLimit-Limit:
+          $ref: "#/components/headers/X-RateLimit-Limit"
+        X-RateLimit-Remaining:
+          $ref: "#/components/headers/X-RateLimit-Remaining"
+        X-RateLimit-Reset:
+          $ref: "#/components/headers/X-RateLimit-Reset"
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/ErrorResponse"
+          example:
+            error: "RATE_LIMITED"
+            message: "Rate limit exceeded. Retry after 60 seconds."
+            timestamp: "2025-06-20T14:15:00Z"
+            path: "/v1/users"
+            request_id: "f47ac10b-58cc-4372-a567-0e02b2c3d479"
+
+    InternalServerError:
+      description: |
+        **500 Internal Server Error** - An unexpected error occurred.
+        Contact support if the issue persists.
+      headers:
+        X-Request-Id:
+          $ref: "#/components/headers/X-Request-Id"
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/ErrorResponse"
+          example:
+            error: "INTERNAL_ERROR"
+            message: "An unexpected error occurred. Please try again later."
+            timestamp: "2025-06-20T14:15:00Z"
+            path: "/v1/users"
+            request_id: "f47ac10b-58cc-4372-a567-0e02b2c3d479"
+
+# =============================================================================
+# API Paths
+# =============================================================================
+paths:
+  # ---------------------------------------------------------------------------
+  # Health Check
+  # ---------------------------------------------------------------------------
+  /health:
+    get:
+      tags:
+        - Health
+      summary: Health check
+      description: Returns the current health status of the API service.
+      operationId: getHealth
+      security: []  # No auth required for health checks
+      responses:
+        "200":
+          description: Service is healthy.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/HealthResponse"
+
+  # ---------------------------------------------------------------------------
+  # Users Collection
+  # ---------------------------------------------------------------------------
+  /users:
+    # ---- List Users ----
+    get:
+      tags:
+        - Users
+      summary: List users
+      description: |
+        Retrieve a paginated list of users with optional filtering, sorting,
+        and full-text search.
+      operationId: listUsers
+      parameters:
+        - $ref: "#/components/parameters/QueryPage"
+        - $ref: "#/components/parameters/QueryPageSize"
+        - $ref: "#/components/parameters/QuerySort"
+        - $ref: "#/components/parameters/QuerySearch"
+        - $ref: "#/components/parameters/QueryStatus"
+      responses:
+        "200":
+          description: Paginated list of users.
+          headers:
+            X-RateLimit-Limit:
+              $ref: "#/components/headers/X-RateLimit-Limit"
+            X-RateLimit-Remaining:
+              $ref: "#/components/headers/X-RateLimit-Remaining"
+            X-RateLimit-Reset:
+              $ref: "#/components/headers/X-RateLimit-Reset"
+            X-Request-Id:
+              $ref: "#/components/headers/X-Request-Id"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/UserListResponse"
+        "400":
+          $ref: "#/components/responses/BadRequest"
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "429":
+          $ref: "#/components/responses/RateLimited"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+
+    # ---- Create User ----
+    post:
+      tags:
+        - Users
+      summary: Create a new user
+      description: |
+        Create a new user account. The email address must be unique.
+        Returns the created user with a `201 Created` status.
+      operationId: createUser
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/CreateUserRequest"
+      responses:
+        "201":
+          description: User created successfully.
+          headers:
+            Location:
+              description: URL of the newly created user resource.
+              schema:
+                type: string
+                format: uri
+                example: "/v1/users/550e8400-e29b-41d4-a716-446655440000"
+            X-Request-Id:
+              $ref: "#/components/headers/X-Request-Id"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/User"
+        "400":
+          $ref: "#/components/responses/BadRequest"
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "403":
+          $ref: "#/components/responses/Forbidden"
+        "422":
+          $ref: "#/components/responses/ValidationError"
+        "429":
+          $ref: "#/components/responses/RateLimited"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+
+  # ---------------------------------------------------------------------------
+  # Users Individual Resource
+  # ---------------------------------------------------------------------------
+  /users/{user_id}:
+    # ---- Get User ----
+    get:
+      tags:
+        - Users
+      summary: Get a user by ID
+      description: Retrieve a single user by their unique identifier.
+      operationId: getUser
+      parameters:
+        - $ref: "#/components/parameters/PathUserId"
+      responses:
+        "200":
+          description: User found.
+          headers:
+            X-Request-Id:
+              $ref: "#/components/headers/X-Request-Id"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/User"
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "403":
+          $ref: "#/components/responses/Forbidden"
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "429":
+          $ref: "#/components/responses/RateLimited"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+
+    # ---- Update User (Partial) ----
+    patch:
+      tags:
+        - Users
+      summary: Update a user
+      description: |
+        Partially update a user resource. Only fields included in the request
+        body will be modified (patch semantics). Omitted fields remain unchanged.
+      operationId: updateUser
+      parameters:
+        - $ref: "#/components/parameters/PathUserId"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/UpdateUserRequest"
+      responses:
+        "200":
+          description: User updated successfully.
+          headers:
+            X-Request-Id:
+              $ref: "#/components/headers/X-Request-Id"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/User"
+        "400":
+          $ref: "#/components/responses/BadRequest"
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "403":
+          $ref: "#/components/responses/Forbidden"
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "422":
+          $ref: "#/components/responses/ValidationError"
+        "429":
+          $ref: "#/components/responses/RateLimited"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+
+    # ---- Delete User ----
+    delete:
+      tags:
+        - Users
+      summary: Delete a user
+      description: |
+        Permanently delete a user account and all associated data.
+        This action is irreversible.
+      operationId: deleteUser
+      parameters:
+        - $ref: "#/components/parameters/PathUserId"
+      responses:
+        "204":
+          description: User deleted successfully. No content returned.
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "403":
+          $ref: "#/components/responses/Forbidden"
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "429":
+          $ref: "#/components/responses/RateLimited"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
