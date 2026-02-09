@@ -104,4 +104,4 @@ Each agent declares per-phase model tier recommendations in its YAML frontmatter
 | Resource | Path | Description |
 |----------|------|-------------|
 | Skills catalog | [../skills/](../skills/) | 118 skills by category |
-| Commands reference | [../commands/](../commands/) | 50 slash commands |
+| Commands reference | [../commands/](../commands/) | 48 slash commands |

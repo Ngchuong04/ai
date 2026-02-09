@@ -203,11 +203,9 @@ cp -r ai/skills/[project]-* /path/to/skills-repo/ai/staging/skills/
 cp -r docs/extracted/* /path/to/skills-repo/ai/staging/docs/
 ```
 
-**After output:** Run `/skill-status` to verify skills are properly installed
-
 **After staging:** Run `/refine-staged` to consolidate patterns
 
-**Validation:** Files exist at expected paths. Skills appear in `/skill-status` output.
+**Validation:** Files exist at expected paths.
 
 ---
 
