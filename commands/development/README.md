@@ -43,7 +43,7 @@ Day-to-day coding, debugging, deployment, and workflow. Scaffolding, testing, re
 First, clone the repo:
 
 ```bash
-git clone https://github.com/wustep/ai-agent-toolkit ~/.ai-skills
+git clone https://github.com/wpank/ai ~/.ai-skills
 ```
 
 ### Cursor (per-project)

@@ -34,7 +34,7 @@
 ### Step 1: Clone this repo
 
 ```bash
-git clone https://github.com/wustep/ai-agent-toolkit ~/.ai-skills
+git clone https://github.com/wpank/ai ~/.ai-skills
 ```
 
 ### Step 2: Copy agents into your project

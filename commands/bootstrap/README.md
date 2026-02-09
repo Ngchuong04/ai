@@ -15,7 +15,7 @@ Project and infrastructure scaffolding from scratch. Use when starting a new pro
 First, clone the repo:
 
 ```bash
-git clone https://github.com/wustep/ai-agent-toolkit ~/.ai-skills
+git clone https://github.com/wpank/ai ~/.ai-skills
 ```
 
 ### Cursor (per-project)
