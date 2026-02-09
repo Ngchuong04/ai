@@ -1,0 +1,239 @@
+# =============================================================================
+# Comprehensive .dockerignore Template
+# =============================================================================
+# This file excludes unnecessary files from the Docker build context.
+# Benefits:
+# - Faster builds (smaller context to send to Docker daemon)
+# - Smaller images (no accidental inclusion of dev files)
+# - Better security (no secrets copied into images)
+#
+# Usage:
+#   Copy this file to your project root as ".dockerignore"
+#   Uncomment sections relevant to your stack
+#   Add project-specific exclusions as needed
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# Git
+# -----------------------------------------------------------------------------
+.git
+.gitignore
+.gitattributes
+.github
+
+# -----------------------------------------------------------------------------
+# IDE and Editors
+# -----------------------------------------------------------------------------
+.idea
+.vscode
+*.swp
+*.swo
+*~
+.project
+.classpath
+.settings
+*.sublime-*
+
+# -----------------------------------------------------------------------------
+# OS Files
+# -----------------------------------------------------------------------------
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# -----------------------------------------------------------------------------
+# Docker
+# -----------------------------------------------------------------------------
+Dockerfile*
+docker-compose*.yml
+docker-compose*.yaml
+.docker
+.dockerignore
+
+# -----------------------------------------------------------------------------
+# Documentation
+# -----------------------------------------------------------------------------
+README.md
+README.rst
+CHANGELOG.md
+CONTRIBUTING.md
+LICENSE
+docs/
+*.md
+
+# -----------------------------------------------------------------------------
+# CI/CD
+# -----------------------------------------------------------------------------
+.github
+.gitlab-ci.yml
+.travis.yml
+.circleci
+Jenkinsfile
+azure-pipelines.yml
+bitbucket-pipelines.yml
+
+# -----------------------------------------------------------------------------
+# Testing
+# -----------------------------------------------------------------------------
+coverage/
+.coverage
+htmlcov/
+.nyc_output
+*.lcov
+test/
+tests/
+__tests__/
+spec/
+*.test.js
+*.test.ts
+*.spec.js
+*.spec.ts
+jest.config.*
+vitest.config.*
+cypress/
+playwright/
+e2e/
+
+# -----------------------------------------------------------------------------
+# Environment and Secrets (CRITICAL - never include in images)
+# -----------------------------------------------------------------------------
+.env
+.env.*
+.env.local
+.env.*.local
+*.pem
+*.key
+*.crt
+secrets/
+credentials/
+.secrets
+config/secrets.*
+
+# -----------------------------------------------------------------------------
+# Logs
+# -----------------------------------------------------------------------------
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+pnpm-debug.log*
+
+# -----------------------------------------------------------------------------
+# Node.js (uncomment if using Node.js)
+# -----------------------------------------------------------------------------
+# node_modules/
+# .npm
+# .yarn
+# .pnpm-store
+# package-lock.json  # Uncomment if you want to rebuild deps in container
+# yarn.lock          # Uncomment if you want to rebuild deps in container
+# .next/
+# .nuxt/
+# dist/
+# build/
+# out/
+# .turbo
+# .vercel
+# storybook-static/
+
+# -----------------------------------------------------------------------------
+# Python (uncomment if using Python)
+# -----------------------------------------------------------------------------
+# __pycache__/
+# *.py[cod]
+# *$py.class
+# *.so
+# .Python
+# venv/
+# .venv/
+# env/
+# ENV/
+# .eggs/
+# *.egg-info/
+# *.egg
+# .mypy_cache/
+# .pytest_cache/
+# .ruff_cache/
+# .tox/
+# .nox/
+# pip-wheel-metadata/
+
+# -----------------------------------------------------------------------------
+# Go (uncomment if using Go)
+# -----------------------------------------------------------------------------
+# vendor/  # Uncomment if vendoring and want to download fresh
+# *.exe
+# *.exe~
+# *.dll
+# *.so
+# *.dylib
+# *.test
+# *.out
+# go.work
+
+# -----------------------------------------------------------------------------
+# Rust (uncomment if using Rust)
+# -----------------------------------------------------------------------------
+# target/
+# Cargo.lock  # Uncomment for libraries, keep for binaries
+# *.rlib
+# *.rmeta
+
+# -----------------------------------------------------------------------------
+# Java/Kotlin (uncomment if using JVM languages)
+# -----------------------------------------------------------------------------
+# target/
+# build/
+# out/
+# *.class
+# *.jar
+# *.war
+# *.ear
+# .gradle/
+# gradle/
+# gradlew
+# gradlew.bat
+
+# -----------------------------------------------------------------------------
+# Ruby (uncomment if using Ruby)
+# -----------------------------------------------------------------------------
+# vendor/bundle/
+# .bundle/
+# *.gem
+# Gemfile.lock  # Uncomment if you want to rebuild deps in container
+
+# -----------------------------------------------------------------------------
+# Terraform/Infrastructure (uncomment if applicable)
+# -----------------------------------------------------------------------------
+# .terraform/
+# *.tfstate
+# *.tfstate.*
+# terraform.tfvars
+# *.tfvars
+
+# -----------------------------------------------------------------------------
+# Kubernetes (uncomment if applicable)
+# -----------------------------------------------------------------------------
+# *.kubeconfig
+# kubeconfig
+# charts/
+# helmfile.yaml
+
+# -----------------------------------------------------------------------------
+# Misc Development Files
+# -----------------------------------------------------------------------------
+Makefile
+Taskfile.yml
+*.bak
+*.tmp
+*.temp
+tmp/
+temp/
+.cache/

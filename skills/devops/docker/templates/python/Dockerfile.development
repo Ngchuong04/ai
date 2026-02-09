@@ -1,0 +1,83 @@
+# =============================================================================
+# Python Development Dockerfile
+# =============================================================================
+# Development-optimized build with:
+# - Hot reloading support via volume mounts
+# - All dependencies including dev/test packages
+# - Virtual environment for isolation
+# - Compatible with editable installs (pip install -e)
+#
+# Usage with docker-compose (recommended):
+#   See templates/compose/docker-compose.development.yml
+#
+# Usage standalone:
+#   docker build -f Dockerfile.development -t <app-name>:dev .
+#   docker run -p 8000:8000 -v $(pwd):/app <app-name>:dev
+#
+# Customize:
+#   - Replace <app-name> with your application name
+#   - Adjust PYTHON_VERSION to match your project
+#   - Modify ports as needed
+# =============================================================================
+
+FROM python:3.12-slim AS development
+
+# Add labels
+LABEL maintainer="your-team@example.com"
+LABEL description="Development Python environment"
+
+# Prevent Python from writing bytecode and buffering stdout/stderr
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1
+
+# Create non-root user (consistent with production)
+RUN groupadd -g 1001 appgroup && \
+    useradd -r -u 1001 -g appgroup appuser
+
+WORKDIR /app
+
+# Install development tools (optional, uncomment as needed)
+# RUN apt-get update && apt-get install -y --no-install-recommends \
+#     git \
+#     curl \
+#     && rm -rf /var/lib/apt/lists/*
+
+# Create virtual environment
+RUN python -m venv /opt/venv && \
+    chown -R appuser:appgroup /opt/venv
+
+# Activate virtual environment
+ENV PATH="/opt/venv/bin:$PATH"
+
+# Copy requirements files
+COPY --chown=appuser:appgroup requirements*.txt ./
+
+# Install dependencies (including dev dependencies)
+# Assumes requirements-dev.txt exists; adjust as needed
+RUN pip install --no-cache-dir --upgrade pip && \
+    pip install --no-cache-dir -r requirements.txt && \
+    ([ -f requirements-dev.txt ] && pip install --no-cache-dir -r requirements-dev.txt || true)
+
+# Copy application code
+# Note: In development, source is typically mounted as a volume
+# This COPY is for initial setup or non-volume usage
+COPY --chown=appuser:appgroup . .
+
+# Install package in editable mode if setup.py or pyproject.toml exists
+RUN ([ -f setup.py ] || [ -f pyproject.toml ]) && pip install -e . || true
+
+# Change ownership of working directory
+RUN chown -R appuser:appgroup /app
+
+# Switch to non-root user
+USER 1001
+
+# Expose application port
+EXPOSE 8000
+
+# Development command with auto-reload
+# Adjust based on your framework:
+#   - FastAPI/Starlette: ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000", "--reload"]
+#   - Flask: ["flask", "run", "--host", "0.0.0.0", "--port", "8000", "--reload"]
+#   - Django: ["python", "manage.py", "runserver", "0.0.0.0:8000"]
+CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000", "--reload"]

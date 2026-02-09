@@ -1,0 +1,102 @@
+# =============================================================================
+# Go Production Dockerfile
+# =============================================================================
+# Multi-stage build optimized for production with:
+# - Static binary compilation (CGO disabled)
+# - Scratch image for minimal size (~5-15MB final image)
+# - No shell, no package manager, minimal attack surface
+# - Optional distroless alternative for debugging
+#
+# Usage:
+#   docker build -f Dockerfile.production -t <app-name>:prod .
+#
+# Customize:
+#   - Replace <app-name> with your application name
+#   - Adjust GO_VERSION to match your project
+#   - Modify EXPOSE port if needed
+#   - Update BUILD_TARGET for your main package location
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# Stage 1: Builder
+# Purpose: Compile Go application as a static binary
+# -----------------------------------------------------------------------------
+FROM golang:1.22-alpine AS builder
+
+# Build arguments for customization
+ARG BUILD_TARGET=./cmd/server
+ARG VERSION=dev
+ARG COMMIT=unknown
+
+WORKDIR /app
+
+# Install git for fetching dependencies (if using private repos)
+# Remove if not needed
+RUN apk add --no-cache git ca-certificates tzdata
+
+# Copy go.mod and go.sum first for dependency caching
+COPY go.mod go.sum ./
+
+# Download dependencies
+# Uses cache mount for faster subsequent builds
+RUN go mod download && go mod verify
+
+# Copy source code
+COPY . .
+
+# Build static binary
+# CGO_ENABLED=0: Pure Go binary, no C dependencies
+# -ldflags="-w -s": Strip debug info for smaller binary
+# -ldflags with version: Embed version info at build time
+RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build \
+    -ldflags="-w -s -X main.Version=${VERSION} -X main.Commit=${COMMIT}" \
+    -o /server ${BUILD_TARGET}
+
+# -----------------------------------------------------------------------------
+# Stage 2: Production Runtime (Scratch)
+# Purpose: Absolute minimal image - just the binary
+# Note: No shell, no debugging tools. Use distroless if you need debugging.
+# -----------------------------------------------------------------------------
+FROM scratch AS production
+
+# Add labels for maintainability
+LABEL maintainer="your-team@example.com"
+LABEL description="Production Go application"
+
+# Copy CA certificates for HTTPS requests
+COPY --from=builder /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/
+
+# Copy timezone data (optional, for time-aware applications)
+COPY --from=builder /usr/share/zoneinfo /usr/share/zoneinfo
+
+# Copy the binary
+COPY --from=builder /server /server
+
+# Expose application port
+EXPOSE 8080
+
+# Run as non-root (numeric UID, since scratch has no /etc/passwd)
+USER 1001
+
+# Start the application
+ENTRYPOINT ["/server"]
+
+
+# =============================================================================
+# Alternative: Distroless Runtime
+# Uncomment below and comment out the scratch stage above if you need:
+# - Debugging capabilities (gcr.io/distroless/static-debian12:debug)
+# - Shell access for troubleshooting
+# - Slightly larger image (~2MB vs ~0MB for scratch)
+# =============================================================================
+# FROM gcr.io/distroless/static-debian12 AS production
+#
+# LABEL maintainer="your-team@example.com"
+# LABEL description="Production Go application"
+#
+# COPY --from=builder /server /server
+#
+# EXPOSE 8080
+# USER nonroot:nonroot
+#
+# ENTRYPOINT ["/server"]

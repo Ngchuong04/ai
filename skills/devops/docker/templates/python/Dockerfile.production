@@ -1,0 +1,98 @@
+# =============================================================================
+# Python Production Dockerfile
+# =============================================================================
+# Multi-stage build optimized for production with:
+# - Minimal image size (slim-based)
+# - Virtual environment for clean dependency isolation
+# - Non-root user for security
+# - Health check included
+#
+# Usage:
+#   docker build -f Dockerfile.production -t <app-name>:prod .
+#
+# Customize:
+#   - Replace <app-name> with your application name
+#   - Adjust PYTHON_VERSION to match your project
+#   - Modify EXPOSE port if needed
+#   - Update health check endpoint
+#   - Change CMD to match your application entry point
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# Stage 1: Builder
+# Purpose: Install dependencies in a virtual environment
+# -----------------------------------------------------------------------------
+FROM python:3.12-slim AS builder
+
+# Prevent Python from writing bytecode and buffering stdout/stderr
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1
+
+WORKDIR /app
+
+# Create virtual environment
+RUN python -m venv /opt/venv
+
+# Activate virtual environment for subsequent commands
+ENV PATH="/opt/venv/bin:$PATH"
+
+# Install build dependencies if needed
+# Uncomment if you have packages that require compilation
+# RUN apt-get update && apt-get install -y --no-install-recommends \
+#     build-essential \
+#     && rm -rf /var/lib/apt/lists/*
+
+# Copy requirements first for layer caching
+COPY requirements.txt .
+
+# Install Python dependencies
+# --no-cache-dir: Don't store pip cache (reduces image size)
+RUN pip install --no-cache-dir --upgrade pip && \
+    pip install --no-cache-dir -r requirements.txt
+
+# -----------------------------------------------------------------------------
+# Stage 2: Production Runtime
+# Purpose: Minimal production image
+# -----------------------------------------------------------------------------
+FROM python:3.12-slim AS production
+
+# Add labels for maintainability
+LABEL maintainer="your-team@example.com"
+LABEL description="Production Python application"
+
+# Prevent Python from writing bytecode and buffering stdout/stderr
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1
+
+# Create non-root user for security
+RUN groupadd -g 1001 appgroup && \
+    useradd -r -u 1001 -g appgroup appuser
+
+WORKDIR /app
+
+# Copy virtual environment from builder
+COPY --from=builder /opt/venv /opt/venv
+
+# Activate virtual environment
+ENV PATH="/opt/venv/bin:$PATH"
+
+# Copy application code
+COPY --chown=appuser:appgroup . .
+
+# Switch to non-root user
+USER 1001
+
+# Expose application port
+EXPOSE 8000
+
+# Health check configuration
+# Adjust the endpoint to match your health check route
+HEALTHCHECK --interval=30s --timeout=10s --start-period=10s --retries=3 \
+  CMD python -c "import urllib.request; urllib.request.urlopen('http://localhost:8000/health')" || exit 1
+
+# Start the application
+# Adjust based on your framework:
+#   - FastAPI/Starlette: ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]
+#   - Flask with Gunicorn: ["gunicorn", "-b", "0.0.0.0:8000", "app:app"]
+#   - Django: ["gunicorn", "-b", "0.0.0.0:8000", "myproject.wsgi:application"]
+CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]

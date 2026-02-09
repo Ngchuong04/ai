@@ -1,0 +1,67 @@
+# =============================================================================
+# Node.js Development Dockerfile
+# =============================================================================
+# Development-optimized build with:
+# - Hot reloading support via volume mounts
+# - Debug port exposed (9229)
+# - All dependencies including devDependencies
+# - Non-root user for consistency with production
+#
+# Usage with docker-compose (recommended):
+#   See templates/compose/docker-compose.development.yml
+#
+# Usage standalone:
+#   docker build -f Dockerfile.development -t <app-name>:dev .
+#   docker run -p 3000:3000 -p 9229:9229 -v $(pwd):/app -v /app/node_modules <app-name>:dev
+#
+# Customize:
+#   - Replace <app-name> with your application name
+#   - Adjust NODE_VERSION to match your project
+#   - Modify ports as needed
+# =============================================================================
+
+FROM node:20-alpine AS development
+
+# Add labels
+LABEL maintainer="your-team@example.com"
+LABEL description="Development Node.js environment"
+
+# Development mode
+ENV NODE_ENV=development
+
+# Create non-root user (consistent with production)
+RUN addgroup -g 1001 -S nodejs && \
+    adduser -S appuser -u 1001 -G nodejs
+
+WORKDIR /app
+
+# Change ownership of working directory
+RUN chown -R appuser:nodejs /app
+
+# Copy package files
+COPY --chown=appuser:nodejs package.json package-lock.json* ./
+
+# Install ALL dependencies (including devDependencies)
+RUN npm install
+
+# Copy source code
+# Note: In development, source is typically mounted as a volume
+# This COPY is for initial setup or non-volume usage
+COPY --chown=appuser:nodejs . .
+
+# Switch to non-root user
+USER 1001
+
+# Expose application port
+EXPOSE 3000
+
+# Expose Node.js debug port
+EXPOSE 9229
+
+# Development command with debugging enabled
+# Adjust based on your package.json scripts
+# Common patterns:
+#   - "npm run dev" for Next.js, Vite, etc.
+#   - "npm run start:dev" for NestJS
+#   - "npx nodemon" for Express
+CMD ["npm", "run", "dev"]

@@ -1,0 +1,249 @@
+# =============================================================================
+# Production Docker Compose
+# =============================================================================
+# Production-ready configuration with:
+# - Health checks on all services
+# - Resource limits to prevent resource exhaustion
+# - Network isolation (frontend/backend separation)
+# - Secret management
+# - Restart policies for resilience
+# - Logging configuration
+#
+# Usage:
+#   docker-compose -f docker-compose.production.yml up -d
+#
+# Customize:
+#   - Replace <app-name> with your application name
+#   - Adjust resource limits based on your infrastructure
+#   - Update secrets configuration
+#   - Modify network names as needed
+# =============================================================================
+
+version: '3.8'
+
+services:
+  # ---------------------------------------------------------------------------
+  # Application Service
+  # ---------------------------------------------------------------------------
+  app:
+    image: ${REGISTRY:-}/<app-name>:${TAG:-latest}
+    build:
+      context: .
+      dockerfile: Dockerfile.production
+      target: production
+    container_name: <app-name>-app
+    restart: unless-stopped
+    
+    # Environment variables (non-sensitive)
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+      # Reference secrets via _FILE suffix pattern
+      - DATABASE_URL_FILE=/run/secrets/database_url
+    
+    # Mount secrets
+    secrets:
+      - database_url
+      - api_key
+    
+    # Network configuration
+    networks:
+      - frontend
+      - backend
+    
+    # Only expose what's necessary
+    ports:
+      - "3000:3000"
+    
+    # Health check
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:3000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    
+    # Resource limits
+    deploy:
+      resources:
+        limits:
+          cpus: '1.0'
+          memory: 1G
+        reservations:
+          cpus: '0.25'
+          memory: 256M
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+        window: 120s
+    
+    # Security options
+    security_opt:
+      - no-new-privileges:true
+    
+    # Logging configuration
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+    
+    # Dependencies
+    depends_on:
+      db:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+
+  # ---------------------------------------------------------------------------
+  # Database Service
+  # ---------------------------------------------------------------------------
+  db:
+    image: postgres:16-alpine
+    container_name: <app-name>-db
+    restart: unless-stopped
+    
+    # Use secrets for credentials (more secure than environment variables)
+    environment:
+      - POSTGRES_DB_FILE=/run/secrets/postgres_db
+      - POSTGRES_USER_FILE=/run/secrets/postgres_user
+      - POSTGRES_PASSWORD_FILE=/run/secrets/postgres_password
+    
+    secrets:
+      - postgres_db
+      - postgres_user
+      - postgres_password
+    
+    # Backend network only (not exposed externally)
+    networks:
+      - backend
+    
+    # No ports exposed to host - internal access only
+    # Uncomment below only if you need external access
+    # ports:
+    #   - "5432:5432"
+    
+    # Persistent storage
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    
+    # Health check
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $$(cat /run/secrets/postgres_user) -d $$(cat /run/secrets/postgres_db)"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+    
+    # Resource limits
+    deploy:
+      resources:
+        limits:
+          cpus: '1.0'
+          memory: 1G
+        reservations:
+          cpus: '0.25'
+          memory: 256M
+    
+    # Security
+    security_opt:
+      - no-new-privileges:true
+    
+    # Logging
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+  # ---------------------------------------------------------------------------
+  # Redis Service (Caching/Sessions)
+  # ---------------------------------------------------------------------------
+  redis:
+    image: redis:7-alpine
+    container_name: <app-name>-redis
+    restart: unless-stopped
+    
+    # Redis configuration
+    command: redis-server --appendonly yes --maxmemory 256mb --maxmemory-policy allkeys-lru
+    
+    # Backend network only
+    networks:
+      - backend
+    
+    # Persistent storage (optional, remove for cache-only)
+    volumes:
+      - redis_data:/data
+    
+    # Health check
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 5s
+    
+    # Resource limits
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 512M
+        reservations:
+          cpus: '0.1'
+          memory: 128M
+    
+    # Security
+    security_opt:
+      - no-new-privileges:true
+    
+    # Logging
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+# -----------------------------------------------------------------------------
+# Networks
+# -----------------------------------------------------------------------------
+networks:
+  # Frontend network - services that need external access
+  frontend:
+    driver: bridge
+  
+  # Backend network - internal services only
+  backend:
+    driver: bridge
+    internal: true  # No external access
+
+# -----------------------------------------------------------------------------
+# Volumes
+# -----------------------------------------------------------------------------
+volumes:
+  postgres_data:
+    driver: local
+  redis_data:
+    driver: local
+
+# -----------------------------------------------------------------------------
+# Secrets
+# Create these before running:
+#   echo "your-database-url" | docker secret create database_url -
+#   echo "your-api-key" | docker secret create api_key -
+# Or use file-based secrets in development (see below)
+# -----------------------------------------------------------------------------
+secrets:
+  database_url:
+    # For Docker Swarm: external: true
+    # For Docker Compose (development/testing):
+    file: ./secrets/database_url.txt
+  api_key:
+    file: ./secrets/api_key.txt
+  postgres_db:
+    file: ./secrets/postgres_db.txt
+  postgres_user:
+    file: ./secrets/postgres_user.txt
+  postgres_password:
+    file: ./secrets/postgres_password.txt

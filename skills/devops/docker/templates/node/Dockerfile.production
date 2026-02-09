@@ -1,0 +1,98 @@
+# =============================================================================
+# Node.js Production Dockerfile
+# =============================================================================
+# Multi-stage build optimized for production with:
+# - Minimal image size (Alpine-based)
+# - Non-root user for security
+# - Proper layer caching
+# - Health check included
+#
+# Usage:
+#   docker build -f Dockerfile.production -t <app-name>:prod .
+#
+# Customize:
+#   - Replace <app-name> with your application name
+#   - Adjust NODE_VERSION to match your project
+#   - Modify EXPOSE port if needed
+#   - Update health check endpoint
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# Stage 1: Dependencies
+# Purpose: Install production dependencies in isolation for cache efficiency
+# -----------------------------------------------------------------------------
+FROM node:20-alpine AS deps
+WORKDIR /app
+
+# Copy only package files for dependency caching
+COPY package.json package-lock.json* ./
+
+# Install production dependencies only
+# --only=production: Skip devDependencies
+# npm cache clean: Reduce layer size
+RUN npm ci --only=production && npm cache clean --force
+
+# -----------------------------------------------------------------------------
+# Stage 2: Builder
+# Purpose: Build the application with all dependencies
+# -----------------------------------------------------------------------------
+FROM node:20-alpine AS builder
+WORKDIR /app
+
+# Copy package files
+COPY package.json package-lock.json* ./
+
+# Install all dependencies (including dev for building)
+RUN npm ci
+
+# Copy source code
+COPY . .
+
+# Build the application
+# Adjust this command based on your build script
+RUN npm run build
+
+# Prune dev dependencies after build
+RUN npm prune --production
+
+# -----------------------------------------------------------------------------
+# Stage 3: Production Runtime
+# Purpose: Minimal production image with only runtime requirements
+# -----------------------------------------------------------------------------
+FROM node:20-alpine AS production
+
+# Add labels for maintainability
+LABEL maintainer="your-team@example.com"
+LABEL description="Production Node.js application"
+
+# Set Node.js to production mode
+ENV NODE_ENV=production
+
+# Create non-root user for security
+# Using specific UID/GID for consistency across environments
+RUN addgroup -g 1001 -S nodejs && \
+    adduser -S appuser -u 1001 -G nodejs
+
+WORKDIR /app
+
+# Copy production dependencies from deps stage
+COPY --from=deps --chown=appuser:nodejs /app/node_modules ./node_modules
+
+# Copy built application from builder stage
+COPY --from=builder --chown=appuser:nodejs /app/dist ./dist
+COPY --from=builder --chown=appuser:nodejs /app/package.json ./
+
+# Switch to non-root user
+USER 1001
+
+# Expose application port
+EXPOSE 3000
+
+# Health check configuration
+# Adjust the endpoint to match your health check route
+HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \
+  CMD wget --no-verbose --tries=1 --spider http://localhost:3000/health || exit 1
+
+# Start the application
+# Adjust the entry point to match your build output
+CMD ["node", "dist/index.js"]

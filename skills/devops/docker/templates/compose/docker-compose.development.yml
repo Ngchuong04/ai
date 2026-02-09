@@ -1,0 +1,182 @@
+# =============================================================================
+# Development Docker Compose
+# =============================================================================
+# Development-optimized configuration with:
+# - Volume mounts for hot reloading
+# - Debug ports exposed
+# - Relaxed resource limits
+# - Development-specific environment variables
+# - All ports accessible for debugging
+#
+# Usage:
+#   docker-compose -f docker-compose.development.yml up
+#
+# With live reload:
+#   docker-compose -f docker-compose.development.yml up --build
+#
+# Customize:
+#   - Replace <app-name> with your application name
+#   - Adjust volume mounts for your project structure
+#   - Modify ports as needed
+# =============================================================================
+
+version: '3.8'
+
+services:
+  # ---------------------------------------------------------------------------
+  # Application Service (Development)
+  # ---------------------------------------------------------------------------
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile.development
+      target: development
+    container_name: <app-name>-dev
+    
+    # Development environment
+    environment:
+      - NODE_ENV=development
+      - PORT=3000
+      - DEBUG=*
+      - DATABASE_URL=postgresql://devuser:devpassword@db:5432/devdb
+      - REDIS_URL=redis://redis:6379
+    
+    # Volume mounts for hot reloading
+    volumes:
+      # Mount source code
+      - .:/app
+      # Anonymous volume for node_modules (prevents host override)
+      - /app/node_modules
+      # Anonymous volume for build output
+      - /app/dist
+      # Mount for faster npm installs (optional)
+      - node_modules_cache:/app/.npm
+    
+    # Expose all development ports
+    ports:
+      - "3000:3000"   # Application
+      - "9229:9229"   # Node.js debug port
+    
+    # Development network
+    networks:
+      - development
+    
+    # Dependencies
+    depends_on:
+      - db
+      - redis
+    
+    # Use tty for better log output
+    tty: true
+    stdin_open: true
+
+  # ---------------------------------------------------------------------------
+  # Database Service (Development)
+  # ---------------------------------------------------------------------------
+  db:
+    image: postgres:16-alpine
+    container_name: <app-name>-db-dev
+    
+    # Simple environment variables for development
+    # (Use secrets in production!)
+    environment:
+      - POSTGRES_DB=devdb
+      - POSTGRES_USER=devuser
+      - POSTGRES_PASSWORD=devpassword
+    
+    # Expose port for local database tools
+    ports:
+      - "5432:5432"
+    
+    networks:
+      - development
+    
+    # Persistent storage (survives container restarts)
+    volumes:
+      - postgres_dev_data:/var/lib/postgresql/data
+      # Optional: Mount init scripts
+      # - ./scripts/init-db:/docker-entrypoint-initdb.d
+    
+    # Health check
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U devuser -d devdb"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  # ---------------------------------------------------------------------------
+  # Redis Service (Development)
+  # ---------------------------------------------------------------------------
+  redis:
+    image: redis:7-alpine
+    container_name: <app-name>-redis-dev
+    
+    # Expose port for local Redis tools
+    ports:
+      - "6379:6379"
+    
+    networks:
+      - development
+    
+    # Health check
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  # ---------------------------------------------------------------------------
+  # Optional: Database Admin UI
+  # ---------------------------------------------------------------------------
+  # adminer:
+  #   image: adminer
+  #   container_name: <app-name>-adminer
+  #   ports:
+  #     - "8080:8080"
+  #   networks:
+  #     - development
+  #   depends_on:
+  #     - db
+
+  # ---------------------------------------------------------------------------
+  # Optional: Redis Admin UI
+  # ---------------------------------------------------------------------------
+  # redis-commander:
+  #   image: rediscommander/redis-commander
+  #   container_name: <app-name>-redis-ui
+  #   environment:
+  #     - REDIS_HOSTS=local:redis:6379
+  #   ports:
+  #     - "8081:8081"
+  #   networks:
+  #     - development
+  #   depends_on:
+  #     - redis
+
+  # ---------------------------------------------------------------------------
+  # Optional: MailHog (Email Testing)
+  # ---------------------------------------------------------------------------
+  # mailhog:
+  #   image: mailhog/mailhog
+  #   container_name: <app-name>-mail
+  #   ports:
+  #     - "1025:1025"  # SMTP
+  #     - "8025:8025"  # Web UI
+  #   networks:
+  #     - development
+
+# -----------------------------------------------------------------------------
+# Networks
+# -----------------------------------------------------------------------------
+networks:
+  development:
+    driver: bridge
+
+# -----------------------------------------------------------------------------
+# Volumes
+# -----------------------------------------------------------------------------
+volumes:
+  postgres_dev_data:
+    driver: local
+  node_modules_cache:
+    driver: local
