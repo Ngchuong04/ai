@@ -27,7 +27,7 @@ Production Prometheus setup covering scrape configuration, service discovery, re
 ## Installation
 
 ```bash
-skills add prometheus
+npx skills add prometheus
 ```
 
 ### Manual Installation

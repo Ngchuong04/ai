@@ -23,7 +23,7 @@ Build system for JavaScript/TypeScript monorepos. Caches task outputs and runs t
 ## Installation
 
 ```bash
-skills add turborepo
+npx skills add turborepo
 ```
 
 ### Manual Installation

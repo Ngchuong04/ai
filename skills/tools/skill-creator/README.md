@@ -22,7 +22,7 @@ Guide for creating effective AI agent skills — modular packages that extend ag
 ## Installation
 
 ```bash
-skills add skill-creator
+npx skills add skill-creator
 ```
 
 ### Manual Installation

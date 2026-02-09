@@ -22,7 +22,7 @@ Searchable UI/UX design databases with CLI for generating complete design system
 ## Installation
 
 ```bash
-skills add ui-ux-pro-max
+npx skills add ui-ux-pro-max
 ```
 
 ### Manual Installation

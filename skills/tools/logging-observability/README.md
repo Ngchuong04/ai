@@ -25,7 +25,7 @@ Structured logging, distributed tracing, and metrics collection patterns for bui
 ## Installation
 
 ```bash
-skills add logging-observability
+npx skills add logging-observability
 ```
 
 ### Manual Installation

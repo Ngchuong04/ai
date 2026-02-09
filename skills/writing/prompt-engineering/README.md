@@ -27,7 +27,7 @@ Master advanced prompt engineering techniques to maximize LLM performance, relia
 ## Installation
 
 ```bash
-skills add prompt-engineering
+npx skills add prompt-engineering
 ```
 
 ### Manual Installation

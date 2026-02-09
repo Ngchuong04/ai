@@ -20,7 +20,7 @@ Curated collection of 10 professional color and typography themes for styling ar
 ## Installation
 
 ```bash
-skills add theme-factory
+npx skills add theme-factory
 ```
 
 ### Manual Installation

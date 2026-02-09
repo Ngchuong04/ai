@@ -25,7 +25,7 @@ Practical estimation techniques for software tasks — methods comparison, decom
 ## Installation
 
 ```bash
-skills add estimation-patterns
+npx skills add estimation-patterns
 ```
 
 ### Manual Installation

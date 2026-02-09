@@ -23,7 +23,7 @@ Minimize total codebase size through ruthless simplification. Measure success by
 ## Installation
 
 ```bash
-skills add reducing-entropy
+npx skills add reducing-entropy
 ```
 
 ### Manual Installation

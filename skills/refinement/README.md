@@ -12,7 +12,7 @@ Skills for consolidating and refining extracted content from multiple projects i
 
 ```bash
 # Add individual skills
-skills add staged-content-refinement
+npx skills add staged-content-refinement
 ```
 
 ## See Also

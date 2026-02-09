@@ -23,7 +23,7 @@ Backend architecture patterns for building maintainable, testable systems: Clean
 ## Installation
 
 ```bash
-skills add architecture-patterns
+npx skills add architecture-patterns
 ```
 
 ### Manual Installation

@@ -21,16 +21,16 @@ Skills for building commands, managing releases, creating skills, orchestrating 
 
 ```bash
 # Add individual skills
-skills add command-creator
-skills add find-skills
-skills add finishing-branch
-skills add logging-observability
-skills add meme-factory
-skills add release-skills
-skills add session-handoff
-skills add skill-creator
-skills add skill-judge
-skills add subagent-driven-development
+npx skills add command-creator
+npx skills add find-skills
+npx skills add finishing-branch
+npx skills add logging-observability
+npx skills add meme-factory
+npx skills add release-skills
+npx skills add session-handoff
+npx skills add skill-creator
+npx skills add skill-judge
+npx skills add subagent-driven-development
 ```
 
 ## See Also

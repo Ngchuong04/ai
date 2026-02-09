@@ -24,7 +24,7 @@ Create comprehensive handoff documents that enable fresh AI agents to seamlessly
 ## Installation
 
 ```bash
-skills add session-handoff
+npx skills add session-handoff
 ```
 
 ### Manual Installation

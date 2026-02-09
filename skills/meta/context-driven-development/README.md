@@ -24,7 +24,7 @@ Treat project context as a managed artifact alongside code. Use structured conte
 ## Installation
 
 ```bash
-skills add context-driven-development
+npx skills add context-driven-development
 ```
 
 ### Manual Installation

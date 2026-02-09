@@ -22,7 +22,7 @@ Patterns for creating design systems with personality and distinctive aesthetics
 ## Installation
 
 ```bash
-skills add distinctive-design-systems
+npx skills add distinctive-design-systems
 ```
 
 ### Manual Installation

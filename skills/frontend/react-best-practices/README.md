@@ -25,7 +25,7 @@ Comprehensive performance optimization guide for React and Next.js applications 
 ## Installation
 
 ```bash
-skills add react-best-practices
+npx skills add react-best-practices
 ```
 
 ### Manual Installation

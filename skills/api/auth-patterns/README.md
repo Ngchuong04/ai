@@ -26,7 +26,7 @@ Authentication and authorization patterns — JWT, OAuth 2.0, sessions, RBAC/ABA
 ## Installation
 
 ```bash
-skills add auth-patterns
+npx skills add auth-patterns
 ```
 
 ### Manual Installation

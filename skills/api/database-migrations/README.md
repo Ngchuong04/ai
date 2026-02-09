@@ -26,7 +26,7 @@ Safe, zero-downtime database migration strategies — schema evolution, rollback
 ## Installation
 
 ```bash
-skills add database-migrations
+npx skills add database-migrations
 ```
 
 ### Manual Installation

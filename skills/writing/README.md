@@ -20,15 +20,15 @@ Skills for producing clear prose, technical documentation, illustrations, diagra
 
 ```bash
 # Add individual skills
-skills add article-illustrator
-skills add brainstorming
-skills add clear-writing
-skills add game-changing-features
-skills add mermaid-diagrams
-skills add persona-docs
-skills add professional-communication
-skills add prompt-engineering
-skills add schema-markup
+npx skills add article-illustrator
+npx skills add brainstorming
+npx skills add clear-writing
+npx skills add game-changing-features
+npx skills add mermaid-diagrams
+npx skills add persona-docs
+npx skills add professional-communication
+npx skills add prompt-engineering
+npx skills add schema-markup
 ```
 
 ## See Also

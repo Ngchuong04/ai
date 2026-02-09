@@ -23,7 +23,7 @@ Systematic task implementation using TDD, phase checkpoints, and structured comm
 ## Installation
 
 ```bash
-skills add workflow-patterns
+npx skills add workflow-patterns
 ```
 
 ### Manual Installation

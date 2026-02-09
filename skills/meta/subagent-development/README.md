@@ -22,7 +22,7 @@ Execute implementation plans by dispatching fresh subagents per task, with two-s
 ## Installation
 
 ```bash
-skills add subagent-development
+npx skills add subagent-development
 ```
 
 ### Manual Installation

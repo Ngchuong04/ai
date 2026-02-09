@@ -26,7 +26,7 @@ Patterns and conventions for building native mobile applications with Expo Route
 ## Installation
 
 ```bash
-skills add native-ui
+npx skills add native-ui
 ```
 
 ### Manual Installation

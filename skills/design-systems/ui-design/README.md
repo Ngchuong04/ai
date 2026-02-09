@@ -28,7 +28,7 @@ The definitive guide for building production-grade web interfaces. Covers the fu
 ## Installation
 
 ```bash
-skills add ui-design
+npx skills add ui-design
 ```
 
 ### Manual Installation

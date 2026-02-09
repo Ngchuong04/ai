@@ -22,7 +22,7 @@ Evaluate Agent Skill quality against official specifications. Scores skills acro
 ## Installation
 
 ```bash
-skills add skill-judge
+npx skills add skill-judge
 ```
 
 ### Manual Installation

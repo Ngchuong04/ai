@@ -28,7 +28,7 @@ Meta-skill that orchestrates comprehensive testing across a project by coordinat
 ## Installation
 
 ```bash
-skills add testing-workflow
+npx skills add testing-workflow
 ```
 
 ### Manual Installation

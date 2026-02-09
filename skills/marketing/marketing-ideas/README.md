@@ -23,7 +23,7 @@ Library of 139 proven SaaS marketing tactics with implementation guidance. Searc
 ## Installation
 
 ```bash
-skills add marketing-ideas
+npx skills add marketing-ideas
 ```
 
 ### Manual Installation

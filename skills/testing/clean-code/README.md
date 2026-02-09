@@ -23,7 +23,7 @@ Pragmatic coding standards for writing clean, maintainable code — naming, func
 ## Installation
 
 ```bash
-skills add clean-code
+npx skills add clean-code
 ```
 
 ### Manual Installation

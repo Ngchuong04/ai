@@ -25,7 +25,7 @@ Plan content aligned with user personas and journey stages. Content strategy bri
 ## Installation
 
 ```bash
-skills add content-strategy
+npx skills add content-strategy
 ```
 
 ### Manual Installation

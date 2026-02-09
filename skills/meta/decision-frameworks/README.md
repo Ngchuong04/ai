@@ -25,7 +25,7 @@ Structured decision-making patterns for common engineering choices — library s
 ## Installation
 
 ```bash
-skills add decision-frameworks
+npx skills add decision-frameworks
 ```
 
 ### Manual Installation

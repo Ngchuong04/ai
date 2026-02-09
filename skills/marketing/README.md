@@ -20,15 +20,15 @@ Skills for marketing strategy, copywriting, conversion rate optimization, and gr
 
 ```bash
 # Add individual skills
-skills add content-strategy
-skills add copywriting
-skills add marketing-ideas
-skills add marketing-psychology
-skills add onboarding-cro
-skills add page-cro
-skills add signup-flow-cro
-skills add social-content
-skills add startup-metrics
+npx skills add content-strategy
+npx skills add copywriting
+npx skills add marketing-ideas
+npx skills add marketing-psychology
+npx skills add onboarding-cro
+npx skills add page-cro
+npx skills add signup-flow-cro
+npx skills add social-content
+npx skills add startup-metrics
 ```
 
 ## See Also

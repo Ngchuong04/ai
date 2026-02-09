@@ -28,7 +28,7 @@ Caching strategies, invalidation, eviction policies, HTTP caching, distributed c
 ## Installation
 
 ```bash
-skills add caching
+npx skills add caching
 ```
 
 ### Manual Installation

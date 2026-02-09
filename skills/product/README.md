@@ -12,7 +12,7 @@ Skills for product metrics, KPI tracking, and data-driven product decisions. Cov
 
 ```bash
 # Add individual skills
-skills add startup-metrics
+npx skills add startup-metrics
 ```
 
 ## See Also

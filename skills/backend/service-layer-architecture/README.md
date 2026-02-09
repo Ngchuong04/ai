@@ -21,7 +21,7 @@ Controller-service-query layered API architecture with data enrichment and paral
 ## Installation
 
 ```bash
-skills add service-layer-architecture
+npx skills add service-layer-architecture
 ```
 
 ### Manual Installation

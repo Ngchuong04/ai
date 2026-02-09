@@ -21,7 +21,7 @@ Generate memes using the free memegen.link API and textual Markdown meme formats
 ## Installation
 
 ```bash
-skills add meme-factory
+npx skills add meme-factory
 ```
 
 ### Manual Installation

@@ -15,10 +15,10 @@ Skills for building real-time features including WebSocket servers, event stream
 
 ```bash
 # Add individual skills
-skills add dual-stream-architecture
-skills add realtime-react-hooks
-skills add resilient-connections
-skills add websocket-hub-patterns
+npx skills add dual-stream-architecture
+npx skills add realtime-react-hooks
+npx skills add resilient-connections
+npx skills add websocket-hub-patterns
 ```
 
 ## See Also

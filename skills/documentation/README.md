@@ -13,9 +13,9 @@ Skills for creating and maintaining high-quality technical documentation through
 ## Installation
 
 ```bash
-skills add adr-patterns
-skills add docs-organization
-skills add prd-patterns
+npx skills add adr-patterns
+npx skills add docs-organization
+npx skills add prd-patterns
 ```
 
 ## See Also

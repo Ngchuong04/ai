@@ -18,7 +18,7 @@ Complete guide to building AI chat applications with Vercel AI SDK. Orchestrates
 ## Installation
 
 ```bash
-skills add ai-chat-application
+npx skills add ai-chat-application
 ```
 
 ### Manual Installation
@@ -63,7 +63,6 @@ cp -r ~/.ai-skills/skills/meta/ai-chat-application ~/.claude/skills/ai-chat-appl
 - `ai-streaming-routes` — API route patterns
 - `ai-message-handling` — Format conversion
 - `ai-tool-composition` — Tool factories
-- `ai-chat-ux-patterns` — Auto-scroll, loading
 ---
 
 Part of the [Meta](..) skill category.

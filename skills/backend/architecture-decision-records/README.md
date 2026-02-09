@@ -22,7 +22,7 @@ Lightweight documentation capturing the context, decision, and consequences of s
 ## Installation
 
 ```bash
-skills add architecture-decision-records
+npx skills add architecture-decision-records
 ```
 
 ### Manual Installation

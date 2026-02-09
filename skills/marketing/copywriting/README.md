@@ -24,7 +24,7 @@ Write clear, compelling marketing copy that drives action. Covers homepage, land
 ## Installation
 
 ```bash
-skills add copywriting
+npx skills add copywriting
 ```
 
 ### Manual Installation

@@ -20,7 +20,7 @@ Complete guide to building real-time dashboards with streaming data, WebSocket/S
 ## Installation
 
 ```bash
-skills add realtime-dashboard
+npx skills add realtime-dashboard
 ```
 
 ### Manual Installation

@@ -24,7 +24,7 @@ A systematic, scientific approach to finding and fixing bugs — replacing guess
 ## Installation
 
 ```bash
-skills add debugging
+npx skills add debugging
 ```
 
 ### Manual Installation

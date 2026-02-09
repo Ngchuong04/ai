@@ -27,22 +27,22 @@ Skills that orchestrate other skills, coordinate multi-step workflows, and provi
 
 ```bash
 # Add individual skills
-skills add 10x-patterns
-skills add ai-chat-application
-skills add auto-context
-skills add context-driven-development
-skills add decision-frameworks
-skills add design-system-creation
-skills add estimation-patterns
-skills add feature-specification
-skills add full-stack-feature
-skills add planning-with-files
-skills add production-readiness
-skills add project-documentation
-skills add realtime-dashboard
-skills add security-review
-skills add subagent-development
-skills add workflow-patterns
+npx skills add 10x-patterns
+npx skills add ai-chat-application
+npx skills add auto-context
+npx skills add context-driven-development
+npx skills add decision-frameworks
+npx skills add design-system-creation
+npx skills add estimation-patterns
+npx skills add feature-specification
+npx skills add full-stack-feature
+npx skills add planning-with-files
+npx skills add production-readiness
+npx skills add project-documentation
+npx skills add realtime-dashboard
+npx skills add security-review
+npx skills add subagent-development
+npx skills add workflow-patterns
 ```
 
 ## See Also

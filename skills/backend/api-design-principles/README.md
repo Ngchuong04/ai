@@ -28,7 +28,7 @@ Design intuitive, scalable REST and GraphQL APIs that developers love. Covers re
 ## Installation
 
 ```bash
-skills add api-design-principles
+npx skills add api-design-principles
 ```
 
 ### Manual Installation

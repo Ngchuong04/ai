@@ -25,7 +25,7 @@ Production Prometheus setup covering scrape configuration, service discovery, re
 ## Installation
 
 ```bash
-skills add prometheus-observability
+npx skills add prometheus-observability
 ```
 
 ### Manual Installation

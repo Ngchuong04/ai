@@ -23,7 +23,7 @@ Lightweight documentation capturing the context, decision, and consequences of s
 ## Installation
 
 ```bash
-skills add adr-patterns
+npx skills add adr-patterns
 ```
 
 ### Manual Installation

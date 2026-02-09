@@ -24,7 +24,7 @@ Build production-ready component libraries with Tailwind CSS using CVA, compound
 ## Installation
 
 ```bash
-skills add tailwind-design-system
+npx skills add tailwind-design-system
 ```
 
 ### Manual Installation

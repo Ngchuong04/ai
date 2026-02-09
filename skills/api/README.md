@@ -19,18 +19,18 @@ Comprehensive API design and development patterns. Covers REST and GraphQL desig
 
 ```bash
 # Add all API skills
-skills add api-design
-skills add api-development
-skills add api-versioning
-skills add auth-patterns
-skills add caching
-skills add database-migrations
-skills add error-handling
-skills add rate-limiting
+npx skills add api-design
+npx skills add api-development
+npx skills add api-versioning
+npx skills add auth-patterns
+npx skills add caching
+npx skills add database-migrations
+npx skills add error-handling
+npx skills add rate-limiting
 
 # Or add individual skills
-skills add api-design
-skills add auth-patterns
+npx skills add api-design
+npx skills add auth-patterns
 ```
 
 ## See Also

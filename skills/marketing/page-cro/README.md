@@ -22,7 +22,7 @@ Analyze and optimize marketing pages for higher conversion rates. Covers homepag
 ## Installation
 
 ```bash
-skills add page-cro
+npx skills add page-cro
 ```
 
 ### Manual Installation

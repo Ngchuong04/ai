@@ -22,7 +22,7 @@ Meta-skill that orchestrates logging, monitoring, error handling, performance, s
 ## Installation
 
 ```bash
-skills add production-readiness
+npx skills add production-readiness
 ```
 
 ### Manual Installation

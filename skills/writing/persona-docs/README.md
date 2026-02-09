@@ -22,7 +22,7 @@ Create user-centered documentation that defines who a product is for and how the
 ## Installation
 
 ```bash
-skills add persona-docs
+npx skills add persona-docs
 ```
 
 ### Manual Installation

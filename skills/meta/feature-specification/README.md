@@ -21,7 +21,7 @@ Convert persona docs into detailed feature specifications with acceptance criter
 ## Installation
 
 ```bash
-skills add feature-specification
+npx skills add feature-specification
 ```
 
 ### Manual Installation

@@ -270,8 +270,6 @@ export function GridSkeleton({
 
 - **Meta-skill:** [ai/skills/meta/design-system-creation/](../../meta/design-system-creation/) — Complete design system workflow
 - [distinctive-design-systems](../distinctive-design-systems/) — Aesthetic matching for themed skeletons
-- [ai-chat-ux-patterns](../../ai-chat/ai-chat-ux-patterns/) — Thinking states and streaming indicators
-
 ---
 
 ## NEVER Do

@@ -23,7 +23,7 @@ Build flexible, maintainable React components using compound components, context
 ## Installation
 
 ```bash
-skills add composition-patterns
+npx skills add composition-patterns
 ```
 
 ### Manual Installation

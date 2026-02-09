@@ -27,7 +27,7 @@ Expert guide for building accessible, customizable UI components with shadcn/ui,
 ## Installation
 
 ```bash
-skills add shadcn-ui
+npx skills add shadcn-ui
 ```
 
 ### Manual Installation

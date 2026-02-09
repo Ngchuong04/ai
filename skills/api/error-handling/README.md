@@ -26,7 +26,7 @@ Error handling patterns across languages and layers — operational vs programme
 ## Installation
 
 ```bash
-skills add error-handling
+npx skills add error-handling
 ```
 
 ### Manual Installation

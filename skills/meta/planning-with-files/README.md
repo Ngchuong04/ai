@@ -26,7 +26,7 @@ File-based planning for complex tasks. Use persistent markdown files as working 
 ## Installation
 
 ```bash
-skills add planning-with-files
+npx skills add planning-with-files
 ```
 
 ### Manual Installation

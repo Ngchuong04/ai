@@ -6,18 +6,13 @@
 
 ### With [skills.sh](https://skills.sh)
 
-The fastest way to install individual skills using the Vercel `npx @anthropic/skills` CLI:
+The fastest way to install individual skills using the [skills.sh](https://skills.sh/docs) CLI:
 
 ```bash
-# Install a skill into your current project
-npx @anthropic/skills install <skill-name>
-
-# Search for available skills
-npx @anthropic/skills search "api design"
-
-# List installed skills
-npx @anthropic/skills list
+npx skills add <skill-name>
 ```
+
+See [skills.sh docs](https://skills.sh/docs) to browse, search, and list skills.
 
 ### Manual Installation
 

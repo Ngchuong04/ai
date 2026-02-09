@@ -26,7 +26,7 @@ Comprehensive Postgres performance guide — covering indexing, connection manag
 ## Installation
 
 ```bash
-skills add supabase-postgres
+npx skills add supabase-postgres
 ```
 
 ### Manual Installation

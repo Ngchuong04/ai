@@ -27,7 +27,7 @@ Rate limiting algorithms, implementation strategies, HTTP conventions, tiered li
 ## Installation
 
 ```bash
-skills add rate-limiting
+npx skills add rate-limiting
 ```
 
 ### Manual Installation

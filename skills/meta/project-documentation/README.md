@@ -23,7 +23,7 @@ Complete workflow for project documentation including ADRs, PRDs, personas, and 
 ## Installation
 
 ```bash
-skills add project-documentation
+npx skills add project-documentation
 ```
 
 ### Manual Installation

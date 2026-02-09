@@ -16,10 +16,10 @@ A curated collection of **115 skills**, **16 agents**, and **48 commands** for [
 
 ### Install Skills with [skills.sh](https://skills.sh)
 
-The fastest way to install individual skills:
+The fastest way to install individual skills using the [skills.sh](https://skills.sh/docs) CLI:
 
 ```bash
-npx @anthropic/skills install <skill-name>
+npx skills add <skill-name>
 ```
 
 ### Clone the Full Repo
@@ -38,18 +38,17 @@ Then copy what you need into your projects (see Installation below).
 
 ### Skills via [skills.sh](https://skills.sh)
 
-Individual skills can be installed directly using the Vercel `npx @anthropic/skills` CLI:
+Individual skills can be installed using the [skills.sh](https://skills.sh/docs) CLI (not an Anthropic repo):
 
 ```bash
-# Search for available skills
-npx @anthropic/skills search "react"
+# Install a skill
+npx skills add <skill-name>
 
-# Install a specific skill
-npx @anthropic/skills install <skill-name>
-
-# List installed skills
-npx @anthropic/skills list
+# Example: install from a specific repo
+npx skills add vercel-labs/agent-skills
 ```
+
+See [skills.sh docs](https://skills.sh/docs) for browse, search, and list.
 
 ### Agents & Commands (Manual Copy)
 
@@ -125,7 +124,6 @@ Building AI-powered chat interfaces with streaming, personas, and tool systems.
 
 | Skill | Description |
 |-------|-------------|
-| [ai-chat-ux-patterns](skills/ai-chat/ai-chat-ux-patterns/) | Auto-scroll, thinking indicators, loading states for chat UIs |
 | [ai-message-handling](skills/ai-chat/ai-message-handling/) | Message format conversion, sanitization, tool invocation handling |
 | [ai-sdk](skills/ai-chat/ai-sdk/) | Vercel AI SDK — generateText, streamText, useChat, tool calling |
 | [ai-streaming-routes](skills/ai-chat/ai-streaming-routes/) | Next.js App Router AI chat API routes with streaming |

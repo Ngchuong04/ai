@@ -25,7 +25,7 @@ Implement schema.org markup that helps search engines understand content and ena
 ## Installation
 
 ```bash
-skills add schema-markup
+npx skills add schema-markup
 ```
 
 ### Manual Installation

@@ -25,7 +25,7 @@ Upgrade React applications from class components to hooks, adopt concurrent feat
 ## Installation
 
 ```bash
-skills add react-modernization
+npx skills add react-modernization
 ```
 
 ### Manual Installation

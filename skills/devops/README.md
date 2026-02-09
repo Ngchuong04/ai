@@ -17,9 +17,9 @@ Skills for DevOps and infrastructure — containerization, orchestration, monito
 
 ```bash
 # Add individual skills
-skills add docker
-skills add kubernetes
-skills add prometheus
+npx skills add docker
+npx skills add kubernetes
+npx skills add prometheus
 ```
 
 ## See Also

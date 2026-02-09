@@ -22,7 +22,7 @@ Patterns for animating financial numbers with spring physics, formatting, and vi
 ## Installation
 
 ```bash
-skills add animated-financial-display
+npx skills add animated-financial-display
 ```
 
 ### Manual Installation

@@ -25,7 +25,7 @@ Systematic code review patterns covering security, performance, maintainability,
 ## Installation
 
 ```bash
-skills add code-review
+npx skills add code-review
 ```
 
 ### Manual Installation

@@ -21,7 +21,7 @@ Discover and install agent skills from the open skills ecosystem using `npx skil
 ## Installation
 
 ```bash
-skills add find-skills
+npx skills add find-skills
 ```
 
 ### Manual Installation

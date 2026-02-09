@@ -24,7 +24,7 @@ Automatically read relevant context before major actions. Loads TODO.md, roadmap
 ## Installation
 
 ```bash
-skills add auto-context
+npx skills add auto-context
 ```
 
 ### Manual Installation

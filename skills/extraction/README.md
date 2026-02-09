@@ -12,7 +12,7 @@ Skills for mining reusable patterns, design systems, and methodology documentati
 
 ```bash
 # Add individual skills
-skills add pattern-extraction
+npx skills add pattern-extraction
 ```
 
 ## See Also

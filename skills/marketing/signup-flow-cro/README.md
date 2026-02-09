@@ -26,7 +26,7 @@ Optimize signup, registration, and account creation flows. Reduce friction, incr
 ## Installation
 
 ```bash
-skills add signup-flow-cro
+npx skills add signup-flow-cro
 ```
 
 ### Manual Installation

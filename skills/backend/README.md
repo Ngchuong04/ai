@@ -22,21 +22,21 @@ Backend architecture patterns and infrastructure skills. Covers API design princ
 
 ```bash
 # Add all backend skills
-skills add api-design-principles
-skills add architecture-decision-records
-skills add architecture-patterns
-skills add event-store
-skills add go-concurrency
-skills add microservices-patterns
-skills add monorepo
-skills add nodejs-patterns
-skills add postgres-job-queue
-skills add service-layer-architecture
-skills add supabase-postgres
+npx skills add api-design-principles
+npx skills add architecture-decision-records
+npx skills add architecture-patterns
+npx skills add event-store
+npx skills add go-concurrency
+npx skills add microservices-patterns
+npx skills add monorepo
+npx skills add nodejs-patterns
+npx skills add postgres-job-queue
+npx skills add service-layer-architecture
+npx skills add supabase-postgres
 
 # Or add individual skills
-skills add architecture-patterns
-skills add nodejs-patterns
+npx skills add architecture-patterns
+npx skills add nodejs-patterns
 ```
 
 ## See Also

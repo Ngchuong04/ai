@@ -26,7 +26,7 @@ Build reliable, fast end-to-end test suites with Playwright and Cypress. Critica
 ## Installation
 
 ```bash
-skills add e2e-testing-patterns
+npx skills add e2e-testing-patterns
 ```
 
 ### Manual Installation

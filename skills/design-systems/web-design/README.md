@@ -26,7 +26,7 @@ CSS implementation patterns for layout, typography, color, spacing, and responsi
 ## Installation
 
 ```bash
-skills add web-design
+npx skills add web-design
 ```
 
 ### Manual Installation

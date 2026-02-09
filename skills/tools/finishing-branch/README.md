@@ -21,7 +21,7 @@ Complete development work by presenting structured options for merge, PR, or cle
 ## Installation
 
 ```bash
-skills add finishing-branch
+npx skills add finishing-branch
 ```
 
 ### Manual Installation

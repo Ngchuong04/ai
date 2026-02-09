@@ -25,7 +25,7 @@ Optimize post-signup onboarding, user activation, first-run experience, and time
 ## Installation
 
 ```bash
-skills add onboarding-cro
+npx skills add onboarding-cro
 ```
 
 ### Manual Installation

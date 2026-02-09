@@ -32,7 +32,7 @@ Next.js App Router best practices — Server Components, data fetching, caching,
 ## Installation
 
 ```bash
-skills add nextjs
+npx skills add nextjs
 ```
 
 ### Manual Installation

@@ -19,7 +19,7 @@ Write clear, effective professional messages that get read and acted upon. Route
 ## Installation
 
 ```bash
-skills add professional-communication
+npx skills add professional-communication
 ```
 
 ### Manual Installation

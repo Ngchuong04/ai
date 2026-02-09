@@ -28,7 +28,7 @@ Write clear, concise prose for humans — documentation, READMEs, API docs, comm
 ## Installation
 
 ```bash
-skills add clear-writing
+npx skills add clear-writing
 ```
 
 ### Manual Installation

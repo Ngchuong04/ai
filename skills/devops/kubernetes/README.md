@@ -29,7 +29,7 @@ Production-ready Kubernetes manifest generation covering Deployments, StatefulSe
 ## Installation
 
 ```bash
-skills add kubernetes
+npx skills add kubernetes
 ```
 
 ### Manual Installation

@@ -27,7 +27,7 @@ Modern responsive CSS patterns using container queries, fluid typography, CSS Gr
 ## Installation
 
 ```bash
-skills add responsive-design
+npx skills add responsive-design
 ```
 
 ### Manual Installation

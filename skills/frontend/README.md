@@ -24,9 +24,9 @@ Skills for frontend development — React component patterns, performance optimi
 
 ```bash
 # Add individual skills
-skills add nextjs
-skills add react-best-practices
-skills add shadcn-ui
+npx skills add nextjs
+npx skills add react-best-practices
+npx skills add shadcn-ui
 ```
 
 ## See Also

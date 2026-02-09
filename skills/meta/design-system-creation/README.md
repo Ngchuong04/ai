@@ -22,7 +22,7 @@ Complete workflow for creating distinctive design systems from scratch. Orchestr
 ## Installation
 
 ```bash
-skills add design-system-creation
+npx skills add design-system-creation
 ```
 
 ### Manual Installation

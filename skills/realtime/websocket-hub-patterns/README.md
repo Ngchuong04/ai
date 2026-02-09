@@ -22,7 +22,7 @@ Production patterns for horizontally-scalable WebSocket connections with Redis-b
 ## Installation
 
 ```bash
-skills add websocket-hub-patterns
+npx skills add websocket-hub-patterns
 ```
 
 ### Manual Installation

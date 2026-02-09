@@ -20,7 +20,7 @@ Patterns for building resilient API clients and real-time connections with retry
 ## Installation
 
 ```bash
-skills add resilient-connections
+npx skills add resilient-connections
 ```
 
 ### Manual Installation

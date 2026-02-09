@@ -27,7 +27,7 @@ Production-ready Node.js backend patterns — Express/Fastify setup, layered arc
 ## Installation
 
 ```bash
-skills add nodejs-patterns
+npx skills add nodejs-patterns
 ```
 
 ### Manual Installation

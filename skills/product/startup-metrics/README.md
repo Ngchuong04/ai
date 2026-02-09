@@ -26,7 +26,7 @@ Comprehensive guide to tracking, calculating, and optimizing key performance met
 ## Installation
 
 ```bash
-skills add startup-metrics
+npx skills add startup-metrics
 ```
 
 ### Manual Installation

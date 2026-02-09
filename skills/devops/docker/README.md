@@ -26,7 +26,7 @@ Container optimization, security hardening, multi-stage builds, and production d
 ## Installation
 
 ```bash
-skills add docker
+npx skills add docker
 ```
 
 ### Manual Installation

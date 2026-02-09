@@ -20,7 +20,7 @@ Meta-skill that orchestrates the full API development lifecycle — from design 
 ## Installation
 
 ```bash
-skills add api-development
+npx skills add api-development
 ```
 
 ### Manual Installation

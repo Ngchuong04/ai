@@ -19,14 +19,14 @@ Skills for writing clean code, reviewing changes, debugging issues, and building
 
 ```bash
 # Add individual skills
-skills add clean-code
-skills add code-review
-skills add debugging
-skills add e2e-testing-patterns
-skills add quality-gates
-skills add reducing-entropy
-skills add testing-patterns
-skills add testing-workflow
+npx skills add clean-code
+npx skills add code-review
+npx skills add debugging
+npx skills add e2e-testing-patterns
+npx skills add quality-gates
+npx skills add reducing-entropy
+npx skills add testing-patterns
+npx skills add testing-workflow
 ```
 
 ## See Also

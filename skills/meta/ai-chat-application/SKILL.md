@@ -29,10 +29,6 @@ Complete guide to building production AI chat applications with the Vercel AI SD
 │  - isLoading, error              │  - Message annotations   │
 │  See: vercel-ai-chat-integration │  See: vercel-ai-data-streaming
 ├─────────────────────────────────────────────────────────────┤
-│                    Chat UI Components                        │
-│  - Auto-scroll, Thinking indicator, Message rendering       │
-│  See: ai-chat-ux-patterns                                    │
-├─────────────────────────────────────────────────────────────┤
 │                    API Route (Next.js)                       │
 │  - createDataStreamResponse, streamText, message persistence│
 │  See: ai-streaming-routes                                    │
@@ -110,8 +106,6 @@ export function Chat({ id, initialMessages }: ChatProps) {
 
 Add auto-scroll and loading states.
 
-**Read:** `ai/skills/ai-chat/ai-chat-ux-patterns`
-
 ```tsx
 const [containerRef, endRef] = useScrollToBottom();
 
@@ -161,7 +155,6 @@ const cleanMessages = sanitizeResponseMessages(response.messages);
 | `ai-streaming-routes` | API route patterns |
 | `ai-message-handling` | Format conversion |
 | `ai-tool-composition` | Tool factories |
-| `ai-chat-ux-patterns` | Auto-scroll, loading |
 ---
 
 ## NEVER Do

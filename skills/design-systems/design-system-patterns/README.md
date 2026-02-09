@@ -24,7 +24,7 @@ Foundational design system architecture — token hierarchies, theming infrastru
 ## Installation
 
 ```bash
-skills add design-system-patterns
+npx skills add design-system-patterns
 ```
 
 ### Manual Installation

@@ -28,7 +28,7 @@ Create, schedule, and optimize social media content for LinkedIn, Twitter/X, Ins
 ## Installation
 
 ```bash
-skills add social-content
+npx skills add social-content
 ```
 
 ### Manual Installation

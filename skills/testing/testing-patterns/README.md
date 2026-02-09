@@ -28,7 +28,7 @@ Unit, integration, and E2E testing patterns with framework-specific guidance. Wr
 ## Installation
 
 ```bash
-skills add testing-patterns
+npx skills add testing-patterns
 ```
 
 ### Manual Installation

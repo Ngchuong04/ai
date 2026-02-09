@@ -22,7 +22,7 @@ Create memorable frontend interfaces that stand out from generic AI-generated ae
 ## Installation
 
 ```bash
-skills add frontend-design
+npx skills add frontend-design
 ```
 
 ### Manual Installation

@@ -28,7 +28,7 @@ Track, calculate, and optimize key performance metrics for different startup bus
 ## Installation
 
 ```bash
-skills add startup-metrics
+npx skills add startup-metrics
 ```
 
 ### Manual Installation

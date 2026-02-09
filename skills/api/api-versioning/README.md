@@ -26,7 +26,7 @@ API versioning strategies — URL path, header, query param, content negotiation
 ## Installation
 
 ```bash
-skills add api-versioning
+npx skills add api-versioning
 ```
 
 ### Manual Installation

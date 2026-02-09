@@ -22,7 +22,7 @@ Composition patterns for building flexible, maintainable React components. Avoid
 ## Installation
 
 ```bash
-skills add react-composition
+npx skills add react-composition
 ```
 
 ### Manual Installation

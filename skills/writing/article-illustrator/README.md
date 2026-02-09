@@ -23,7 +23,7 @@ Analyze articles, identify optimal illustration positions, and generate images u
 ## Installation
 
 ```bash
-skills add article-illustrator
+npx skills add article-illustrator
 ```
 
 ### Manual Installation

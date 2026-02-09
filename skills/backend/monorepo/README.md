@@ -26,7 +26,7 @@ Build and manage monorepos with Turborepo, Nx, and pnpm workspaces — covering 
 ## Installation
 
 ```bash
-skills add monorepo
+npx skills add monorepo
 ```
 
 ### Manual Installation

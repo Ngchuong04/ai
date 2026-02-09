@@ -27,7 +27,7 @@ Guide to designing event stores for event-sourced applications — covering even
 ## Installation
 
 ```bash
-skills add event-store
+npx skills add event-store
 ```
 
 ### Manual Installation

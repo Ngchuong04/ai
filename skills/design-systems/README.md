@@ -21,9 +21,9 @@ Skills for building scalable design system architecture — token hierarchies, t
 
 ```bash
 # Add individual skills
-skills add animated-financial-display
-skills add design-system-patterns
-skills add theme-factory
+npx skills add animated-financial-display
+npx skills add design-system-patterns
+npx skills add theme-factory
 ```
 
 ## See Also

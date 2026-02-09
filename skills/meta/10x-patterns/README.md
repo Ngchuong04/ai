@@ -24,7 +24,7 @@ Patterns and practices that dramatically accelerate development velocity. Covers
 ## Installation
 
 ```bash
-skills add 10x-patterns
+npx skills add 10x-patterns
 ```
 
 ### Manual Installation

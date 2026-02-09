@@ -22,7 +22,7 @@ Patterns for skeleton loaders, shimmer effects, and loading states that match de
 ## Installation
 
 ```bash
-skills add loading-state-patterns
+npx skills add loading-state-patterns
 ```
 
 ### Manual Installation
@@ -62,7 +62,6 @@ cp -r ~/.ai-skills/skills/design-systems/loading-state-patterns ~/.claude/skills
 ## Related Skills
 
 - [distinctive-design-systems](../distinctive-design-systems/) — Aesthetic matching for themed skeletons
-- [ai-chat-ux-patterns](../../ai-chat/ai-chat-ux-patterns/) — Thinking states and streaming indicators
 - [design-system-creation](../../meta/design-system-creation/) — Complete design system workflow
 
 ---

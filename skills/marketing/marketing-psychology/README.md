@@ -23,7 +23,7 @@
 ## Installation
 
 ```bash
-skills add marketing-psychology
+npx skills add marketing-psychology
 ```
 
 ### Manual Installation

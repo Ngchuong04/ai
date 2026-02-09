@@ -24,7 +24,7 @@ Universal release workflow with auto-detection, multi-language changelogs, seman
 ## Installation
 
 ```bash
-skills add release-skills
+npx skills add release-skills
 ```
 
 ### Manual Installation

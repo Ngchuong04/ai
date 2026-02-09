@@ -23,7 +23,7 @@ Performance optimization guide for React and Next.js applications. Patterns acro
 ## Installation
 
 ```bash
-skills add react-performance
+npx skills add react-performance
 ```
 
 ### Manual Installation

@@ -24,7 +24,7 @@ Explore ideas before implementation through collaborative dialogue. Turns ideas 
 ## Installation
 
 ```bash
-skills add brainstorming
+npx skills add brainstorming
 ```
 
 ### Manual Installation

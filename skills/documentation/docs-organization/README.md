@@ -22,7 +22,7 @@ Complete workflow for setting up and maintaining project documentation. Follows 
 ## Installation
 
 ```bash
-skills add docs-organization
+npx skills add docs-organization
 ```
 
 ### Manual Installation

@@ -23,7 +23,7 @@ Find 10x product opportunities and high-leverage improvements. A product strateg
 ## Installation
 
 ```bash
-skills add game-changing-features
+npx skills add game-changing-features
 ```
 
 ### Manual Installation

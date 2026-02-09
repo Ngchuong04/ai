@@ -24,7 +24,7 @@ Enforce quality checkpoints at every stage of the development lifecycle — pre-
 ## Installation
 
 ```bash
-skills add quality-gates
+npx skills add quality-gates
 ```
 
 ### Manual Installation

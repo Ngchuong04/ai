@@ -23,7 +23,7 @@ Meta-skill that orchestrates a comprehensive security review by coordinating aut
 ## Installation
 
 ```bash
-skills add security-review
+npx skills add security-review
 ```
 
 ### Manual Installation
