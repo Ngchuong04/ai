@@ -1,0 +1,37 @@
+# Marketing & Conversion Optimization
+
+Skills for marketing strategy, copywriting, conversion rate optimization, and growth. Covers the full marketing lifecycle from content planning and psychological principles through to signup flow optimization and metrics tracking.
+
+## Skills
+
+| Skill | Description |
+|-------|-------------|
+| [content-strategy](content-strategy/) | Plan content aligned with user personas and journey stages |
+| [copywriting](copywriting/) | Write clear, compelling marketing copy that drives action |
+| [marketing-ideas](marketing-ideas/) | Library of 139 proven SaaS marketing tactics with implementation guidance |
+| [marketing-psychology](marketing-psychology/) | 70+ mental models and psychological principles applied to marketing and conversion |
+| [onboarding-cro](onboarding-cro/) | Optimize post-signup onboarding, user activation, and time-to-value |
+| [page-cro](page-cro/) | Analyze and optimize marketing pages for higher conversion rates |
+| [signup-flow-cro](signup-flow-cro/) | Optimize signup, registration, and trial activation flows |
+| [social-content](social-content/) | Create, schedule, and optimize social media content across platforms |
+| [startup-metrics](startup-metrics/) | Track and optimize startup KPIs, unit economics, and growth efficiency metrics |
+
+## Installation
+
+```bash
+# Add individual skills
+skills add content-strategy
+skills add copywriting
+skills add marketing-ideas
+skills add marketing-psychology
+skills add onboarding-cro
+skills add page-cro
+skills add signup-flow-cro
+skills add social-content
+skills add startup-metrics
+```
+
+## See Also
+
+- [All Skills](../) — Complete skills catalog
+- [Agents](../../agents/) — Workflow agents

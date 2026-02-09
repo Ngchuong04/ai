@@ -1,0 +1,140 @@
+id,name,category,description,effort,impact,budget,stage,timeline
+1,Easy Keyword Ranking,Content & SEO,Target low-competition long-tail keywords to rank quickly in search results,low,medium,free,early,quick
+2,SEO Audit,Content & SEO,Comprehensive technical and content SEO audit to identify and fix ranking issues,medium,high,free,any,medium
+3,Glossary Marketing,Content & SEO,Create a comprehensive glossary of industry terms to capture informational search traffic,medium,medium,free,early,medium
+4,Programmatic SEO,Content & SEO,Auto-generate hundreds of landing pages from structured data for long-tail keyword coverage,high,high,low,growth,long
+5,Content Repurposing,Content & SEO,Transform existing content into multiple formats like video slides infographics and social posts,low,medium,free,any,quick
+6,Proprietary Data Content,Content & SEO,Publish original research and data that only your company can produce to earn backlinks and authority,high,high,medium,growth,long
+7,Internal Linking,Content & SEO,Optimize internal link structure to distribute page authority and improve crawlability,low,medium,free,any,quick
+8,Content Refreshing,Content & SEO,Update and republish older content with new data and insights to regain search rankings,low,medium,free,any,quick
+9,Knowledge Base SEO,Content & SEO,Build an SEO-optimized help center and knowledge base that ranks for problem-aware queries,medium,medium,free,early,medium
+10,Parasite SEO,Content & SEO,Publish optimized content on high-authority third-party platforms to piggyback on their domain authority,low,medium,free,early,quick
+11,Competitor Comparison Pages,Competitor,Create detailed comparison pages positioning your product against specific competitors,medium,high,free,early,medium
+12,Marketing Jiu-Jitsu,Competitor,Turn competitor weaknesses and negative sentiment into your own marketing advantage,low,medium,free,any,quick
+13,Competitive Ad Research,Competitor,Analyze competitor ad strategies and creatives to find gaps and opportunities for your campaigns,low,medium,free,any,quick
+14,Side Projects as Marketing,Free Tools,Build small standalone tools or apps that attract your target audience and funnel them to your product,high,high,low,early,long
+15,Engineering as Marketing,Free Tools,Create free utilities and tools that solve adjacent problems for your target users,high,high,low,early,long
+16,Importers as Marketing,Free Tools,Build data importers from competitor platforms to reduce switching friction and attract users,medium,high,low,growth,medium
+17,Quiz Marketing,Free Tools,Create interactive quizzes that educate prospects and capture leads through personalized results,medium,medium,low,any,medium
+18,Calculator Marketing,Free Tools,Build free calculators like ROI or pricing tools that attract and convert high-intent visitors,medium,high,low,early,medium
+19,Chrome Extensions,Free Tools,Develop a free browser extension that provides value and keeps your brand top of mind,high,medium,low,growth,long
+20,Microsites,Free Tools,Launch focused single-purpose websites targeting specific use cases or audiences,medium,medium,low,growth,medium
+21,Scanners,Free Tools,Build free scanning or grading tools that analyze prospects websites or setups and recommend improvements,high,high,low,early,long
+22,Public APIs,Free Tools,Offer a public API that developers can build on creating an ecosystem around your product,high,medium,low,growth,long
+23,LinkedIn Ads,Paid Ads,Run targeted B2B advertising campaigns on LinkedIn using job title and company filters,low,medium,high,growth,quick
+24,Google Ads,Paid Ads,Capture high-intent search traffic with pay-per-click ads on Google Search and Display Network,medium,high,high,any,quick
+25,Retargeting,Paid Ads,Re-engage website visitors who did not convert with targeted display and social ads,low,high,medium,growth,quick
+26,Podcast Ads,Paid Ads,Sponsor relevant podcasts with host-read ads to reach engaged niche audiences,low,medium,medium,growth,medium
+27,Newsletter Sponsorships,Paid Ads,Sponsor popular industry newsletters to get your product in front of a curated audience,low,medium,medium,growth,quick
+28,Reddit Ads,Paid Ads,Run targeted ads on Reddit reaching highly engaged niche communities and subreddits,low,medium,medium,early,quick
+29,Facebook/Instagram Ads,Paid Ads,Run visual ad campaigns on Meta platforms targeting specific demographics and interests,medium,medium,high,growth,quick
+30,Influencer Marketing,Paid Ads,Partner with industry influencers to create authentic sponsored content promoting your product,medium,high,high,growth,medium
+31,YouTube Ads,Paid Ads,Run pre-roll and in-stream video ads on YouTube targeting specific audiences and topics,medium,medium,high,growth,medium
+32,Twitter/X Ads,Paid Ads,Promote tweets and run ad campaigns to reach engaged audiences on Twitter/X,low,low,medium,growth,quick
+33,Quora Ads,Paid Ads,Run contextual ads on Quora targeting users actively searching for solutions to problems you solve,low,medium,low,early,quick
+34,TikTok Ads,Paid Ads,Create short-form video ads on TikTok to reach younger demographics with viral creative formats,medium,medium,high,growth,medium
+35,LinkedIn Audience Building,Social & Community,Build a professional following by consistently sharing industry insights and thought leadership on LinkedIn,medium,high,free,any,long
+36,Twitter/X Growth,Social & Community,Grow a following on Twitter/X through consistent posting engaging threads and community interaction,medium,medium,free,any,long
+37,Reddit Marketing,Social & Community,Authentically participate in relevant subreddits to build trust and organically share your product,low,medium,free,early,medium
+38,Community Building,Social & Community,Create and nurture an owned community around your product or industry topic,high,high,low,growth,long
+39,Discord Server,Social & Community,Launch a Discord server for your users and prospects to build real-time community engagement,medium,medium,free,early,medium
+40,Facebook Groups,Social & Community,Create or participate in Facebook Groups to build community and drive organic discussions,medium,medium,free,any,medium
+41,Slack Communities,Social & Community,Build a Slack community for your niche to foster professional discussions and product awareness,medium,medium,free,early,medium
+42,Short-form Video,Social & Community,Create TikTok Reels and Shorts content to reach new audiences with snackable educational content,medium,medium,low,any,medium
+43,Micro-influencers,Social & Community,Partner with niche micro-influencers who have small but highly engaged and relevant audiences,low,medium,low,early,quick
+44,Comment Marketing,Social & Community,Strategically leave valuable insightful comments on popular blogs social posts and forums,low,low,free,early,quick
+45,Founder Emails,Email,Send personal emails from the founder to new signups building authentic connection and trust,low,high,free,early,quick
+46,Welcome Sequences,Email,Create automated multi-step email sequences that onboard and educate new subscribers,medium,high,free,early,medium
+47,Onboarding Emails,Email,Design behavioral email sequences that guide new users to activation and first value moment,medium,high,free,early,medium
+48,Newsletter,Email,Publish a regular newsletter with valuable content to nurture leads and retain existing customers,medium,high,free,any,long
+49,Segmented Campaigns,Email,Send targeted email campaigns based on user behavior demographics and lifecycle stage,medium,high,low,growth,medium
+50,Win-back Campaigns,Email,Re-engage churned or inactive users with targeted email campaigns highlighting new features and value,low,medium,free,growth,quick
+51,Referral Emails,Email,Send automated emails prompting satisfied customers to refer friends and colleagues,low,medium,free,growth,quick
+52,Cold Email,Email,Run personalized outbound cold email campaigns to reach potential customers directly,medium,medium,low,early,medium
+53,Cart Abandonment,Email,Send automated emails to users who started but did not complete signup or purchase,low,high,free,growth,quick
+54,Affiliate Programs,Partnerships,Create an affiliate program that pays commissions to partners who refer paying customers,medium,high,medium,growth,medium
+55,Integration Marketing,Partnerships,Build integrations with popular tools in your ecosystem and co-market with those platforms,high,high,low,growth,long
+56,Co-marketing,Partnerships,Partner with complementary products for joint campaigns webinars or content to share audiences,medium,high,low,growth,medium
+57,Newsletter Swaps,Partnerships,Exchange promotional mentions with complementary newsletters to reach each others audiences,low,medium,free,early,quick
+58,API Partnerships,Partnerships,Create strategic API partnerships that embed your product into partner workflows and platforms,high,high,low,growth,long
+59,White Label,Partnerships,Offer a white-label version of your product that partners can rebrand and sell to their customers,high,high,medium,scale,long
+60,Reseller Programs,Partnerships,Build a reseller channel where partners sell your product to their existing customer base,medium,high,medium,scale,long
+61,Channel Partners,Partnerships,Develop partnerships with consultants agencies and VARs who recommend your product to clients,medium,high,medium,growth,long
+62,Expert Networks,Partnerships,Build a network of certified experts and consultants who implement and advocate for your product,high,medium,medium,scale,long
+63,Technology Partners,Partnerships,Form strategic partnerships with complementary technology providers for mutual referrals,medium,high,low,growth,medium
+64,Data Partnerships,Partnerships,Partner with data providers to enhance your product offering or create co-branded reports,medium,medium,medium,growth,medium
+65,Webinars,Events,Host educational webinars that demonstrate expertise and capture leads from a targeted audience,medium,high,low,any,medium
+66,Virtual Summits,Events,Organize multi-speaker virtual events bringing together industry leaders and attracting large audiences,high,high,medium,growth,long
+67,Meetups,Events,Organize or sponsor local meetups to build community and brand awareness in person,medium,medium,low,any,medium
+68,Workshops,Events,Run hands-on workshops teaching skills related to your product to attract qualified prospects,medium,high,low,any,medium
+69,Conference Speaking,Events,Submit talks to industry conferences to build authority and reach large professional audiences,medium,high,low,growth,long
+70,Conference Sponsorship,Events,Sponsor industry conferences to get booth presence brand visibility and attendee access,low,medium,high,growth,medium
+71,Hackathons,Events,Sponsor or organize hackathons that encourage developers to build on your platform or API,high,medium,medium,growth,long
+72,Office Hours,Events,Host regular open office hours where prospects can ask questions and get live help,low,medium,free,early,quick
+73,Press Coverage,PR & Media,Earn media coverage through newsworthy announcements compelling founder stories and PR outreach,medium,high,low,any,medium
+74,Analyst Relations,PR & Media,Build relationships with industry analysts to get featured in reports and recommendations,high,high,medium,scale,long
+75,Documentaries,PR & Media,Create documentary-style video content telling authentic stories about your industry or customers,high,medium,high,scale,long
+76,Media Acquisitions,PR & Media,Acquire existing media properties newsletters or publications to own distribution channels,high,high,high,scale,long
+77,Product Hunt,Launches,Launch on Product Hunt to get initial traction visibility and early adopter feedback,low,medium,free,pre-launch,quick
+78,Waitlists,Launches,Build pre-launch hype and demand by creating an exclusive waitlist with social sharing incentives,low,medium,free,pre-launch,quick
+79,Lifetime Deals,Launches,Offer limited-time lifetime pricing deals to generate upfront revenue and early user adoption,low,high,free,pre-launch,quick
+80,Giveaways,Launches,Run product giveaways and sweepstakes to generate buzz and collect leads,low,medium,low,any,quick
+81,Beta Programs,Launches,Launch a structured beta program to get early feedback and build a community of invested users,medium,medium,free,pre-launch,medium
+82,Early Access Pricing,Launches,Offer discounted early access pricing to reward first adopters and drive initial revenue,low,medium,free,pre-launch,quick
+83,Launch Events,Launches,Host a live virtual or in-person launch event to generate excitement and media coverage,medium,high,medium,pre-launch,medium
+84,Anniversary Campaigns,Launches,Celebrate company or product milestones with special promotions and retrospective content,low,medium,low,growth,quick
+85,Feature Launches,Launches,Treat major feature releases as mini-launches with dedicated campaigns and announcements,medium,medium,free,growth,medium
+86,Awards Submissions,Launches,Submit your product to industry award programs for credibility and press coverage,low,medium,low,any,medium
+87,Powered-by Marketing,Product-Led,Display a subtle branded badge or link in the free tier output driving organic referral traffic,low,high,free,early,quick
+88,Viral Invites,Product-Led,Build invite mechanisms into your product that incentivize users to bring in teammates and friends,medium,high,free,early,medium
+89,Freemium,Product-Led,Offer a generous free tier that delivers real value and naturally upgrades users to paid plans,medium,high,free,early,medium
+90,Free Migrations,Product-Led,Offer free migration services from competitor products to reduce switching costs and win customers,medium,high,low,growth,medium
+91,In-App Upsells,Product-Led,Strategically place upgrade prompts within the product at moments of high perceived value,low,high,free,growth,quick
+92,Referral Programs,Product-Led,Build a structured referral program with rewards for both referrer and referee,medium,high,low,growth,medium
+93,Viral Loops,Product-Led,Design product mechanics that naturally encourage sharing and create exponential growth loops,high,high,free,early,long
+94,Usage-Based Pricing,Product-Led,Implement pricing that scales with usage removing barriers to entry and aligning cost with value,medium,medium,free,growth,medium
+95,Interactive Demos,Product-Led,Create self-serve interactive product demos that let prospects experience value before signing up,medium,high,low,early,medium
+96,Public Roadmap,Product-Led,Share your product roadmap publicly to build transparency trust and community engagement,low,medium,free,early,quick
+97,Podcasts,Content Formats,Launch a branded podcast featuring industry discussions interviews and thought leadership,high,medium,low,any,long
+98,YouTube Channel,Content Formats,Build a YouTube channel with tutorials demos and educational content for your target audience,high,high,low,any,long
+99,Newsletter/Publication,Content Formats,Create a standalone newsletter or publication that provides standalone value beyond your product,high,high,low,any,long
+100,Case Studies,Content Formats,Publish detailed customer success stories demonstrating measurable outcomes and ROI,medium,high,free,growth,medium
+101,eBooks,Content Formats,Create comprehensive downloadable eBooks and guides as lead magnets for email capture,medium,medium,low,any,medium
+102,Book Marketing,Content Formats,Write and publish a book on your area of expertise to build authority and generate leads,high,high,medium,growth,long
+103,Templates/Kits,Content Formats,Create free downloadable templates toolkits and starter kits that attract your target audience,medium,high,free,any,medium
+104,Annual Reports,Content Formats,Publish annual industry reports with original data analysis and trends to establish thought leadership,high,high,medium,growth,long
+105,Industry Reports,Content Formats,Create in-depth industry reports and whitepapers that position your company as a domain authority,high,high,medium,growth,long
+106,Year Wraps,Content Formats,Publish year-in-review content highlighting trends achievements and predictions for the coming year,medium,medium,free,any,medium
+107,Benchmark Studies,Content Formats,Conduct and publish benchmark studies that help your audience measure their own performance,high,high,medium,growth,long
+108,Open Source,Content Formats,Open source useful tools or libraries to build developer community and brand awareness,high,high,free,any,long
+109,Challenges,Content Formats,Create time-bound challenges or programs that engage your audience around a specific goal or skill,medium,medium,low,any,medium
+110,Contests,Unconventional,Run creative contests with prizes to drive engagement social sharing and brand awareness,medium,medium,medium,any,medium
+111,Award Programs,Unconventional,Create your own industry awards program to position your brand as a category authority,high,high,medium,scale,long
+112,Charity Marketing,Unconventional,Align your brand with charitable causes by donating proceeds or volunteering to build goodwill,low,medium,low,any,medium
+113,Mystery/Easter Eggs,Unconventional,Hide fun surprises and easter eggs in your product to delight users and generate word of mouth,low,low,free,any,quick
+114,Guerrilla Marketing,Unconventional,Execute creative low-cost unconventional marketing tactics that generate outsized attention,medium,medium,low,any,quick
+115,Meme Marketing,Unconventional,Create and share relatable industry memes to build brand personality and social engagement,low,medium,free,any,quick
+116,Provocative Content,Unconventional,Publish bold contrarian takes and controversial opinions to spark debate and earn attention,low,medium,free,any,quick
+117,Stunt Marketing,Unconventional,Execute creative attention-grabbing marketing stunts that generate press coverage and social buzz,high,high,medium,growth,medium
+118,Cause Marketing,Unconventional,Build campaigns around social or environmental causes that resonate with your target audience,medium,medium,low,any,medium
+119,Brand Collaborations,Unconventional,Partner with non-competing brands for limited-edition collaborations that reach new audiences,medium,medium,medium,growth,medium
+120,Naming/Branding,Unconventional,Invest in distinctive naming terminology and brand identity that makes your product memorable,medium,medium,low,any,medium
+121,Pop-up Experiences,Unconventional,Create temporary physical or virtual immersive brand experiences that generate buzz and press,high,medium,high,scale,medium
+122,Reverse Trials,Unconventional,Give users full premium access first then downgrade to free tier to demonstrate value and drive upgrades,medium,high,free,early,medium
+123,App Marketplaces,Platforms,List your product on major app marketplaces and platform stores to reach built-in audiences,medium,high,low,growth,medium
+124,Review Sites,Platforms,Actively manage your presence on review sites like G2 and Capterra to drive high-intent traffic,medium,high,low,growth,medium
+125,YouTube SEO,Platforms,Optimize video content for YouTube search to capture audiences seeking tutorials and solutions,medium,high,free,any,medium
+126,Pinterest Marketing,Platforms,Create optimized pins and boards on Pinterest to drive traffic for visual and design-oriented products,medium,medium,free,any,medium
+127,LinkedIn Content,Platforms,Publish long-form articles and thought leadership content directly on LinkedIn for B2B reach,low,medium,free,any,quick
+128,Substack,Platforms,Launch a Substack publication to build a subscriber base with built-in discovery and growth tools,medium,medium,free,any,medium
+129,GitHub,Platforms,Maintain an active GitHub presence with useful repos and contributions for developer audience reach,medium,medium,free,any,long
+130,Product Directory Listings,Platforms,Submit your product to curated directories and listing sites to improve discoverability and SEO,low,medium,free,early,quick
+131,Market Expansion,International,Expand into new geographic markets with localized marketing messaging and distribution channels,high,high,high,scale,long
+132,Price Localization,International,Implement location-based pricing adjusted to local purchasing power to increase global conversions,medium,high,low,scale,medium
+133,DevRel,Developer,Build a developer relations program with evangelists docs and community engagement,high,high,medium,growth,long
+134,Certifications,Developer,Create a certification program that trains and credentials users on your product or methodology,high,medium,medium,scale,long
+135,Investor Marketing,Developer,Leverage investor networks and credibility for warm intros press and partnership opportunities,low,medium,free,early,quick
+136,Technical Blogging,Developer,Publish deep technical blog posts covering engineering challenges and solutions to attract developers,medium,high,free,any,medium
+137,Customer Referrals,Audience-Specific,Systematically ask happy customers for referrals testimonials and introductions to their peers,low,high,free,growth,quick
+138,Podcast Tours,Audience-Specific,Appear as a guest on relevant podcasts to share expertise and reach engaged niche audiences,medium,high,free,any,medium
+139,Customer Language,Audience-Specific,Use exact words phrases and terminology your customers use to make marketing copy resonate deeply,low,medium,free,any,quick
