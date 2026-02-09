@@ -116,20 +116,6 @@ cp -r ~/.ai-skills/commands/* ~/.claude/commands/
 
 115 modular AI agent skills organized across 17 categories. Each skill is a self-contained `SKILL.md` with patterns, code examples, anti-patterns, and decision frameworks.
 
-### AI Chat (10 skills)
-
-Building AI-powered chat interfaces with streaming, personas, and tool systems.
-
-| Skill | Description |
-|-------|-------------|
-| [ai-message-handling](skills/ai-chat/ai-message-handling/) | Message format conversion, sanitization, tool invocation handling |
-| [ai-sdk](skills/ai-chat/ai-sdk/) | Vercel AI SDK — generateText, streamText, useChat, tool calling |
-| [ai-streaming-routes](skills/ai-chat/ai-streaming-routes/) | Next.js App Router AI chat API routes with streaming |
-| [ai-tool-composition](skills/ai-chat/ai-tool-composition/) | Modular AI tool systems with Zod schemas and factories |
-| [vercel-ai-chat-integration](skills/ai-chat/vercel-ai-chat-integration/) | useChat hook integration — error handling, throttling, attachments |
-| [vercel-ai-data-streaming](skills/ai-chat/vercel-ai-data-streaming/) | Custom data events alongside AI text streams |
-| [vercel-ai-tool-architecture](skills/ai-chat/vercel-ai-tool-architecture/) | Toolkit composition, singleton factories, error wrappers |
-
 ### API (8 skills)
 
 Designing, securing, and scaling APIs.
