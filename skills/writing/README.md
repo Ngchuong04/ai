@@ -20,15 +20,15 @@ Skills for producing clear prose, technical documentation, illustrations, diagra
 
 ```bash
 # Add individual skills
-npx skills add article-illustrator
-npx skills add brainstorming
-npx skills add clear-writing
-npx skills add game-changing-features
-npx skills add mermaid-diagrams
-npx skills add persona-docs
-npx skills add professional-communication
-npx skills add prompt-engineering
-npx skills add schema-markup
+npx add https://github.com/wpank/ai/tree/main/skills/writing/article-illustrator
+npx add https://github.com/wpank/ai/tree/main/skills/writing/brainstorming
+npx add https://github.com/wpank/ai/tree/main/skills/writing/clear-writing
+npx add https://github.com/wpank/ai/tree/main/skills/writing/game-changing-features
+npx add https://github.com/wpank/ai/tree/main/skills/writing/mermaid-diagrams
+npx add https://github.com/wpank/ai/tree/main/skills/writing/persona-docs
+npx add https://github.com/wpank/ai/tree/main/skills/writing/professional-communication
+npx add https://github.com/wpank/ai/tree/main/skills/writing/prompt-engineering
+npx add https://github.com/wpank/ai/tree/main/skills/writing/schema-markup
 ```
 
 ## See Also

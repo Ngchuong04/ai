@@ -19,18 +19,18 @@ Comprehensive API design and development patterns. Covers REST and GraphQL desig
 
 ```bash
 # Add all API skills
-npx skills add api-design
-npx skills add api-development
-npx skills add api-versioning
-npx skills add auth-patterns
-npx skills add caching
-npx skills add database-migrations
-npx skills add error-handling
-npx skills add rate-limiting
+npx add https://github.com/wpank/ai/tree/main/skills/api/api-design
+npx add https://github.com/wpank/ai/tree/main/skills/api/api-development
+npx add https://github.com/wpank/ai/tree/main/skills/api/api-versioning
+npx add https://github.com/wpank/ai/tree/main/skills/api/auth-patterns
+npx add https://github.com/wpank/ai/tree/main/skills/api/caching
+npx add https://github.com/wpank/ai/tree/main/skills/api/database-migrations
+npx add https://github.com/wpank/ai/tree/main/skills/api/error-handling
+npx add https://github.com/wpank/ai/tree/main/skills/api/rate-limiting
 
 # Or add individual skills
-npx skills add api-design
-npx skills add auth-patterns
+npx add https://github.com/wpank/ai/tree/main/skills/api/api-design
+npx add https://github.com/wpank/ai/tree/main/skills/api/auth-patterns
 ```
 
 ## See Also

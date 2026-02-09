@@ -23,7 +23,7 @@ Backend architecture patterns for building maintainable, testable systems: Clean
 ## Installation
 
 ```bash
-npx skills add architecture-patterns
+npx add https://github.com/wpank/ai/tree/main/skills/backend/architecture-patterns
 ```
 
 ### Manual Installation

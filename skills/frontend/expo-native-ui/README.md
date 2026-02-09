@@ -27,7 +27,7 @@ Build beautiful native iOS/Android apps with Expo Router. Covers route structure
 ## Installation
 
 ```bash
-npx skills add expo-native-ui
+npx add https://github.com/wpank/ai/tree/main/skills/frontend/expo-native-ui
 ```
 
 ### Manual Installation

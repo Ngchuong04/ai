@@ -28,7 +28,7 @@ The definitive guide for building production-grade web interfaces. Covers the fu
 ## Installation
 
 ```bash
-npx skills add ui-design
+npx add https://github.com/wpank/ai/tree/main/skills/design-systems/ui-design
 ```
 
 ### Manual Installation

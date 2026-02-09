@@ -28,7 +28,7 @@ Track, calculate, and optimize key performance metrics for different startup bus
 ## Installation
 
 ```bash
-npx skills add startup-metrics
+npx add https://github.com/wpank/ai/tree/main/skills/marketing/startup-metrics
 ```
 
 ### Manual Installation

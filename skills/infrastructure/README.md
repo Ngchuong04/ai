@@ -13,9 +13,9 @@ Skills for containerization, orchestration, and observability — the foundation
 ## Installation
 
 ```bash
-npx skills add docker-environment-patterns
-npx skills add kubernetes-deployment-patterns
-npx skills add prometheus-observability
+npx add https://github.com/wpank/ai/tree/main/skills/infrastructure/docker-environment-patterns
+npx add https://github.com/wpank/ai/tree/main/skills/infrastructure/kubernetes-deployment-patterns
+npx add https://github.com/wpank/ai/tree/main/skills/infrastructure/prometheus-observability
 ```
 
 ## See Also

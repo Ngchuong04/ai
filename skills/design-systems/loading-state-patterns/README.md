@@ -22,7 +22,7 @@ Patterns for skeleton loaders, shimmer effects, and loading states that match de
 ## Installation
 
 ```bash
-npx skills add loading-state-patterns
+npx add https://github.com/wpank/ai/tree/main/skills/design-systems/loading-state-patterns
 ```
 
 ### Manual Installation

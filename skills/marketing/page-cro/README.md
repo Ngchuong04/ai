@@ -22,7 +22,7 @@ Analyze and optimize marketing pages for higher conversion rates. Covers homepag
 ## Installation
 
 ```bash
-npx skills add page-cro
+npx add https://github.com/wpank/ai/tree/main/skills/marketing/page-cro
 ```
 
 ### Manual Installation

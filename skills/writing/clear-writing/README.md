@@ -28,7 +28,7 @@ Write clear, concise prose for humans — documentation, READMEs, API docs, comm
 ## Installation
 
 ```bash
-npx skills add clear-writing
+npx add https://github.com/wpank/ai/tree/main/skills/writing/clear-writing
 ```
 
 ### Manual Installation

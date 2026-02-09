@@ -20,7 +20,7 @@ Production-ready job queue using PostgreSQL with priority scheduling, batch clai
 ## Installation
 
 ```bash
-npx skills add postgres-job-queue
+npx add https://github.com/wpank/ai/tree/main/skills/backend/postgres-job-queue
 ```
 
 ### Manual Installation

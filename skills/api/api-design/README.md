@@ -27,7 +27,7 @@ REST and GraphQL API design principles — resource modeling, HTTP semantics, pa
 ## Installation
 
 ```bash
-npx skills add api-design
+npx add https://github.com/wpank/ai/tree/main/skills/api/api-design
 ```
 
 ### Manual Installation

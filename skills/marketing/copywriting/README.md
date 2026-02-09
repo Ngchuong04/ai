@@ -24,7 +24,7 @@ Write clear, compelling marketing copy that drives action. Covers homepage, land
 ## Installation
 
 ```bash
-npx skills add copywriting
+npx add https://github.com/wpank/ai/tree/main/skills/marketing/copywriting
 ```
 
 ### Manual Installation

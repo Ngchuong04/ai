@@ -26,7 +26,7 @@ API versioning strategies — URL path, header, query param, content negotiation
 ## Installation
 
 ```bash
-npx skills add api-versioning
+npx add https://github.com/wpank/ai/tree/main/skills/api/api-versioning
 ```
 
 ### Manual Installation

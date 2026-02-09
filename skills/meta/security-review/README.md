@@ -23,7 +23,7 @@ Meta-skill that orchestrates a comprehensive security review by coordinating aut
 ## Installation
 
 ```bash
-npx skills add security-review
+npx add https://github.com/wpank/ai/tree/main/skills/meta/security-review
 ```
 
 ### Manual Installation

@@ -6,13 +6,13 @@
 
 ### With [skills.sh](https://skills.sh)
 
-The fastest way to install individual skills using the [skills.sh](https://skills.sh/docs) CLI:
+The fastest way to install a skill from this repo:
 
 ```bash
-npx skills add <skill-name>
+npx add https://github.com/wpank/ai/tree/main/skills/<category>/<skill-name>
 ```
 
-See [skills.sh docs](https://skills.sh/docs) to browse, search, and list skills.
+Example: `npx add https://github.com/wpank/ai/tree/main/skills/api/api-design`
 
 ### Manual Installation
 

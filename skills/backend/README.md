@@ -22,21 +22,21 @@ Backend architecture patterns and infrastructure skills. Covers API design princ
 
 ```bash
 # Add all backend skills
-npx skills add api-design-principles
-npx skills add architecture-decision-records
-npx skills add architecture-patterns
-npx skills add event-store
-npx skills add go-concurrency
-npx skills add microservices-patterns
-npx skills add monorepo
-npx skills add nodejs-patterns
-npx skills add postgres-job-queue
-npx skills add service-layer-architecture
-npx skills add supabase-postgres
+npx add https://github.com/wpank/ai/tree/main/skills/backend/api-design-principles
+npx add https://github.com/wpank/ai/tree/main/skills/backend/architecture-decision-records
+npx add https://github.com/wpank/ai/tree/main/skills/backend/architecture-patterns
+npx add https://github.com/wpank/ai/tree/main/skills/backend/event-store
+npx add https://github.com/wpank/ai/tree/main/skills/backend/go-concurrency
+npx add https://github.com/wpank/ai/tree/main/skills/backend/microservices-patterns
+npx add https://github.com/wpank/ai/tree/main/skills/backend/monorepo
+npx add https://github.com/wpank/ai/tree/main/skills/backend/nodejs-patterns
+npx add https://github.com/wpank/ai/tree/main/skills/backend/postgres-job-queue
+npx add https://github.com/wpank/ai/tree/main/skills/backend/service-layer-architecture
+npx add https://github.com/wpank/ai/tree/main/skills/backend/supabase-postgres
 
 # Or add individual skills
-npx skills add architecture-patterns
-npx skills add nodejs-patterns
+npx add https://github.com/wpank/ai/tree/main/skills/backend/architecture-patterns
+npx add https://github.com/wpank/ai/tree/main/skills/backend/nodejs-patterns
 ```
 
 ## See Also

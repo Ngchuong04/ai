@@ -19,14 +19,14 @@ Skills for writing clean code, reviewing changes, debugging issues, and building
 
 ```bash
 # Add individual skills
-npx skills add clean-code
-npx skills add code-review
-npx skills add debugging
-npx skills add e2e-testing-patterns
-npx skills add quality-gates
-npx skills add reducing-entropy
-npx skills add testing-patterns
-npx skills add testing-workflow
+npx add https://github.com/wpank/ai/tree/main/skills/testing/clean-code
+npx add https://github.com/wpank/ai/tree/main/skills/testing/code-review
+npx add https://github.com/wpank/ai/tree/main/skills/testing/debugging
+npx add https://github.com/wpank/ai/tree/main/skills/testing/e2e-testing-patterns
+npx add https://github.com/wpank/ai/tree/main/skills/testing/quality-gates
+npx add https://github.com/wpank/ai/tree/main/skills/testing/reducing-entropy
+npx add https://github.com/wpank/ai/tree/main/skills/testing/testing-patterns
+npx add https://github.com/wpank/ai/tree/main/skills/testing/testing-workflow
 ```
 
 ## See Also

@@ -26,7 +26,7 @@ Build and manage monorepos with Turborepo, Nx, and pnpm workspaces — covering 
 ## Installation
 
 ```bash
-npx skills add monorepo
+npx add https://github.com/wpank/ai/tree/main/skills/backend/monorepo
 ```
 
 ### Manual Installation

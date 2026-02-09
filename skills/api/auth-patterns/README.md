@@ -26,7 +26,7 @@ Authentication and authorization patterns — JWT, OAuth 2.0, sessions, RBAC/ABA
 ## Installation
 
 ```bash
-npx skills add auth-patterns
+npx add https://github.com/wpank/ai/tree/main/skills/api/auth-patterns
 ```
 
 ### Manual Installation

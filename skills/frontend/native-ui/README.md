@@ -26,7 +26,7 @@ Patterns and conventions for building native mobile applications with Expo Route
 ## Installation
 
 ```bash
-npx skills add native-ui
+npx add https://github.com/wpank/ai/tree/main/skills/frontend/native-ui
 ```
 
 ### Manual Installation

@@ -27,7 +27,7 @@ Guide to designing event stores for event-sourced applications — covering even
 ## Installation
 
 ```bash
-npx skills add event-store
+npx add https://github.com/wpank/ai/tree/main/skills/backend/event-store
 ```
 
 ### Manual Installation

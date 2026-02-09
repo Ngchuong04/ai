@@ -23,7 +23,7 @@ Build system for JavaScript/TypeScript monorepos. Caches task outputs and runs t
 ## Installation
 
 ```bash
-npx skills add turborepo
+npx add https://github.com/wpank/ai/tree/main/skills/devops/turborepo
 ```
 
 ### Manual Installation

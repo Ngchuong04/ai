@@ -18,7 +18,7 @@ Complete guide to building AI chat applications with Vercel AI SDK. Orchestrates
 ## Installation
 
 ```bash
-npx skills add ai-chat-application
+npx add https://github.com/wpank/ai/tree/main/skills/meta/ai-chat-application
 ```
 
 ### Manual Installation

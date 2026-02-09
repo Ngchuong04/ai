@@ -26,7 +26,7 @@ Error handling patterns across languages and layers — operational vs programme
 ## Installation
 
 ```bash
-npx skills add error-handling
+npx add https://github.com/wpank/ai/tree/main/skills/api/error-handling
 ```
 
 ### Manual Installation

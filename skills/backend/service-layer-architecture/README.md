@@ -21,7 +21,7 @@ Controller-service-query layered API architecture with data enrichment and paral
 ## Installation
 
 ```bash
-npx skills add service-layer-architecture
+npx add https://github.com/wpank/ai/tree/main/skills/backend/service-layer-architecture
 ```
 
 ### Manual Installation

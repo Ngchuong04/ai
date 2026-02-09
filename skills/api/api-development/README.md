@@ -20,7 +20,7 @@ Meta-skill that orchestrates the full API development lifecycle — from design 
 ## Installation
 
 ```bash
-npx skills add api-development
+npx add https://github.com/wpank/ai/tree/main/skills/api/api-development
 ```
 
 ### Manual Installation

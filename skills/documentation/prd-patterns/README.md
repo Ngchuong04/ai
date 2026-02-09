@@ -22,7 +22,7 @@ Bridge persona documentation and development by translating user needs, pain poi
 ## Installation
 
 ```bash
-npx skills add prd-patterns
+npx add https://github.com/wpank/ai/tree/main/skills/documentation/prd-patterns
 ```
 
 ### Manual Installation

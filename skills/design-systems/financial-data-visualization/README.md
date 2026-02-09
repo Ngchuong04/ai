@@ -22,7 +22,7 @@ Patterns for building dark-themed financial charts and data visualizations. Cove
 ## Installation
 
 ```bash
-npx skills add financial-data-visualization
+npx add https://github.com/wpank/ai/tree/main/skills/design-systems/financial-data-visualization
 ```
 
 ### Manual Installation

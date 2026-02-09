@@ -23,7 +23,7 @@ Create professional software diagrams using Mermaid's text-based syntax. Mermaid
 ## Installation
 
 ```bash
-npx skills add mermaid-diagrams
+npx add https://github.com/wpank/ai/tree/main/skills/writing/mermaid-diagrams
 ```
 
 ### Manual Installation

@@ -21,7 +21,7 @@ Discover and install agent skills from the open skills ecosystem using `npx skil
 ## Installation
 
 ```bash
-npx skills add find-skills
+npx add https://github.com/wpank/ai/tree/main/skills/tools/find-skills
 ```
 
 ### Manual Installation

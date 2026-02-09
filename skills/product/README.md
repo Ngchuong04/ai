@@ -12,7 +12,7 @@ Skills for product metrics, KPI tracking, and data-driven product decisions. Cov
 
 ```bash
 # Add individual skills
-npx skills add startup-metrics
+npx add https://github.com/wpank/ai/tree/main/skills/product/startup-metrics
 ```
 
 ## See Also

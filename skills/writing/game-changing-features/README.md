@@ -23,7 +23,7 @@ Find 10x product opportunities and high-leverage improvements. A product strateg
 ## Installation
 
 ```bash
-npx skills add game-changing-features
+npx add https://github.com/wpank/ai/tree/main/skills/writing/game-changing-features
 ```
 
 ### Manual Installation

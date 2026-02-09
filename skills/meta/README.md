@@ -27,22 +27,22 @@ Skills that orchestrate other skills, coordinate multi-step workflows, and provi
 
 ```bash
 # Add individual skills
-npx skills add 10x-patterns
-npx skills add ai-chat-application
-npx skills add auto-context
-npx skills add context-driven-development
-npx skills add decision-frameworks
-npx skills add design-system-creation
-npx skills add estimation-patterns
-npx skills add feature-specification
-npx skills add full-stack-feature
-npx skills add planning-with-files
-npx skills add production-readiness
-npx skills add project-documentation
-npx skills add realtime-dashboard
-npx skills add security-review
-npx skills add subagent-development
-npx skills add workflow-patterns
+npx add https://github.com/wpank/ai/tree/main/skills/meta/10x-patterns
+npx add https://github.com/wpank/ai/tree/main/skills/meta/ai-chat-application
+npx add https://github.com/wpank/ai/tree/main/skills/meta/auto-context
+npx add https://github.com/wpank/ai/tree/main/skills/meta/context-driven-development
+npx add https://github.com/wpank/ai/tree/main/skills/meta/decision-frameworks
+npx add https://github.com/wpank/ai/tree/main/skills/meta/design-system-creation
+npx add https://github.com/wpank/ai/tree/main/skills/meta/estimation-patterns
+npx add https://github.com/wpank/ai/tree/main/skills/meta/feature-specification
+npx add https://github.com/wpank/ai/tree/main/skills/meta/full-stack-feature
+npx add https://github.com/wpank/ai/tree/main/skills/meta/planning-with-files
+npx add https://github.com/wpank/ai/tree/main/skills/meta/production-readiness
+npx add https://github.com/wpank/ai/tree/main/skills/meta/project-documentation
+npx add https://github.com/wpank/ai/tree/main/skills/meta/realtime-dashboard
+npx add https://github.com/wpank/ai/tree/main/skills/meta/security-review
+npx add https://github.com/wpank/ai/tree/main/skills/meta/subagent-development
+npx add https://github.com/wpank/ai/tree/main/skills/meta/workflow-patterns
 ```
 
 ## See Also

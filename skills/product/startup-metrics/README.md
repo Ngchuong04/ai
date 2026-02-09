@@ -26,7 +26,7 @@ Comprehensive guide to tracking, calculating, and optimizing key performance met
 ## Installation
 
 ```bash
-npx skills add startup-metrics
+npx add https://github.com/wpank/ai/tree/main/skills/product/startup-metrics
 ```
 
 ### Manual Installation

@@ -27,7 +27,7 @@ Rate limiting algorithms, implementation strategies, HTTP conventions, tiered li
 ## Installation
 
 ```bash
-npx skills add rate-limiting
+npx add https://github.com/wpank/ai/tree/main/skills/api/rate-limiting
 ```
 
 ### Manual Installation

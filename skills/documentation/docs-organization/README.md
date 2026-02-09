@@ -22,7 +22,7 @@ Complete workflow for setting up and maintaining project documentation. Follows 
 ## Installation
 
 ```bash
-npx skills add docs-organization
+npx add https://github.com/wpank/ai/tree/main/skills/documentation/docs-organization
 ```
 
 ### Manual Installation

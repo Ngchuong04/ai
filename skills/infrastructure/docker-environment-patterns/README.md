@@ -23,7 +23,7 @@ Docker containerization expertise — multi-stage builds, image optimization, se
 ## Installation
 
 ```bash
-npx skills add docker-environment-patterns
+npx add https://github.com/wpank/ai/tree/main/skills/infrastructure/docker-environment-patterns
 ```
 
 ### Manual Installation

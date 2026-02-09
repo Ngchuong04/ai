@@ -25,7 +25,7 @@ Production-tested setup for Tailwind v4 with shadcn/ui. Prevents 8 documented er
 ## Installation
 
 ```bash
-npx skills add tailwind-v4-shadcn
+npx add https://github.com/wpank/ai/tree/main/skills/frontend/tailwind-v4-shadcn
 ```
 
 ### Manual Installation

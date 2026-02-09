@@ -21,16 +21,16 @@ Skills for building commands, managing releases, creating skills, orchestrating 
 
 ```bash
 # Add individual skills
-npx skills add command-creator
-npx skills add find-skills
-npx skills add finishing-branch
-npx skills add logging-observability
-npx skills add meme-factory
-npx skills add release-skills
-npx skills add session-handoff
-npx skills add skill-creator
-npx skills add skill-judge
-npx skills add subagent-driven-development
+npx add https://github.com/wpank/ai/tree/main/skills/tools/command-creator
+npx add https://github.com/wpank/ai/tree/main/skills/tools/find-skills
+npx add https://github.com/wpank/ai/tree/main/skills/tools/finishing-branch
+npx add https://github.com/wpank/ai/tree/main/skills/tools/logging-observability
+npx add https://github.com/wpank/ai/tree/main/skills/tools/meme-factory
+npx add https://github.com/wpank/ai/tree/main/skills/tools/release-skills
+npx add https://github.com/wpank/ai/tree/main/skills/tools/session-handoff
+npx add https://github.com/wpank/ai/tree/main/skills/tools/skill-creator
+npx add https://github.com/wpank/ai/tree/main/skills/tools/skill-judge
+npx add https://github.com/wpank/ai/tree/main/skills/tools/subagent-driven-development
 ```
 
 ## See Also

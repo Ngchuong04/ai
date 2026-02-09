@@ -22,7 +22,7 @@ Evaluate Agent Skill quality against official specifications. Scores skills acro
 ## Installation
 
 ```bash
-npx skills add skill-judge
+npx add https://github.com/wpank/ai/tree/main/skills/tools/skill-judge
 ```
 
 ### Manual Installation

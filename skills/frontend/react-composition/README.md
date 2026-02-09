@@ -22,7 +22,7 @@ Composition patterns for building flexible, maintainable React components. Avoid
 ## Installation
 
 ```bash
-npx skills add react-composition
+npx add https://github.com/wpank/ai/tree/main/skills/frontend/react-composition
 ```
 
 ### Manual Installation

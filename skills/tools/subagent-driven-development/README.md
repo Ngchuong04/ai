@@ -21,7 +21,7 @@ Execute implementation plans by dispatching a fresh subagent per task with two-s
 ## Installation
 
 ```bash
-npx skills add subagent-driven-development
+npx add https://github.com/wpank/ai/tree/main/skills/tools/subagent-driven-development
 ```
 
 ### Manual Installation

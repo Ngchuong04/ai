@@ -25,7 +25,7 @@ Production Prometheus setup covering scrape configuration, service discovery, re
 ## Installation
 
 ```bash
-npx skills add prometheus-observability
+npx add https://github.com/wpank/ai/tree/main/skills/infrastructure/prometheus-observability
 ```
 
 ### Manual Installation

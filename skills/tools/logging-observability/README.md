@@ -25,7 +25,7 @@ Structured logging, distributed tracing, and metrics collection patterns for bui
 ## Installation
 
 ```bash
-npx skills add logging-observability
+npx add https://github.com/wpank/ai/tree/main/skills/tools/logging-observability
 ```
 
 ### Manual Installation

@@ -29,7 +29,7 @@ Production-ready Kubernetes manifest generation covering Deployments, StatefulSe
 ## Installation
 
 ```bash
-npx skills add kubernetes
+npx add https://github.com/wpank/ai/tree/main/skills/devops/kubernetes
 ```
 
 ### Manual Installation

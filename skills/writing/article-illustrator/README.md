@@ -23,7 +23,7 @@ Analyze articles, identify optimal illustration positions, and generate images u
 ## Installation
 
 ```bash
-npx skills add article-illustrator
+npx add https://github.com/wpank/ai/tree/main/skills/writing/article-illustrator
 ```
 
 ### Manual Installation

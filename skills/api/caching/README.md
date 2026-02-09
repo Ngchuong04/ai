@@ -28,7 +28,7 @@ Caching strategies, invalidation, eviction policies, HTTP caching, distributed c
 ## Installation
 
 ```bash
-npx skills add caching
+npx add https://github.com/wpank/ai/tree/main/skills/api/caching
 ```
 
 ### Manual Installation

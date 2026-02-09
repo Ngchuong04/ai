@@ -24,7 +24,7 @@ Create comprehensive handoff documents that enable fresh AI agents to seamlessly
 ## Installation
 
 ```bash
-npx skills add session-handoff
+npx add https://github.com/wpank/ai/tree/main/skills/tools/session-handoff
 ```
 
 ### Manual Installation

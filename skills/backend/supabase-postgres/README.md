@@ -26,7 +26,7 @@ Comprehensive Postgres performance guide — covering indexing, connection manag
 ## Installation
 
 ```bash
-npx skills add supabase-postgres
+npx add https://github.com/wpank/ai/tree/main/skills/backend/supabase-postgres
 ```
 
 ### Manual Installation

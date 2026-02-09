@@ -24,7 +24,7 @@ Enforce quality checkpoints at every stage of the development lifecycle — pre-
 ## Installation
 
 ```bash
-npx skills add quality-gates
+npx add https://github.com/wpank/ai/tree/main/skills/testing/quality-gates
 ```
 
 ### Manual Installation

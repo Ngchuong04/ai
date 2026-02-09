@@ -24,7 +24,7 @@ Explore ideas before implementation through collaborative dialogue. Turns ideas 
 ## Installation
 
 ```bash
-npx skills add brainstorming
+npx add https://github.com/wpank/ai/tree/main/skills/writing/brainstorming
 ```
 
 ### Manual Installation

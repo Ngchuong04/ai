@@ -19,7 +19,7 @@ Write clear, effective professional messages that get read and acted upon. Route
 ## Installation
 
 ```bash
-npx skills add professional-communication
+npx add https://github.com/wpank/ai/tree/main/skills/writing/professional-communication
 ```
 
 ### Manual Installation

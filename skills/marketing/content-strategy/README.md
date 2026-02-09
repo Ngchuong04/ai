@@ -25,7 +25,7 @@ Plan content aligned with user personas and journey stages. Content strategy bri
 ## Installation
 
 ```bash
-npx skills add content-strategy
+npx add https://github.com/wpank/ai/tree/main/skills/marketing/content-strategy
 ```
 
 ### Manual Installation

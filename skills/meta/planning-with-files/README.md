@@ -26,7 +26,7 @@ File-based planning for complex tasks. Use persistent markdown files as working 
 ## Installation
 
 ```bash
-npx skills add planning-with-files
+npx add https://github.com/wpank/ai/tree/main/skills/meta/planning-with-files
 ```
 
 ### Manual Installation

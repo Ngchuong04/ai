@@ -21,7 +21,7 @@ Complete development work by presenting structured options for merge, PR, or cle
 ## Installation
 
 ```bash
-npx skills add finishing-branch
+npx add https://github.com/wpank/ai/tree/main/skills/tools/finishing-branch
 ```
 
 ### Manual Installation

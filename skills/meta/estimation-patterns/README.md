@@ -25,7 +25,7 @@ Practical estimation techniques for software tasks — methods comparison, decom
 ## Installation
 
 ```bash
-npx skills add estimation-patterns
+npx add https://github.com/wpank/ai/tree/main/skills/meta/estimation-patterns
 ```
 
 ### Manual Installation

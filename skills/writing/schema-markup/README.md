@@ -25,7 +25,7 @@ Implement schema.org markup that helps search engines understand content and ena
 ## Installation
 
 ```bash
-npx skills add schema-markup
+npx add https://github.com/wpank/ai/tree/main/skills/writing/schema-markup
 ```
 
 ### Manual Installation

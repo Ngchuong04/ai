@@ -21,7 +21,7 @@ Generate memes using the free memegen.link API and textual Markdown meme formats
 ## Installation
 
 ```bash
-npx skills add meme-factory
+npx add https://github.com/wpank/ai/tree/main/skills/tools/meme-factory
 ```
 
 ### Manual Installation

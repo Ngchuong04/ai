@@ -22,7 +22,7 @@ Create user-centered documentation that defines who a product is for and how the
 ## Installation
 
 ```bash
-npx skills add persona-docs
+npx add https://github.com/wpank/ai/tree/main/skills/writing/persona-docs
 ```
 
 ### Manual Installation

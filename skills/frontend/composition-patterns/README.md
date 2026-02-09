@@ -23,7 +23,7 @@ Build flexible, maintainable React components using compound components, context
 ## Installation
 
 ```bash
-npx skills add composition-patterns
+npx add https://github.com/wpank/ai/tree/main/skills/frontend/composition-patterns
 ```
 
 ### Manual Installation

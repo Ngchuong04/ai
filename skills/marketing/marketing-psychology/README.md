@@ -23,7 +23,7 @@
 ## Installation
 
 ```bash
-npx skills add marketing-psychology
+npx add https://github.com/wpank/ai/tree/main/skills/marketing/marketing-psychology
 ```
 
 ### Manual Installation

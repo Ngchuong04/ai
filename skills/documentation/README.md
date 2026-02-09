@@ -13,9 +13,9 @@ Skills for creating and maintaining high-quality technical documentation through
 ## Installation
 
 ```bash
-npx skills add adr-patterns
-npx skills add docs-organization
-npx skills add prd-patterns
+npx add https://github.com/wpank/ai/tree/main/skills/documentation/adr-patterns
+npx add https://github.com/wpank/ai/tree/main/skills/documentation/docs-organization
+npx add https://github.com/wpank/ai/tree/main/skills/documentation/prd-patterns
 ```
 
 ## See Also

@@ -20,7 +20,7 @@ Curated collection of 10 professional color and typography themes for styling ar
 ## Installation
 
 ```bash
-npx skills add theme-factory
+npx add https://github.com/wpank/ai/tree/main/skills/design-systems/theme-factory
 ```
 
 ### Manual Installation

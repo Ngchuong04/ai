@@ -20,15 +20,15 @@ Skills for marketing strategy, copywriting, conversion rate optimization, and gr
 
 ```bash
 # Add individual skills
-npx skills add content-strategy
-npx skills add copywriting
-npx skills add marketing-ideas
-npx skills add marketing-psychology
-npx skills add onboarding-cro
-npx skills add page-cro
-npx skills add signup-flow-cro
-npx skills add social-content
-npx skills add startup-metrics
+npx add https://github.com/wpank/ai/tree/main/skills/marketing/content-strategy
+npx add https://github.com/wpank/ai/tree/main/skills/marketing/copywriting
+npx add https://github.com/wpank/ai/tree/main/skills/marketing/marketing-ideas
+npx add https://github.com/wpank/ai/tree/main/skills/marketing/marketing-psychology
+npx add https://github.com/wpank/ai/tree/main/skills/marketing/onboarding-cro
+npx add https://github.com/wpank/ai/tree/main/skills/marketing/page-cro
+npx add https://github.com/wpank/ai/tree/main/skills/marketing/signup-flow-cro
+npx add https://github.com/wpank/ai/tree/main/skills/marketing/social-content
+npx add https://github.com/wpank/ai/tree/main/skills/marketing/startup-metrics
 ```
 
 ## See Also

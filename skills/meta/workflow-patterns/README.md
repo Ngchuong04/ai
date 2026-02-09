@@ -23,7 +23,7 @@ Systematic task implementation using TDD, phase checkpoints, and structured comm
 ## Installation
 
 ```bash
-npx skills add workflow-patterns
+npx add https://github.com/wpank/ai/tree/main/skills/meta/workflow-patterns
 ```
 
 ### Manual Installation

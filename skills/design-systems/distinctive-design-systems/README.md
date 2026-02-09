@@ -22,7 +22,7 @@ Patterns for creating design systems with personality and distinctive aesthetics
 ## Installation
 
 ```bash
-npx skills add distinctive-design-systems
+npx add https://github.com/wpank/ai/tree/main/skills/design-systems/distinctive-design-systems
 ```
 
 ### Manual Installation

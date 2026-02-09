@@ -27,7 +27,7 @@ Master advanced prompt engineering techniques to maximize LLM performance, relia
 ## Installation
 
 ```bash
-npx skills add prompt-engineering
+npx add https://github.com/wpank/ai/tree/main/skills/writing/prompt-engineering
 ```
 
 ### Manual Installation

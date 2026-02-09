@@ -23,7 +23,7 @@ Complete workflow for project documentation including ADRs, PRDs, personas, and 
 ## Installation
 
 ```bash
-npx skills add project-documentation
+npx add https://github.com/wpank/ai/tree/main/skills/meta/project-documentation
 ```
 
 ### Manual Installation

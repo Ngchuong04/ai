@@ -26,7 +26,7 @@ Production Go concurrency patterns — goroutines, channels, sync primitives, co
 ## Installation
 
 ```bash
-npx skills add go-concurrency
+npx add https://github.com/wpank/ai/tree/main/skills/backend/go-concurrency
 ```
 
 ### Manual Installation

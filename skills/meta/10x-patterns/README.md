@@ -24,7 +24,7 @@ Patterns and practices that dramatically accelerate development velocity. Covers
 ## Installation
 
 ```bash
-npx skills add 10x-patterns
+npx add https://github.com/wpank/ai/tree/main/skills/meta/10x-patterns
 ```
 
 ### Manual Installation

@@ -25,7 +25,7 @@ Optimize post-signup onboarding, user activation, first-run experience, and time
 ## Installation
 
 ```bash
-npx skills add onboarding-cro
+npx add https://github.com/wpank/ai/tree/main/skills/marketing/onboarding-cro
 ```
 
 ### Manual Installation

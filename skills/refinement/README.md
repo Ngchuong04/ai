@@ -12,7 +12,7 @@ Skills for consolidating and refining extracted content from multiple projects i
 
 ```bash
 # Add individual skills
-npx skills add staged-content-refinement
+npx add https://github.com/wpank/ai/tree/main/skills/refinement/staged-content-refinement
 ```
 
 ## See Also

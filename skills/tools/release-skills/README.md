@@ -24,7 +24,7 @@ Universal release workflow with auto-detection, multi-language changelogs, seman
 ## Installation
 
 ```bash
-npx skills add release-skills
+npx add https://github.com/wpank/ai/tree/main/skills/tools/release-skills
 ```
 
 ### Manual Installation

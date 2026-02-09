@@ -24,7 +24,7 @@ Treat project context as a managed artifact alongside code. Use structured conte
 ## Installation
 
 ```bash
-npx skills add context-driven-development
+npx add https://github.com/wpank/ai/tree/main/skills/meta/context-driven-development
 ```
 
 ### Manual Installation

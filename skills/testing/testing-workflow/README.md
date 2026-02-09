@@ -28,7 +28,7 @@ Meta-skill that orchestrates comprehensive testing across a project by coordinat
 ## Installation
 
 ```bash
-npx skills add testing-workflow
+npx add https://github.com/wpank/ai/tree/main/skills/testing/testing-workflow
 ```
 
 ### Manual Installation

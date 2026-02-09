@@ -22,7 +22,7 @@ Meta-skill that orchestrates logging, monitoring, error handling, performance, s
 ## Installation
 
 ```bash
-npx skills add production-readiness
+npx add https://github.com/wpank/ai/tree/main/skills/meta/production-readiness
 ```
 
 ### Manual Installation

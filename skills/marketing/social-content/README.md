@@ -28,7 +28,7 @@ Create, schedule, and optimize social media content for LinkedIn, Twitter/X, Ins
 ## Installation
 
 ```bash
-npx skills add social-content
+npx add https://github.com/wpank/ai/tree/main/skills/marketing/social-content
 ```
 
 ### Manual Installation

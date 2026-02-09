@@ -27,7 +27,7 @@ Modern responsive CSS patterns using container queries, fluid typography, CSS Gr
 ## Installation
 
 ```bash
-npx skills add responsive-design
+npx add https://github.com/wpank/ai/tree/main/skills/frontend/responsive-design
 ```
 
 ### Manual Installation

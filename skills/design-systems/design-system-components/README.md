@@ -22,7 +22,7 @@ Patterns for building design system components using Surface primitives, CVA var
 ## Installation
 
 ```bash
-npx skills add design-system-components
+npx add https://github.com/wpank/ai/tree/main/skills/design-systems/design-system-components
 ```
 
 ### Manual Installation

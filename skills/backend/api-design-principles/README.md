@@ -28,7 +28,7 @@ Design intuitive, scalable REST and GraphQL APIs that developers love. Covers re
 ## Installation
 
 ```bash
-npx skills add api-design-principles
+npx add https://github.com/wpank/ai/tree/main/skills/backend/api-design-principles
 ```
 
 ### Manual Installation

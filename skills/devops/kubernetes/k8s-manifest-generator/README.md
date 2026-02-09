@@ -29,7 +29,7 @@ Step-by-step guidance for creating production-ready Kubernetes manifests includi
 ## Installation
 
 ```bash
-npx skills add k8s-manifest-generator
+npx add https://github.com/wpank/ai/tree/main/skills/devops/kubernetes/k8s-manifest-generator
 ```
 
 ### Manual Installation

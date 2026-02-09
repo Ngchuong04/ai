@@ -17,9 +17,9 @@ Skills for DevOps and infrastructure — containerization, orchestration, monito
 
 ```bash
 # Add individual skills
-npx skills add docker
-npx skills add kubernetes
-npx skills add prometheus
+npx add https://github.com/wpank/ai/tree/main/skills/devops/docker
+npx add https://github.com/wpank/ai/tree/main/skills/devops/kubernetes
+npx add https://github.com/wpank/ai/tree/main/skills/devops/prometheus
 ```
 
 ## See Also

@@ -28,7 +28,7 @@ Unit, integration, and E2E testing patterns with framework-specific guidance. Wr
 ## Installation
 
 ```bash
-npx skills add testing-patterns
+npx add https://github.com/wpank/ai/tree/main/skills/testing/testing-patterns
 ```
 
 ### Manual Installation

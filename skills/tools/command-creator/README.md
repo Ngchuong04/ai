@@ -21,7 +21,7 @@ Create Claude Code slash commands — reusable markdown workflows invoked with `
 ## Installation
 
 ```bash
-npx skills add command-creator
+npx add https://github.com/wpank/ai/tree/main/skills/tools/command-creator
 ```
 
 ### Manual Installation

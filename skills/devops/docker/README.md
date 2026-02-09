@@ -26,7 +26,7 @@ Container optimization, security hardening, multi-stage builds, and production d
 ## Installation
 
 ```bash
-npx skills add docker
+npx add https://github.com/wpank/ai/tree/main/skills/devops/docker
 ```
 
 ### Manual Installation

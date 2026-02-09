@@ -23,7 +23,7 @@ Lightweight documentation capturing the context, decision, and consequences of s
 ## Installation
 
 ```bash
-npx skills add adr-patterns
+npx add https://github.com/wpank/ai/tree/main/skills/documentation/adr-patterns
 ```
 
 ### Manual Installation

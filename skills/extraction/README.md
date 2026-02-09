@@ -12,7 +12,7 @@ Skills for mining reusable patterns, design systems, and methodology documentati
 
 ```bash
 # Add individual skills
-npx skills add pattern-extraction
+npx add https://github.com/wpank/ai/tree/main/skills/extraction/pattern-extraction
 ```
 
 ## See Also

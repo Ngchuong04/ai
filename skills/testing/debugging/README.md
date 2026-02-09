@@ -24,7 +24,7 @@ A systematic, scientific approach to finding and fixing bugs — replacing guess
 ## Installation
 
 ```bash
-npx skills add debugging
+npx add https://github.com/wpank/ai/tree/main/skills/testing/debugging
 ```
 
 ### Manual Installation

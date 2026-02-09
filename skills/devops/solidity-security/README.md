@@ -24,7 +24,7 @@ Smart contract security patterns, vulnerability prevention, gas optimization, an
 ## Installation
 
 ```bash
-npx skills add solidity-security
+npx add https://github.com/wpank/ai/tree/main/skills/devops/solidity-security
 ```
 
 ### Manual Installation

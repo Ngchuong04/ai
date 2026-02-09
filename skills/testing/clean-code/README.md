@@ -23,7 +23,7 @@ Pragmatic coding standards for writing clean, maintainable code — naming, func
 ## Installation
 
 ```bash
-npx skills add clean-code
+npx add https://github.com/wpank/ai/tree/main/skills/testing/clean-code
 ```
 
 ### Manual Installation

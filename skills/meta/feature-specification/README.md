@@ -21,7 +21,7 @@ Convert persona docs into detailed feature specifications with acceptance criter
 ## Installation
 
 ```bash
-npx skills add feature-specification
+npx add https://github.com/wpank/ai/tree/main/skills/meta/feature-specification
 ```
 
 ### Manual Installation

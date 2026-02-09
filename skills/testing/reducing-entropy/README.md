@@ -23,7 +23,7 @@ Minimize total codebase size through ruthless simplification. Measure success by
 ## Installation
 
 ```bash
-npx skills add reducing-entropy
+npx add https://github.com/wpank/ai/tree/main/skills/testing/reducing-entropy
 ```
 
 ### Manual Installation

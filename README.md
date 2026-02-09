@@ -16,11 +16,13 @@ A curated collection of **115 skills**, **16 agents**, and **48 commands** for [
 
 ### Install Skills with [skills.sh](https://skills.sh)
 
-The fastest way to install individual skills using the [skills.sh](https://skills.sh/docs) CLI:
+The fastest way to install a skill from this repo:
 
 ```bash
-npx skills add <skill-name>
+npx add https://github.com/wpank/ai/tree/main/skills/<category>/<skill-name>
 ```
+
+Example: `npx add https://github.com/wpank/ai/tree/main/skills/api/api-design`
 
 ### Clone the Full Repo
 
@@ -38,17 +40,13 @@ Then copy what you need into your projects (see Installation below).
 
 ### Skills via [skills.sh](https://skills.sh)
 
-Individual skills can be installed using the [skills.sh](https://skills.sh/docs) CLI (not an Anthropic repo):
+Install a skill from this repo by URL:
 
 ```bash
-# Install a skill
-npx skills add <skill-name>
-
-# Example: install from a specific repo
-npx skills add vercel-labs/agent-skills
+npx add https://github.com/wpank/ai/tree/main/skills/<category>/<skill-name>
 ```
 
-See [skills.sh docs](https://skills.sh/docs) for browse, search, and list.
+Example: `npx add https://github.com/wpank/ai/tree/main/skills/api/api-design`
 
 ### Agents & Commands (Manual Copy)
 

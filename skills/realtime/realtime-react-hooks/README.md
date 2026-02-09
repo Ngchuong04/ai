@@ -20,7 +20,7 @@ Production patterns for real-time data in React applications using SSE, WebSocke
 ## Installation
 
 ```bash
-npx skills add realtime-react-hooks
+npx add https://github.com/wpank/ai/tree/main/skills/realtime/realtime-react-hooks
 ```
 
 ### Manual Installation

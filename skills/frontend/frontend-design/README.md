@@ -22,7 +22,7 @@ Create memorable frontend interfaces that stand out from generic AI-generated ae
 ## Installation
 
 ```bash
-npx skills add frontend-design
+npx add https://github.com/wpank/ai/tree/main/skills/frontend/frontend-design
 ```
 
 ### Manual Installation

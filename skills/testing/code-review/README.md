@@ -25,7 +25,7 @@ Systematic code review patterns covering security, performance, maintainability,
 ## Installation
 
 ```bash
-npx skills add code-review
+npx add https://github.com/wpank/ai/tree/main/skills/testing/code-review
 ```
 
 ### Manual Installation

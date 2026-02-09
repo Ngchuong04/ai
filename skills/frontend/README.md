@@ -24,9 +24,9 @@ Skills for frontend development — React component patterns, performance optimi
 
 ```bash
 # Add individual skills
-npx skills add nextjs
-npx skills add react-best-practices
-npx skills add shadcn-ui
+npx add https://github.com/wpank/ai/tree/main/skills/frontend/nextjs
+npx add https://github.com/wpank/ai/tree/main/skills/frontend/react-best-practices
+npx add https://github.com/wpank/ai/tree/main/skills/frontend/shadcn-ui
 ```
 
 ## See Also

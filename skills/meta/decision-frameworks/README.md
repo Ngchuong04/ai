@@ -25,7 +25,7 @@ Structured decision-making patterns for common engineering choices — library s
 ## Installation
 
 ```bash
-npx skills add decision-frameworks
+npx add https://github.com/wpank/ai/tree/main/skills/meta/decision-frameworks
 ```
 
 ### Manual Installation

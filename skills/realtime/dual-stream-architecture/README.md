@@ -21,7 +21,7 @@ Dual-stream event publishing combining Kafka for durability with Redis Pub/Sub f
 ## Installation
 
 ```bash
-npx skills add dual-stream-architecture
+npx add https://github.com/wpank/ai/tree/main/skills/realtime/dual-stream-architecture
 ```
 
 ### Manual Installation

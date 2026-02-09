@@ -23,7 +23,7 @@ Patterns for building distributed systems: service decomposition, inter-service 
 ## Installation
 
 ```bash
-npx skills add microservices-patterns
+npx add https://github.com/wpank/ai/tree/main/skills/backend/microservices-patterns
 ```
 
 ### Manual Installation

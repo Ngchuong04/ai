@@ -26,7 +26,7 @@ Safe, zero-downtime database migration strategies — schema evolution, rollback
 ## Installation
 
 ```bash
-npx skills add database-migrations
+npx add https://github.com/wpank/ai/tree/main/skills/api/database-migrations
 ```
 
 ### Manual Installation

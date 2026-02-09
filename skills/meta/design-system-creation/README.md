@@ -22,7 +22,7 @@ Complete workflow for creating distinctive design systems from scratch. Orchestr
 ## Installation
 
 ```bash
-npx skills add design-system-creation
+npx add https://github.com/wpank/ai/tree/main/skills/meta/design-system-creation
 ```
 
 ### Manual Installation

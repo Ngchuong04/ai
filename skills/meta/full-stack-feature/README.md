@@ -22,7 +22,7 @@ Meta-skill for orchestrating end-to-end feature development from persona researc
 ## Installation
 
 ```bash
-npx skills add full-stack-feature
+npx add https://github.com/wpank/ai/tree/main/skills/meta/full-stack-feature
 ```
 
 ### Manual Installation
