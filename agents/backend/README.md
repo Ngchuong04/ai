@@ -35,14 +35,25 @@ Autonomous workflow for designing, implementing, and hardening production-grade 
 
 ## Installation
 
-### Cursor
+### Cursor (per-project)
+
+From your project root:
 
 ```bash
-mkdir -p .cursor/rules
-cp -r ~/.ai-skills/agents/backend .cursor/rules/backend-agent
+mkdir -p .cursor/agents
+cp -r ~/.ai-skills/agents/backend .cursor/agents/backend
+```
+
+### Cursor (global)
+
+```bash
+mkdir -p ~/.cursor/agents
+cp -r ~/.ai-skills/agents/backend ~/.cursor/agents/backend
 ```
 
 ### Claude Code (per-project)
+
+From your project root:
 
 ```bash
 mkdir -p .claude/agents

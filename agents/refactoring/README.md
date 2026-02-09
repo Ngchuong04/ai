@@ -26,14 +26,25 @@ Autonomous workflow for systematic code refactoring with test coverage verificat
 
 ## Installation
 
-### Cursor
+### Cursor (per-project)
+
+From your project root:
 
 ```bash
-mkdir -p .cursor/rules
-cp -r ~/.ai-skills/agents/refactoring .cursor/rules/refactoring-agent
+mkdir -p .cursor/agents
+cp -r ~/.ai-skills/agents/refactoring .cursor/agents/refactoring
+```
+
+### Cursor (global)
+
+```bash
+mkdir -p ~/.cursor/agents
+cp -r ~/.ai-skills/agents/refactoring ~/.cursor/agents/refactoring
 ```
 
 ### Claude Code (per-project)
+
+From your project root:
 
 ```bash
 mkdir -p .claude/agents

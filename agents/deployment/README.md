@@ -27,14 +27,25 @@ Autonomous workflow for configuring CI/CD pipelines, containerizing applications
 
 ## Installation
 
-### Cursor
+### Cursor (per-project)
+
+From your project root:
 
 ```bash
-mkdir -p .cursor/rules
-cp -r ~/.ai-skills/agents/deployment .cursor/rules/deployment-agent
+mkdir -p .cursor/agents
+cp -r ~/.ai-skills/agents/deployment .cursor/agents/deployment
+```
+
+### Cursor (global)
+
+```bash
+mkdir -p ~/.cursor/agents
+cp -r ~/.ai-skills/agents/deployment ~/.cursor/agents/deployment
 ```
 
 ### Claude Code (per-project)
+
+From your project root:
 
 ```bash
 mkdir -p .claude/agents

@@ -28,14 +28,25 @@ Autonomous workflow for docs-first feature development. Handles feature planning
 
 ## Installation
 
-### Cursor
+### Cursor (per-project)
+
+From your project root:
 
 ```bash
-mkdir -p .cursor/rules
-cp -r ~/.ai-skills/agents/development .cursor/rules/development-agent
+mkdir -p .cursor/agents
+cp -r ~/.ai-skills/agents/development .cursor/agents/development
+```
+
+### Cursor (global)
+
+```bash
+mkdir -p ~/.cursor/agents
+cp -r ~/.ai-skills/agents/development ~/.cursor/agents/development
 ```
 
 ### Claude Code (per-project)
+
+From your project root:
 
 ```bash
 mkdir -p .claude/agents

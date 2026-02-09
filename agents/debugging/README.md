@@ -28,14 +28,25 @@ Autonomous workflow for systematic error diagnosis, root cause analysis, fix app
 
 ## Installation
 
-### Cursor
+### Cursor (per-project)
+
+From your project root:
 
 ```bash
-mkdir -p .cursor/rules
-cp -r ~/.ai-skills/agents/debugging .cursor/rules/debugging-agent
+mkdir -p .cursor/agents
+cp -r ~/.ai-skills/agents/debugging .cursor/agents/debugging
+```
+
+### Cursor (global)
+
+```bash
+mkdir -p ~/.cursor/agents
+cp -r ~/.ai-skills/agents/debugging ~/.cursor/agents/debugging
 ```
 
 ### Claude Code (per-project)
+
+From your project root:
 
 ```bash
 mkdir -p .claude/agents

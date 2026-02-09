@@ -23,14 +23,25 @@ Autonomous workflow for extracting reusable patterns from codebases into skills 
 
 ## Installation
 
-### Cursor
+### Cursor (per-project)
+
+From your project root:
 
 ```bash
-mkdir -p .cursor/rules
-cp -r ~/.ai-skills/agents/extraction .cursor/rules/extraction-agent
+mkdir -p .cursor/agents
+cp -r ~/.ai-skills/agents/extraction .cursor/agents/extraction
+```
+
+### Cursor (global)
+
+```bash
+mkdir -p ~/.cursor/agents
+cp -r ~/.ai-skills/agents/extraction ~/.cursor/agents/extraction
 ```
 
 ### Claude Code (per-project)
+
+From your project root:
 
 ```bash
 mkdir -p .claude/agents

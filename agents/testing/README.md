@@ -30,14 +30,25 @@ Autonomous workflow for generating comprehensive test suites, identifying untest
 
 ## Installation
 
-### Cursor
+### Cursor (per-project)
+
+From your project root:
 
 ```bash
-mkdir -p .cursor/rules
-cp -r ~/.ai-skills/agents/testing .cursor/rules/testing-agent
+mkdir -p .cursor/agents
+cp -r ~/.ai-skills/agents/testing .cursor/agents/testing
+```
+
+### Cursor (global)
+
+```bash
+mkdir -p ~/.cursor/agents
+cp -r ~/.ai-skills/agents/testing ~/.cursor/agents/testing
 ```
 
 ### Claude Code (per-project)
+
+From your project root:
 
 ```bash
 mkdir -p .claude/agents

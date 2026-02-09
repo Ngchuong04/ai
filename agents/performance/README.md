@@ -28,14 +28,25 @@ Autonomous workflow for systematic performance profiling, bottleneck analysis, i
 
 ## Installation
 
-### Cursor
+### Cursor (per-project)
+
+From your project root:
 
 ```bash
-mkdir -p .cursor/rules
-cp -r ~/.ai-skills/agents/performance .cursor/rules/performance-agent
+mkdir -p .cursor/agents
+cp -r ~/.ai-skills/agents/performance .cursor/agents/performance
+```
+
+### Cursor (global)
+
+```bash
+mkdir -p ~/.cursor/agents
+cp -r ~/.ai-skills/agents/performance ~/.cursor/agents/performance
 ```
 
 ### Claude Code (per-project)
+
+From your project root:
 
 ```bash
 mkdir -p .claude/agents

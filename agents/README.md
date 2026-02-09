@@ -39,22 +39,30 @@ git clone https://github.com/wpank/ai ~/.ai-skills
 
 ### Step 2: Copy agents into your project
 
-#### Cursor
+#### Cursor (per-project)
 
-Copy an agent into `.cursor/rules/` so Cursor loads the workflow as context:
+From your project root:
 
 ```bash
 # Single agent
-mkdir -p .cursor/rules
-cp -r ~/.ai-skills/agents/api .cursor/rules/api-agent
+mkdir -p .cursor/agents
+cp -r ~/.ai-skills/agents/api .cursor/agents/api
 
 # All agents
-cp -r ~/.ai-skills/agents/* .cursor/rules/
+mkdir -p .cursor/agents
+cp -r ~/.ai-skills/agents/* .cursor/agents/
+```
+
+#### Cursor (global)
+
+```bash
+mkdir -p ~/.cursor/agents
+cp -r ~/.ai-skills/agents/api ~/.cursor/agents/api
 ```
 
 #### Claude Code (per-project)
 
-Copy into `.claude/agents/` in your project root:
+From your project root:
 
 ```bash
 mkdir -p .claude/agents
@@ -62,8 +70,6 @@ cp -r ~/.ai-skills/agents/api .claude/agents/api
 ```
 
 #### Claude Code (global)
-
-Copy into `~/.claude/agents/` to make agents available in all projects:
 
 ```bash
 mkdir -p ~/.claude/agents

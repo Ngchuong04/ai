@@ -29,14 +29,25 @@ Autonomous workflow for extracting design tokens from codebases or reference sit
 
 ## Installation
 
-### Cursor
+### Cursor (per-project)
+
+From your project root:
 
 ```bash
-mkdir -p .cursor/rules
-cp -r ~/.ai-skills/agents/design-system .cursor/rules/design-system-agent
+mkdir -p .cursor/agents
+cp -r ~/.ai-skills/agents/design-system .cursor/agents/design-system
+```
+
+### Cursor (global)
+
+```bash
+mkdir -p ~/.cursor/agents
+cp -r ~/.ai-skills/agents/design-system ~/.cursor/agents/design-system
 ```
 
 ### Claude Code (per-project)
+
+From your project root:
 
 ```bash
 mkdir -p .claude/agents

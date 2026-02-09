@@ -24,14 +24,25 @@ Autonomous workflow for consolidating and refining extracted skills from staging
 
 ## Installation
 
-### Cursor
+### Cursor (per-project)
+
+From your project root:
 
 ```bash
-mkdir -p .cursor/rules
-cp -r ~/.ai-skills/agents/refinement .cursor/rules/refinement-agent
+mkdir -p .cursor/agents
+cp -r ~/.ai-skills/agents/refinement .cursor/agents/refinement
+```
+
+### Cursor (global)
+
+```bash
+mkdir -p ~/.cursor/agents
+cp -r ~/.ai-skills/agents/refinement ~/.cursor/agents/refinement
 ```
 
 ### Claude Code (per-project)
+
+From your project root:
 
 ```bash
 mkdir -p .claude/agents

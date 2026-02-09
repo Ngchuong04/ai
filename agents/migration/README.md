@@ -28,14 +28,25 @@ Autonomous workflow for planning and executing multi-step migrations with rollba
 
 ## Installation
 
-### Cursor
+### Cursor (per-project)
+
+From your project root:
 
 ```bash
-mkdir -p .cursor/rules
-cp -r ~/.ai-skills/agents/migration .cursor/rules/migration-agent
+mkdir -p .cursor/agents
+cp -r ~/.ai-skills/agents/migration .cursor/agents/migration
+```
+
+### Cursor (global)
+
+```bash
+mkdir -p ~/.cursor/agents
+cp -r ~/.ai-skills/agents/migration ~/.cursor/agents/migration
 ```
 
 ### Claude Code (per-project)
+
+From your project root:
 
 ```bash
 mkdir -p .claude/agents

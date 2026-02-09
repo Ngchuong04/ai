@@ -34,14 +34,25 @@ Autonomous workflow for designing, building, and polishing production-grade fron
 
 ## Installation
 
-### Cursor
+### Cursor (per-project)
+
+From your project root:
 
 ```bash
-mkdir -p .cursor/rules
-cp -r ~/.ai-skills/agents/frontend .cursor/rules/frontend-agent
+mkdir -p .cursor/agents
+cp -r ~/.ai-skills/agents/frontend .cursor/agents/frontend
+```
+
+### Cursor (global)
+
+```bash
+mkdir -p ~/.cursor/agents
+cp -r ~/.ai-skills/agents/frontend ~/.cursor/agents/frontend
 ```
 
 ### Claude Code (per-project)
+
+From your project root:
 
 ```bash
 mkdir -p .claude/agents

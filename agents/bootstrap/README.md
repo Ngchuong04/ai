@@ -23,14 +23,25 @@ Autonomous workflow for scaffolding new projects with opinionated structure, doc
 
 ## Installation
 
-### Cursor
+### Cursor (per-project)
+
+From your project root:
 
 ```bash
-mkdir -p .cursor/rules
-cp -r ~/.ai-skills/agents/bootstrap .cursor/rules/bootstrap-agent
+mkdir -p .cursor/agents
+cp -r ~/.ai-skills/agents/bootstrap .cursor/agents/bootstrap
+```
+
+### Cursor (global)
+
+```bash
+mkdir -p ~/.cursor/agents
+cp -r ~/.ai-skills/agents/bootstrap ~/.cursor/agents/bootstrap
 ```
 
 ### Claude Code (per-project)
+
+From your project root:
 
 ```bash
 mkdir -p .claude/agents

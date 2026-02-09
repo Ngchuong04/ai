@@ -38,14 +38,25 @@ Autonomous workflow for creating professional written content — from brainstor
 
 ## Installation
 
-### Cursor
+### Cursor (per-project)
+
+From your project root:
 
 ```bash
-mkdir -p .cursor/rules
-cp -r ~/.ai-skills/agents/content .cursor/rules/content-agent
+mkdir -p .cursor/agents
+cp -r ~/.ai-skills/agents/content .cursor/agents/content
+```
+
+### Cursor (global)
+
+```bash
+mkdir -p ~/.cursor/agents
+cp -r ~/.ai-skills/agents/content ~/.cursor/agents/content
 ```
 
 ### Claude Code (per-project)
+
+From your project root:
 
 ```bash
 mkdir -p .claude/agents

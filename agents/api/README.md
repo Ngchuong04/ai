@@ -30,14 +30,25 @@ Autonomous workflow for designing, specifying, implementing, testing, and docume
 
 ## Installation
 
-### Cursor
+### Cursor (per-project)
+
+From your project root:
 
 ```bash
-mkdir -p .cursor/rules
-cp -r ~/.ai-skills/agents/api .cursor/rules/api-agent
+mkdir -p .cursor/agents
+cp -r ~/.ai-skills/agents/api .cursor/agents/api
+```
+
+### Cursor (global)
+
+```bash
+mkdir -p ~/.cursor/agents
+cp -r ~/.ai-skills/agents/api ~/.cursor/agents/api
 ```
 
 ### Claude Code (per-project)
+
+From your project root:
 
 ```bash
 mkdir -p .claude/agents
