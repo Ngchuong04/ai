@@ -8,6 +8,16 @@ description: Design and implement event stores for event-sourced systems. Use wh
 
 Guide to designing event stores for event-sourced applications — covering event schemas, projections, snapshotting, and CQRS integration.
 
+
+## Installation
+
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install event-store
+```
+
+
 ## When to Use This Skill
 
 - Designing event sourcing infrastructure

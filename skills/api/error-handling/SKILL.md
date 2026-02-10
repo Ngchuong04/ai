@@ -19,6 +19,16 @@ description: Error handling patterns across languages and layers — operational
 | **Be Specific** | Catch specific error types, never bare `catch` or `except` |
 | **Provide Context** | Every error carries enough context to diagnose without reproducing |
 
+
+## Installation
+
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install error-handling
+```
+
+
 ---
 
 ## Error Types

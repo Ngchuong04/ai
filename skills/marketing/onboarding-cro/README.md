@@ -28,6 +28,12 @@ Optimize post-signup onboarding, user activation, first-run experience, and time
 npx add https://github.com/wpank/ai/tree/main/skills/marketing/onboarding-cro
 ```
 
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install onboarding-cro
+```
+
 ### Manual Installation
 
 #### Cursor (per-project)

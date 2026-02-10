@@ -27,6 +27,12 @@ Build production-ready component libraries with Tailwind CSS using CVA, compound
 npx add https://github.com/wpank/ai/tree/main/skills/frontend/tailwind-design-system
 ```
 
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install tailwind-design-system
+```
+
 ### Manual Installation
 
 #### Cursor (per-project)

@@ -18,6 +18,16 @@ Backend architecture patterns for building maintainable, testable systems: Clean
 ## KEYWORDS
 clean architecture, hexagonal, ports and adapters, DDD, domain-driven design, layers, entities, use cases, repositories, aggregates, bounded contexts
 
+
+## Installation
+
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install architecture-patterns
+```
+
+
 ---
 
 ## Decision Framework: Which Pattern?

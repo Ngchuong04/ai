@@ -27,6 +27,12 @@ Automatically read relevant context before major actions. Loads TODO.md, roadmap
 npx add https://github.com/wpank/ai/tree/main/skills/meta/auto-context
 ```
 
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install auto-context
+```
+
 ### Manual Installation
 
 #### Cursor (per-project)

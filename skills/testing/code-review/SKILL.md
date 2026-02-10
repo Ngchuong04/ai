@@ -10,6 +10,16 @@ version: 1.0
 
 Thorough, structured approach to reviewing code. Work through each dimension systematically rather than scanning randomly.
 
+
+## Installation
+
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install code-review
+```
+
+
 ---
 
 ## Review Dimensions

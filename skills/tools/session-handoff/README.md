@@ -27,6 +27,12 @@ Create comprehensive handoff documents that enable fresh AI agents to seamlessly
 npx add https://github.com/wpank/ai/tree/main/skills/tools/session-handoff
 ```
 
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install session-handoff
+```
+
 ### Manual Installation
 
 #### Cursor (per-project)

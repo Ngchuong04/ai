@@ -28,6 +28,12 @@ Plan content aligned with user personas and journey stages. Content strategy bri
 npx add https://github.com/wpank/ai/tree/main/skills/marketing/content-strategy
 ```
 
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install content-strategy
+```
+
 ### Manual Installation
 
 #### Cursor (per-project)

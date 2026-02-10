@@ -24,6 +24,12 @@ Discover and install agent skills from the open skills ecosystem using `npx skil
 npx add https://github.com/wpank/ai/tree/main/skills/tools/find-skills
 ```
 
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install find-skills
+```
+
 ### Manual Installation
 
 #### Cursor (per-project)

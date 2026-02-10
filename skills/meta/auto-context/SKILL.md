@@ -8,6 +8,16 @@ description: Automatically read relevant context before major actions. Loads TOD
 
 Before you act, understand where you are. This skill ensures the AI loads critical project context automatically before any major action, preventing wasted effort, duplicate work, and misaligned implementations.
 
+
+## Installation
+
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install auto-context
+```
+
+
 ---
 
 ## When to Activate

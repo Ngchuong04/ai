@@ -14,6 +14,16 @@ model: reasoning
 - `references/copy-frameworks.md` - Headline formulas, page templates, section types
 - `references/natural-transitions.md` - Transitional phrases and signposting
 
+
+## Installation
+
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install copywriting
+```
+
+
 ---
 
 ## Workflow

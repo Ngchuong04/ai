@@ -23,6 +23,12 @@ Curated collection of 10 professional color and typography themes for styling ar
 npx add https://github.com/wpank/ai/tree/main/skills/design-systems/theme-factory
 ```
 
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install theme-factory
+```
+
 ### Manual Installation
 
 #### Cursor (per-project)

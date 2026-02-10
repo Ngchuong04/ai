@@ -21,6 +21,15 @@ npx add https://github.com/wpank/ai/tree/main/skills/realtime/resilient-connecti
 npx add https://github.com/wpank/ai/tree/main/skills/realtime/websocket-hub-patterns
 ```
 
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install dual-stream-architecture
+npx clawhub@latest install realtime-react-hooks
+npx clawhub@latest install resilient-connections
+npx clawhub@latest install websocket-hub-patterns
+```
+
 ## See Also
 
 - [All Skills](../) — Complete skills catalog

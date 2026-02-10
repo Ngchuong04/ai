@@ -29,6 +29,12 @@ CSS implementation patterns for layout, typography, color, spacing, and responsi
 npx add https://github.com/wpank/ai/tree/main/skills/design-systems/web-design
 ```
 
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install web-design
+```
+
 ### Manual Installation
 
 #### Cursor (per-project)

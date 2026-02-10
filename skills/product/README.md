@@ -15,6 +15,12 @@ Skills for product metrics, KPI tracking, and data-driven product decisions. Cov
 npx add https://github.com/wpank/ai/tree/main/skills/product/startup-metrics
 ```
 
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install startup-metrics
+```
+
 ## See Also
 
 - [All Skills](../) — Complete skills catalog

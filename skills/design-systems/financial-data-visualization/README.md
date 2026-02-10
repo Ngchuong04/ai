@@ -25,6 +25,12 @@ Patterns for building dark-themed financial charts and data visualizations. Cove
 npx add https://github.com/wpank/ai/tree/main/skills/design-systems/financial-data-visualization
 ```
 
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install financial-data-visualization
+```
+
 ### Manual Installation
 
 #### Cursor (per-project)

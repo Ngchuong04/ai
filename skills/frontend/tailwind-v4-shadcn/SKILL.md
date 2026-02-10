@@ -32,6 +32,16 @@ tailwind v4, tailwindcss 4, shadcn, shadcn/ui, @theme inline, dark mode, css var
 **Production verified:** WordPress Auditor (https://wordpress-auditor.webfonts.workers.dev)  
 **Versions:** tailwindcss@4.1.18, @tailwindcss/vite@4.1.18
 
+
+## Installation
+
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install tailwind-v4-shadcn
+```
+
+
 ---
 
 ## Quick Start

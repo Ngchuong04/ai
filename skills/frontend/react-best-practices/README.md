@@ -28,6 +28,12 @@ Comprehensive performance optimization guide for React and Next.js applications 
 npx add https://github.com/wpank/ai/tree/main/skills/frontend/react-best-practices
 ```
 
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install react-best-practices
+```
+
 ### Manual Installation
 
 #### Cursor (per-project)

@@ -27,6 +27,12 @@ Smart contract security patterns, vulnerability prevention, gas optimization, an
 npx add https://github.com/wpank/ai/tree/main/skills/devops/solidity-security
 ```
 
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install solidity-security
+```
+
 ### Manual Installation
 
 #### Cursor (per-project)

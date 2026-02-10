@@ -27,6 +27,12 @@ Universal release workflow with auto-detection, multi-language changelogs, seman
 npx add https://github.com/wpank/ai/tree/main/skills/tools/release-skills
 ```
 
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install release-skills
+```
+
 ### Manual Installation
 
 #### Cursor (per-project)

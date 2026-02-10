@@ -12,6 +12,16 @@ tags: [startup, metrics, saas, kpis, unit-economics, growth, fundraising]
 
 Comprehensive guide to tracking, calculating, and optimizing key performance metrics for different startup business models from seed through Series A.
 
+
+## Installation
+
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install startup-metrics
+```
+
+
 ## WHAT This Skill Does
 
 Provides formulas, benchmarks, and guidance for:

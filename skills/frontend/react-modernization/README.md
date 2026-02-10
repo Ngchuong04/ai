@@ -28,6 +28,12 @@ Upgrade React applications from class components to hooks, adopt concurrent feat
 npx add https://github.com/wpank/ai/tree/main/skills/frontend/react-modernization
 ```
 
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install react-modernization
+```
+
 ### Manual Installation
 
 #### Cursor (per-project)

@@ -8,6 +8,16 @@ description: Complete guide to building AI chat applications with Vercel AI SDK.
 
 Complete guide to building production AI chat applications with the Vercel AI SDK.
 
+
+## Installation
+
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install ai-chat-application
+```
+
+
 ---
 
 ## When to Use

@@ -31,6 +31,16 @@ tailwind, cva, design system, component library, variants, theming, dark mode, d
 
 **Related skills:** `tailwind-v4-shadcn` for Tailwind v4 setup and migration
 
+
+## Installation
+
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install tailwind-design-system
+```
+
+
 ---
 
 ## Core Setup

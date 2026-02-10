@@ -29,6 +29,12 @@ File-based planning for complex tasks. Use persistent markdown files as working 
 npx add https://github.com/wpank/ai/tree/main/skills/meta/planning-with-files
 ```
 
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install planning-files
+```
+
 ### Manual Installation
 
 #### Cursor (per-project)

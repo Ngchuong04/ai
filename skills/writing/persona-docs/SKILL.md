@@ -14,6 +14,16 @@ tags: [personas, user-research, product, documentation, onboarding, user-journey
 
 Create user-centered documentation that defines who a product is for and how they interact with it. Persona docs establish the foundation for product-driven development — every feature decision, design choice, and prioritization call flows from understanding your users.
 
+
+## Installation
+
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install persona-docs
+```
+
+
 ## When to Create
 
 Persona docs should be the first thing fleshed out for any product. Even minimal documentation about who uses the product helps direct development and design decisions.

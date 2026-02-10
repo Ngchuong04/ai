@@ -26,6 +26,12 @@ Patterns for building distributed systems: service decomposition, inter-service 
 npx add https://github.com/wpank/ai/tree/main/skills/backend/microservices-patterns
 ```
 
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install microservices-patterns
+```
+
 ### Manual Installation
 
 #### Cursor (per-project)

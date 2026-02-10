@@ -31,6 +31,12 @@ Unit, integration, and E2E testing patterns with framework-specific guidance. Wr
 npx add https://github.com/wpank/ai/tree/main/skills/testing/testing-patterns
 ```
 
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install testing-patterns
+```
+
 ### Manual Installation
 
 #### Cursor (per-project)

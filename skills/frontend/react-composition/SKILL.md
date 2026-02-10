@@ -34,6 +34,16 @@ scale.
 | 5 | Explicit Variants          | MEDIUM   |
 | 6 | Children Over Render Props | MEDIUM   |
 
+
+## Installation
+
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install react-composition
+```
+
+
 ---
 
 ## 1. Avoid Boolean Prop Proliferation

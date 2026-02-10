@@ -30,6 +30,12 @@ Rate limiting algorithms, implementation strategies, HTTP conventions, tiered li
 npx add https://github.com/wpank/ai/tree/main/skills/api/rate-limiting
 ```
 
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install rate-limiting
+```
+
 ### Manual Installation
 
 #### Cursor (per-project)

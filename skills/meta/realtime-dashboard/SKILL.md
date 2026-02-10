@@ -8,6 +8,16 @@ description: Complete guide to building real-time dashboards with streaming data
 
 Complete guide to building real-time dashboards with streaming data.
 
+
+## Installation
+
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install realtime-dashboard
+```
+
+
 ---
 
 ## When to Use

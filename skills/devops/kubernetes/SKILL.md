@@ -18,6 +18,16 @@ Production-ready Kubernetes manifest generation covering Deployments, StatefulSe
 CronJobs, Services, Ingresses, ConfigMaps, Secrets, and PVCs with security contexts,
 health checks, and resource management.
 
+
+## Installation
+
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install kubernetes-devops
+```
+
+
 ## When to Use
 
 | Scenario | Example |

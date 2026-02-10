@@ -26,6 +26,21 @@ npx add https://github.com/wpank/ai/tree/main/skills/design-systems/design-syste
 npx add https://github.com/wpank/ai/tree/main/skills/design-systems/theme-factory
 ```
 
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install animated-financial-display
+npx clawhub@latest install design-system-components
+npx clawhub@latest install design-system-patterns
+npx clawhub@latest install distinctive-design-systems
+npx clawhub@latest install financial-data-visualization
+npx clawhub@latest install loading-state-patterns
+npx clawhub@latest install theme-factory
+npx clawhub@latest install ui-design
+npx clawhub@latest install ui-ux-pro-max
+npx clawhub@latest install web-design
+```
+
 ## See Also
 
 - [All Skills](../) — Complete skills catalog

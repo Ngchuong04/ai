@@ -8,6 +8,16 @@ description: Horizontally-scalable WebSocket hub pattern with lazy Redis subscri
 
 Production patterns for horizontally-scalable WebSocket connections with Redis-backed coordination.
 
+
+## Installation
+
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install websocket-hub-patterns
+```
+
+
 ---
 
 ## When to Use

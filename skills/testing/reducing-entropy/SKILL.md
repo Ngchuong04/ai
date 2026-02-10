@@ -12,6 +12,16 @@ activation: manual  # Only activate when explicitly requested
 
 > More code begets more code. Entropy accumulates. This skill biases toward the smallest possible codebase.
 
+
+## Installation
+
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install reducing-entropy
+```
+
+
 ---
 
 ## WHAT This Skill Does

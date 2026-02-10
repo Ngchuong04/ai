@@ -25,6 +25,12 @@ Production patterns for horizontally-scalable WebSocket connections with Redis-b
 npx add https://github.com/wpank/ai/tree/main/skills/realtime/websocket-hub-patterns
 ```
 
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install websocket-hub-patterns
+```
+
 ### Manual Installation
 
 #### Cursor (per-project)

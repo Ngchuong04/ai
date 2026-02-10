@@ -8,6 +8,16 @@ description: Practical estimation techniques for software tasks — methods comp
 
 Systematic approaches for producing accurate, defensible software estimates.
 
+
+## Installation
+
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install estimation-patterns
+```
+
+
 ---
 
 ## When to Use

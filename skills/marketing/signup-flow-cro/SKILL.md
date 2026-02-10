@@ -26,6 +26,16 @@ Before providing recommendations, understand:
 2. **Current State** — How many steps/screens? What fields? Current completion rate? Where do users drop off?
 3. **Business Constraints** — What data is genuinely needed at signup? Compliance requirements? What happens after signup?
 
+
+## Installation
+
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install signup-flow-cro
+```
+
+
 ---
 
 ## Core Principles

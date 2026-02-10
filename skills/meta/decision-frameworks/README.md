@@ -28,6 +28,12 @@ Structured decision-making patterns for common engineering choices — library s
 npx add https://github.com/wpank/ai/tree/main/skills/meta/decision-frameworks
 ```
 
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install decision-frameworks
+```
+
 ### Manual Installation
 
 #### Cursor (per-project)

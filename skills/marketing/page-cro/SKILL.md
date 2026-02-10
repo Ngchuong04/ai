@@ -13,6 +13,16 @@ model: standard
 
 - `references/experiments.md` - A/B test ideas by page type (100+ experiments)
 
+
+## Installation
+
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install page-cro
+```
+
+
 ---
 
 ## Workflow

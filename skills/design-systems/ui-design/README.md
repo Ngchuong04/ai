@@ -31,6 +31,12 @@ The definitive guide for building production-grade web interfaces. Covers the fu
 npx add https://github.com/wpank/ai/tree/main/skills/design-systems/ui-design
 ```
 
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install ui-design
+```
+
 ### Manual Installation
 
 #### Cursor (per-project)

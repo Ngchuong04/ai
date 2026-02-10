@@ -8,6 +8,16 @@ description: Write effective professional messages for software teams. Use when 
 
 Write clear, effective professional messages that get read and acted upon.
 
+
+## Installation
+
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install professional-communication
+```
+
+
 ## WHAT This Skill Does
 
 Routes you to ready-to-use templates and translation guides for professional technical communication.

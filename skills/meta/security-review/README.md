@@ -26,6 +26,12 @@ Meta-skill that orchestrates a comprehensive security review by coordinating aut
 npx add https://github.com/wpank/ai/tree/main/skills/meta/security-review
 ```
 
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install security-review
+```
+
 ### Manual Installation
 
 #### Cursor (per-project)

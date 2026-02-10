@@ -8,6 +8,16 @@ description: Consolidate and refine extracted skills and docs from multiple proj
 
 Process extracted skills and docs from multiple projects into consolidated, project-agnostic patterns.
 
+
+## Installation
+
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install refinement
+```
+
+
 ---
 
 ## Before Starting

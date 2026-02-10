@@ -26,6 +26,12 @@ Library of 139 proven SaaS marketing tactics with implementation guidance. Searc
 npx add https://github.com/wpank/ai/tree/main/skills/marketing/marketing-ideas
 ```
 
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install marketing-ideas
+```
+
 ### Manual Installation
 
 #### Cursor (per-project)

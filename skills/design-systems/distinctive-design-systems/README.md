@@ -25,6 +25,12 @@ Patterns for creating design systems with personality and distinctive aesthetics
 npx add https://github.com/wpank/ai/tree/main/skills/design-systems/distinctive-design-systems
 ```
 
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install distinctive-design-systems
+```
+
 ### Manual Installation
 
 #### Cursor (per-project)

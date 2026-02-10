@@ -26,6 +26,12 @@ Systematic task implementation using TDD, phase checkpoints, and structured comm
 npx add https://github.com/wpank/ai/tree/main/skills/meta/workflow-patterns
 ```
 
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install workflow-patterns
+```
+
 ### Manual Installation
 
 #### Cursor (per-project)

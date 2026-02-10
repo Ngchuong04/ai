@@ -14,6 +14,16 @@ tags: [diagrams, mermaid, visualization, architecture, documentation, modeling]
 
 Create professional software diagrams using Mermaid's text-based syntax. Mermaid renders diagrams from simple text definitions, making diagrams version-controllable, easy to update, and maintainable alongside code.
 
+
+## Installation
+
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install mermaid-diagrams
+```
+
+
 ## Core Syntax
 
 All Mermaid diagrams follow this pattern:

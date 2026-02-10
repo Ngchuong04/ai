@@ -29,6 +29,24 @@ npx add https://github.com/wpank/ai/tree/main/skills/frontend/react-best-practic
 npx add https://github.com/wpank/ai/tree/main/skills/frontend/shadcn-ui
 ```
 
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install composition-patterns
+npx clawhub@latest install expo-native-ui
+npx clawhub@latest install frontend-design
+npx clawhub@latest install native-ui
+npx clawhub@latest install nextjs
+npx clawhub@latest install react-best-practices
+npx clawhub@latest install react-composition
+npx clawhub@latest install react-modernization
+npx clawhub@latest install react-performance
+npx clawhub@latest install responsive-design
+npx clawhub@latest install shadcn-ui
+npx clawhub@latest install tailwind-design-system
+npx clawhub@latest install tailwind-v4-shadcn
+```
+
 ## See Also
 
 - [All Skills](../) — Complete skills catalog

@@ -14,6 +14,16 @@ tags: [memes, humor, social-media, tools, content]
 
 Generate memes using the free memegen.link API and textual Markdown meme formats. No API key required.
 
+
+## Installation
+
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install meme-factory
+```
+
+
 ## NEVER Do
 
 - Use spaces in meme URLs without encoding them as `_` or `-`

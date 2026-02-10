@@ -22,6 +22,12 @@ Write clear, effective professional messages that get read and acted upon. Route
 npx add https://github.com/wpank/ai/tree/main/skills/writing/professional-communication
 ```
 
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install professional-communication
+```
+
 ### Manual Installation
 
 #### Cursor (per-project)

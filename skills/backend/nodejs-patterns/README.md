@@ -30,6 +30,12 @@ Production-ready Node.js backend patterns — Express/Fastify setup, layered arc
 npx add https://github.com/wpank/ai/tree/main/skills/backend/nodejs-patterns
 ```
 
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install nodejs-patterns
+```
+
 ### Manual Installation
 
 #### Cursor (per-project)

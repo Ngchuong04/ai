@@ -29,6 +29,12 @@ Build reliable, fast end-to-end test suites with Playwright and Cypress. Critica
 npx add https://github.com/wpank/ai/tree/main/skills/testing/e2e-testing-patterns
 ```
 
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install e2e-testing-patterns
+```
+
 ### Manual Installation
 
 #### Cursor (per-project)

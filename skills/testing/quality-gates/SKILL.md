@@ -10,6 +10,16 @@ version: 1.0
 
 Enforce quality checkpoints at every stage of the development lifecycle. Each gate defines what is checked, when it runs, and whether it blocks progression.
 
+
+## Installation
+
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install quality-gates
+```
+
+
 ---
 
 ## When to Use

@@ -19,6 +19,16 @@ Pick one strategy and apply it consistently across your entire API surface.
 | **Header** | `Accept-Version: v1` | Low | Good | Internal APIs, coordinated consumers |
 | **Content Negotiation** | `Accept: application/vnd.api.v1+json` | Low | Good | Enterprise, strict REST compliance |
 
+
+## Installation
+
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install api-versioning
+```
+
+
 ---
 
 ## URL Path Versioning

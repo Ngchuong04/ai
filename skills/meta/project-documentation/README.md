@@ -26,6 +26,12 @@ Complete workflow for project documentation including ADRs, PRDs, personas, and 
 npx add https://github.com/wpank/ai/tree/main/skills/meta/project-documentation
 ```
 
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install project-documentation
+```
+
 ### Manual Installation
 
 #### Cursor (per-project)

@@ -50,6 +50,16 @@ Use `npx expo run:ios/android` or `eas build` only for:
 
 Expo Go supports all `expo-*` packages, Expo Router, Reanimated, Gesture Handler, push notifications, and deep links out of the box.
 
+
+## Installation
+
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install native-ui
+```
+
+
 ---
 
 ## Code Style

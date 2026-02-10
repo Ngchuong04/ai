@@ -26,6 +26,12 @@ Find 10x product opportunities and high-leverage improvements. A product strateg
 npx add https://github.com/wpank/ai/tree/main/skills/writing/game-changing-features
 ```
 
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install game-changing-features
+```
+
 ### Manual Installation
 
 #### Cursor (per-project)

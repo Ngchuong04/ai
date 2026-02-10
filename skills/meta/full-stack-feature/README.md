@@ -25,6 +25,12 @@ Meta-skill for orchestrating end-to-end feature development from persona researc
 npx add https://github.com/wpank/ai/tree/main/skills/meta/full-stack-feature
 ```
 
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install full-stack-feature
+```
+
 ### Manual Installation
 
 #### Cursor (per-project)

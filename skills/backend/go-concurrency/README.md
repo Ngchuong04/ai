@@ -29,6 +29,12 @@ Production Go concurrency patterns — goroutines, channels, sync primitives, co
 npx add https://github.com/wpank/ai/tree/main/skills/backend/go-concurrency
 ```
 
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install go-concurrency
+```
+
 ### Manual Installation
 
 #### Cursor (per-project)

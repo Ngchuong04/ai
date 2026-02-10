@@ -13,6 +13,16 @@ tags: [context, documentation, ai-alignment, team-workflow, methodology]
 
 Treat project context as a first-class artifact managed alongside code. Instead of relying on ad-hoc prompts or scattered documentation, establish a persistent, structured foundation that informs all AI interactions.
 
+
+## Installation
+
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install context-driven-development
+```
+
+
 ## WHAT This Skill Does
 
 Creates and maintains a set of context documents that:

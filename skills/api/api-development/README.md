@@ -23,6 +23,12 @@ Meta-skill that orchestrates the full API development lifecycle — from design 
 npx add https://github.com/wpank/ai/tree/main/skills/api/api-development
 ```
 
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install api-development
+```
+
 ### Manual Installation
 
 #### Cursor (per-project)

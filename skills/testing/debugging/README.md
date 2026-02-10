@@ -27,6 +27,12 @@ A systematic, scientific approach to finding and fixing bugs — replacing guess
 npx add https://github.com/wpank/ai/tree/main/skills/testing/debugging
 ```
 
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install debugging
+```
+
 ### Manual Installation
 
 #### Cursor (per-project)

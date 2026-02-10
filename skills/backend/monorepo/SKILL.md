@@ -8,6 +8,16 @@ description: Build and manage monorepos with Turborepo, Nx, and pnpm workspaces 
 
 Build efficient, scalable monorepos that enable code sharing, consistent tooling, and atomic changes across multiple packages and applications.
 
+
+## Installation
+
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install monorepo
+```
+
+
 ## When to Use
 
 - Setting up a new monorepo or migrating from multi-repo

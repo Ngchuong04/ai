@@ -19,6 +19,16 @@ Patterns for building observable systems across the three pillars: logs, metrics
 
 Each pillar is strongest when correlated. Embed `trace_id` in every log line to jump from a log entry to the full distributed trace.
 
+
+## Installation
+
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install logging-observability
+```
+
+
 ---
 
 ## Structured Logging

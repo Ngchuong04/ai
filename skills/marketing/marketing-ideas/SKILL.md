@@ -35,6 +35,16 @@ This skill includes **139 marketing ideas** organized by category in `references
 | Developer | 133-136 | DevRel, Certifications |
 | Audience-Specific | 137-139 | Referrals, Podcast tours |
 
+
+## Installation
+
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install marketing-ideas
+```
+
+
 ---
 
 ## Workflow

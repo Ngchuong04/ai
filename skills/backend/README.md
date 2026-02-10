@@ -39,6 +39,22 @@ npx add https://github.com/wpank/ai/tree/main/skills/backend/architecture-patter
 npx add https://github.com/wpank/ai/tree/main/skills/backend/nodejs-patterns
 ```
 
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install api-design-principles
+npx clawhub@latest install architecture-decision-records
+npx clawhub@latest install architecture-patterns
+npx clawhub@latest install event-store
+npx clawhub@latest install go-concurrency
+npx clawhub@latest install microservices-patterns
+npx clawhub@latest install monorepo
+npx clawhub@latest install nodejs-patterns
+npx clawhub@latest install postgres-job-queue
+npx clawhub@latest install service-layer-architecture
+npx clawhub@latest install supabase-postgres
+```
+
 ## See Also
 
 - [All Skills](../) — Complete skills catalog

@@ -25,6 +25,12 @@ Composition patterns for building flexible, maintainable React components. Avoid
 npx add https://github.com/wpank/ai/tree/main/skills/frontend/react-composition
 ```
 
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install react-composition
+```
+
 ### Manual Installation
 
 #### Cursor (per-project)

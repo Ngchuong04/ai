@@ -24,6 +24,16 @@ Every piece of content should answer three questions:
 
 Content without persona alignment is noise. Strategy turns noise into signal.
 
+
+## Installation
+
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install content-strategy
+```
+
+
 ---
 
 ## Content Mapping

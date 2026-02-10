@@ -21,6 +21,16 @@ Scores skills across 8 dimensions (120 points total) and provides specific, acti
 
 **KEYWORDS**: review skill, evaluate skill, audit skill, skill quality, SKILL.md
 
+
+## Installation
+
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install skill-judge
+```
+
+
 ---
 
 ## Core Philosophy

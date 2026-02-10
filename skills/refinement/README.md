@@ -14,6 +14,11 @@ Skills for consolidating and refining extracted content from multiple projects i
 # Add individual skills
 npx add https://github.com/wpank/ai/tree/main/skills/refinement/staged-content-refinement
 ```
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install refinement
+```
 
 ## See Also
 

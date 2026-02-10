@@ -31,6 +31,12 @@ Track, calculate, and optimize key performance metrics for different startup bus
 npx add https://github.com/wpank/ai/tree/main/skills/marketing/startup-metrics
 ```
 
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install startup-metrics
+```
+
 ### Manual Installation
 
 #### Cursor (per-project)

@@ -24,6 +24,12 @@ Create Claude Code slash commands — reusable markdown workflows invoked with `
 npx add https://github.com/wpank/ai/tree/main/skills/tools/command-creator
 ```
 
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install command-creator
+```
+
 ### Manual Installation
 
 #### Cursor (per-project)

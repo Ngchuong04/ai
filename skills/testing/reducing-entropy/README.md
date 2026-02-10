@@ -26,6 +26,12 @@ Minimize total codebase size through ruthless simplification. Measure success by
 npx add https://github.com/wpank/ai/tree/main/skills/testing/reducing-entropy
 ```
 
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install reducing-entropy
+```
+
 ### Manual Installation
 
 #### Cursor (per-project)

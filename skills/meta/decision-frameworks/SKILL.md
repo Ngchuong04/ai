@@ -8,6 +8,16 @@ description: Structured decision-making patterns for common engineering choices 
 
 Structured approaches for making engineering decisions with confidence and traceability.
 
+
+## Installation
+
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install decision-frameworks
+```
+
+
 ---
 
 ## When to Use

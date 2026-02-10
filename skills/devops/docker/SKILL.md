@@ -15,6 +15,16 @@ description: |
 
 Container optimization, security hardening, multi-stage builds, and production deployment patterns.
 
+
+## Installation
+
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install docker
+```
+
+
 ## NEVER
 
 - **NEVER use `:latest` tag** - Always use specific version tags for reproducibility

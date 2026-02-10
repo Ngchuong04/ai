@@ -20,6 +20,16 @@ After implementation is complete, guides you through verifying tests, presenting
 
 **KEYWORDS**: finish branch, complete branch, merge, PR, done with feature
 
+
+## Installation
+
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install finishing-branch
+```
+
+
 ---
 
 ## The Process

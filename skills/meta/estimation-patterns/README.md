@@ -28,6 +28,12 @@ Practical estimation techniques for software tasks — methods comparison, decom
 npx add https://github.com/wpank/ai/tree/main/skills/meta/estimation-patterns
 ```
 
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install estimation-patterns
+```
+
 ### Manual Installation
 
 #### Cursor (per-project)

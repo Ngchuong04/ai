@@ -28,6 +28,12 @@ Implement schema.org markup that helps search engines understand content and ena
 npx add https://github.com/wpank/ai/tree/main/skills/writing/schema-markup
 ```
 
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install schema-markup
+```
+
 ### Manual Installation
 
 #### Cursor (per-project)

@@ -8,6 +8,16 @@ description: Patterns and practices that dramatically accelerate development vel
 
 Patterns that compress timelines, eliminate waste, and multiply output. These are the habits and systems that separate high-velocity teams from the rest.
 
+
+## Installation
+
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install 10x-patterns
+```
+
+
 ---
 
 ## When to Use

@@ -18,6 +18,16 @@ description: Safe, zero-downtime database migration strategies — schema evolut
 
 **Default to Additive-Only.** Escalate to Expand-Contract only when you must modify or remove existing structures.
 
+
+## Installation
+
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install database-migrations
+```
+
+
 ---
 
 ## Zero-Downtime Patterns

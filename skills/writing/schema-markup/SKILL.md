@@ -13,6 +13,16 @@ tags: [seo, schema, structured-data, json-ld, rich-snippets, search]
 
 Implement schema.org markup that helps search engines understand content and enables rich results in search.
 
+
+## Installation
+
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install schema-markup
+```
+
+
 ## When to Use
 
 - Adding structured data to new or existing pages

@@ -25,6 +25,12 @@ Create memorable frontend interfaces that stand out from generic AI-generated ae
 npx add https://github.com/wpank/ai/tree/main/skills/frontend/frontend-design
 ```
 
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install frontend-design-guidelines
+```
+
 ### Manual Installation
 
 #### Cursor (per-project)

@@ -45,6 +45,27 @@ npx add https://github.com/wpank/ai/tree/main/skills/meta/subagent-development
 npx add https://github.com/wpank/ai/tree/main/skills/meta/workflow-patterns
 ```
 
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install 10x-patterns
+npx clawhub@latest install ai-chat-application
+npx clawhub@latest install auto-context
+npx clawhub@latest install context-driven-development
+npx clawhub@latest install decision-frameworks
+npx clawhub@latest install design-system-creation
+npx clawhub@latest install estimation-patterns
+npx clawhub@latest install feature-specification
+npx clawhub@latest install full-stack-feature
+npx clawhub@latest install planning-with-files
+npx clawhub@latest install production-readiness
+npx clawhub@latest install project-documentation
+npx clawhub@latest install realtime-dashboard
+npx clawhub@latest install security-review
+npx clawhub@latest install subagent-development
+npx clawhub@latest install workflow-patterns
+```
+
 ## See Also
 
 - [All Skills](../) — Complete skills catalog

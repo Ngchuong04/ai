@@ -24,6 +24,14 @@ npx add https://github.com/wpank/ai/tree/main/skills/<category>/<skill-name>
 
 Example: `npx add https://github.com/wpank/ai/tree/main/skills/api/api-design`
 
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install <skill-name>
+```
+
+Example: `npx clawhub@latest install animated-financial-display`
+
 ### Clone the Full Repo
 
 For access to everything — skills, agents, and commands:
@@ -47,6 +55,14 @@ npx add https://github.com/wpank/ai/tree/main/skills/<category>/<skill-name>
 ```
 
 Example: `npx add https://github.com/wpank/ai/tree/main/skills/api/api-design`
+
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install <skill-name>
+```
+
+Example: `npx clawhub@latest install animated-financial-display`
 
 ### Agents & Commands (Manual Copy)
 

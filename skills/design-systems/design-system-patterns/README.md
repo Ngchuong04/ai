@@ -27,6 +27,12 @@ Foundational design system architecture — token hierarchies, theming infrastru
 npx add https://github.com/wpank/ai/tree/main/skills/design-systems/design-system-patterns
 ```
 
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install design-system-patterns
+```
+
 ### Manual Installation
 
 #### Cursor (per-project)

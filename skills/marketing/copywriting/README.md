@@ -27,6 +27,12 @@ Write clear, compelling marketing copy that drives action. Covers homepage, land
 npx add https://github.com/wpank/ai/tree/main/skills/marketing/copywriting
 ```
 
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install copywriting
+```
+
 ### Manual Installation
 
 #### Cursor (per-project)

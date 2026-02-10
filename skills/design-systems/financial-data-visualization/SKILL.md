@@ -8,6 +8,16 @@ description: Patterns for building dark-themed financial charts and data visuali
 
 Build dark-themed financial charts and visualizations that are readable, beautiful, and consistent with modern trading UIs.
 
+
+## Installation
+
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install financial-data-visualization
+```
+
+
 ---
 
 ## When to Use

@@ -8,6 +8,16 @@ description: Curated collection of professional color and typography themes for 
 
 Apply consistent, professional styling to any artifact using curated themes with color palettes and font pairings.
 
+
+## Installation
+
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install theme-factory
+```
+
+
 ---
 
 ## When to Use

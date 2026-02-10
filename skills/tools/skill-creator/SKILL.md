@@ -19,6 +19,16 @@ The context window is a public good. Only add context Claude doesn't already hav
 
 **Prefer concise examples over verbose explanations.**
 
+
+## Installation
+
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install skill-creator
+```
+
+
 ---
 
 ## Skill Anatomy

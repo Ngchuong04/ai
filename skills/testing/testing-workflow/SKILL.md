@@ -10,6 +10,16 @@ version: 1.0
 
 Orchestrate comprehensive testing across a project by coordinating the **testing-patterns** skill, **e2e-testing** skill, and testing agents. This meta-skill does not define test patterns itself — it routes to the right skill or agent at each stage and ensures nothing is missed.
 
+
+## Installation
+
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install testing-workflow
+```
+
+
 ---
 
 ## When to Use

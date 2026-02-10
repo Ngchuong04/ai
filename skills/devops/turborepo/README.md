@@ -26,6 +26,12 @@ Build system for JavaScript/TypeScript monorepos. Caches task outputs and runs t
 npx add https://github.com/wpank/ai/tree/main/skills/devops/turborepo
 ```
 
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install turborepo
+```
+
 ### Manual Installation
 
 #### Cursor (per-project)

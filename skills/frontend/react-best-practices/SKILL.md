@@ -14,6 +14,16 @@ author: vercel
 
 Comprehensive performance optimization guide for React and Next.js applications from Vercel Engineering. Contains 57 rules across 8 categories, prioritized by impact.
 
+
+## Installation
+
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install react-best-practices
+```
+
+
 ## WHAT This Skill Does
 
 Provides actionable rules for:

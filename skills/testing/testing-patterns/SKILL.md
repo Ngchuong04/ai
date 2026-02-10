@@ -10,6 +10,16 @@ version: 1.0
 
 > **Write tests that catch bugs, not tests that pass.** — Confidence through coverage, speed through isolation.
 
+
+## Installation
+
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install testing-patterns
+```
+
+
 ---
 
 ## Testing Pyramid

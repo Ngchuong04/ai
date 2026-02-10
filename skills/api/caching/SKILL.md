@@ -27,6 +27,16 @@ Cache-Aside Flow:
           Read DB ──► Store in Cache ──► Return data
 ```
 
+
+## Installation
+
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install caching
+```
+
+
 ---
 
 ## Cache Invalidation

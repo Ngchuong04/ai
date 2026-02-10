@@ -8,6 +8,16 @@ description: Meta-skill for orchestrating end-to-end feature development from pe
 
 Coordinate the entire lifecycle of a feature — from understanding who it's for, through design, implementation, testing, and documentation. This meta-skill routes to the right skill, command, or agent at each stage and enforces stage gates so nothing ships half-baked.
 
+
+## Installation
+
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install full-stack-feature
+```
+
+
 ---
 
 ## When to Use

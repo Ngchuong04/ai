@@ -29,6 +29,12 @@ Patterns and conventions for building native mobile applications with Expo Route
 npx add https://github.com/wpank/ai/tree/main/skills/frontend/native-ui
 ```
 
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install native-ui
+```
+
 ### Manual Installation
 
 #### Cursor (per-project)

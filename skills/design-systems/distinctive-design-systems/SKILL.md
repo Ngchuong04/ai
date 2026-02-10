@@ -8,6 +8,16 @@ description: Patterns for creating design systems with personality and distincti
 
 Create design systems with personality that users remember. Move beyond generic templates to build cohesive, emotionally resonant visual languages.
 
+
+## Installation
+
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install distinctive-design-systems
+```
+
+
 ---
 
 ## When to Use

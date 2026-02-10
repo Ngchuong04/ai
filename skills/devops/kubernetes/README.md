@@ -32,6 +32,12 @@ Production-ready Kubernetes manifest generation covering Deployments, StatefulSe
 npx add https://github.com/wpank/ai/tree/main/skills/devops/kubernetes
 ```
 
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install kubernetes-devops
+```
+
 ### Manual Installation
 
 #### Cursor (per-project)

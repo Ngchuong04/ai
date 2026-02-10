@@ -28,6 +28,12 @@ Production-tested setup for Tailwind v4 with shadcn/ui. Prevents 8 documented er
 npx add https://github.com/wpank/ai/tree/main/skills/frontend/tailwind-v4-shadcn
 ```
 
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install tailwind-v4-shadcn
+```
+
 ### Manual Installation
 
 #### Cursor (per-project)

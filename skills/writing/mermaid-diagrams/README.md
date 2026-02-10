@@ -26,6 +26,12 @@ Create professional software diagrams using Mermaid's text-based syntax. Mermaid
 npx add https://github.com/wpank/ai/tree/main/skills/writing/mermaid-diagrams
 ```
 
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install mermaid-diagrams
+```
+
 ### Manual Installation
 
 #### Cursor (per-project)

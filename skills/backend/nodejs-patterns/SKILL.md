@@ -15,6 +15,16 @@ description: |
 
 Patterns for building scalable, maintainable Node.js backend applications with TypeScript.
 
+
+## Installation
+
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install nodejs-patterns
+```
+
+
 ## NEVER
 
 - **NEVER store secrets in code** - Use environment variables, never hardcode credentials

@@ -26,6 +26,12 @@ Backend architecture patterns for building maintainable, testable systems: Clean
 npx add https://github.com/wpank/ai/tree/main/skills/backend/architecture-patterns
 ```
 
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install architecture-patterns
+```
+
 ### Manual Installation
 
 #### Cursor (per-project)

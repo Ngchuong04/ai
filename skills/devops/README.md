@@ -22,6 +22,17 @@ npx add https://github.com/wpank/ai/tree/main/skills/devops/kubernetes
 npx add https://github.com/wpank/ai/tree/main/skills/devops/prometheus
 ```
 
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install docker
+npx clawhub@latest install kubernetes
+npx clawhub@latest install k8s-manifest-generator
+npx clawhub@latest install prometheus
+npx clawhub@latest install solidity-security
+npx clawhub@latest install turborepo
+```
+
 ## See Also
 
 - [All Skills](../) — Complete skills catalog

@@ -26,6 +26,16 @@ argument-hint: <required> or [optional] (if takes arguments)
 [Instructions for agent to execute autonomously]
 ```
 
+
+## Installation
+
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install command-creator
+```
+
+
 ---
 
 ## Creation Workflow

@@ -28,6 +28,16 @@ Systematic patterns for modernizing React codebases:
 
 react upgrade, class to hooks, useEffect, useState, react 18, react 19, concurrent, suspense, transition, codemod, migrate, modernize, functional component
 
+
+## Installation
+
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install react-modernization
+```
+
+
 ---
 
 ## Version Upgrade Paths

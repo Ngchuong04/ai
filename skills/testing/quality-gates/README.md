@@ -27,6 +27,12 @@ Enforce quality checkpoints at every stage of the development lifecycle — pre-
 npx add https://github.com/wpank/ai/tree/main/skills/testing/quality-gates
 ```
 
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install quality-gates
+```
+
 ### Manual Installation
 
 #### Cursor (per-project)

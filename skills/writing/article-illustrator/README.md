@@ -26,6 +26,12 @@ Analyze articles, identify optimal illustration positions, and generate images u
 npx add https://github.com/wpank/ai/tree/main/skills/writing/article-illustrator
 ```
 
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install article-illustrator
+```
+
 ### Manual Installation
 
 #### Cursor (per-project)

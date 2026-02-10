@@ -25,6 +25,12 @@ Analyze and optimize marketing pages for higher conversion rates. Covers homepag
 npx add https://github.com/wpank/ai/tree/main/skills/marketing/page-cro
 ```
 
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install page-cro
+```
+
 ### Manual Installation
 
 #### Cursor (per-project)

@@ -92,6 +92,16 @@ Searchable design database with CLI for generating complete design systems from 
 - `color-guidance` — Use accessible color palettes
 - `data-table` — Provide table alternative for accessibility
 
+
+## Installation
+
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install ui-ux-pro-max
+```
+
+
 ---
 
 ## Prerequisites

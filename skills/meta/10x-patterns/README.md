@@ -27,6 +27,12 @@ Patterns and practices that dramatically accelerate development velocity. Covers
 npx add https://github.com/wpank/ai/tree/main/skills/meta/10x-patterns
 ```
 
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install 10x-patterns
+```
+
 ### Manual Installation
 
 #### Cursor (per-project)

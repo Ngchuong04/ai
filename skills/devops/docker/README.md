@@ -29,6 +29,12 @@ Container optimization, security hardening, multi-stage builds, and production d
 npx add https://github.com/wpank/ai/tree/main/skills/devops/docker
 ```
 
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install docker
+```
+
 ### Manual Installation
 
 #### Cursor (per-project)

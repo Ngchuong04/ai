@@ -25,6 +25,12 @@ Guide for creating effective AI agent skills — modular packages that extend ag
 npx add https://github.com/wpank/ai/tree/main/skills/tools/skill-creator
 ```
 
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install skill-creator
+```
+
 ### Manual Installation
 
 #### Cursor (per-project)

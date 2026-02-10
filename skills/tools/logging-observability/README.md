@@ -28,6 +28,12 @@ Structured logging, distributed tracing, and metrics collection patterns for bui
 npx add https://github.com/wpank/ai/tree/main/skills/tools/logging-observability
 ```
 
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install logging-observability
+```
+
 ### Manual Installation
 
 #### Cursor (per-project)

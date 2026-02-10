@@ -8,6 +8,16 @@ description: Patterns for animating financial numbers with spring physics, forma
 
 Create engaging financial number displays with smooth animations, proper formatting, and visual feedback on value changes.
 
+
+## Installation
+
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install animated-financial-display
+```
+
+
 ---
 
 ## When to Use

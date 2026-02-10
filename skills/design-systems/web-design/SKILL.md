@@ -12,6 +12,16 @@ CSS implementation patterns for production-grade interfaces. For design fundamen
 
 > **See also:** `ui-design` for typography/color/spacing theory, `frontend-design` for creative aesthetics.
 
+
+## Installation
+
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install web-design
+```
+
+
 ## Layout Principles
 
 Use CSS Grid for two-dimensional layouts and Flexbox for one-dimensional flow. Choose the right tool for each context.

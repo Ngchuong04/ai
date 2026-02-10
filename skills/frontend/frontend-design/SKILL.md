@@ -15,6 +15,16 @@ Create memorable frontend interfaces that stand out from generic AI-generated ae
 
 > **See also:** `ui-design` for fundamentals (typography, color, spacing), `web-design` for CSS patterns.
 
+
+## Installation
+
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install frontend-design
+```
+
+
 ## WHAT This Skill Does
 
 Guides creation of visually distinctive web interfaces by:

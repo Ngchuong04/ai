@@ -36,6 +36,16 @@ Comprehensive Postgres performance guide organized by impact priority. Each rule
 
 See `references/` for detailed rule files with full SQL examples.
 
+
+## Installation
+
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install supabase-postgres
+```
+
+
 ---
 
 ## Critical Rules Summary

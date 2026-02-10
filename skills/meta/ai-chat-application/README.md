@@ -21,6 +21,12 @@ Complete guide to building AI chat applications with Vercel AI SDK. Orchestrates
 npx add https://github.com/wpank/ai/tree/main/skills/meta/ai-chat-application
 ```
 
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install ai-chat-application
+```
+
 ### Manual Installation
 
 #### Cursor (per-project)

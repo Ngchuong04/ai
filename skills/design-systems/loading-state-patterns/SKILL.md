@@ -8,6 +8,16 @@ description: Patterns for skeleton loaders, shimmer effects, and loading states 
 
 Build loading states that feel intentional and match your design system aesthetic.
 
+
+## Installation
+
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install loading-state-patterns
+```
+
+
 ---
 
 ## When to Use

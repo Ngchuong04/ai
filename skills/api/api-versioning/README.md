@@ -29,6 +29,12 @@ API versioning strategies — URL path, header, query param, content negotiation
 npx add https://github.com/wpank/ai/tree/main/skills/api/api-versioning
 ```
 
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install api-versioning
+```
+
 ### Manual Installation
 
 #### Cursor (per-project)

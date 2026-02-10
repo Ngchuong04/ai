@@ -24,6 +24,12 @@ Complete development work by presenting structured options for merge, PR, or cle
 npx add https://github.com/wpank/ai/tree/main/skills/tools/finishing-branch
 ```
 
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install finishing-branch
+```
+
 ### Manual Installation
 
 #### Cursor (per-project)

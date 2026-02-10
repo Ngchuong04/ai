@@ -29,6 +29,12 @@ Authentication and authorization patterns — JWT, OAuth 2.0, sessions, RBAC/ABA
 npx add https://github.com/wpank/ai/tree/main/skills/api/auth-patterns
 ```
 
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install auth-patterns
+```
+
 ### Manual Installation
 
 #### Cursor (per-project)

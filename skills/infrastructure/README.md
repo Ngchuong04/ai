@@ -18,6 +18,14 @@ npx add https://github.com/wpank/ai/tree/main/skills/infrastructure/kubernetes-d
 npx add https://github.com/wpank/ai/tree/main/skills/infrastructure/prometheus-observability
 ```
 
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install docker-environment-patterns
+npx clawhub@latest install kubernetes-deployment-patterns
+npx clawhub@latest install prometheus-observability
+```
+
 ## See Also
 
 - [All Skills](../) — Complete skills catalog

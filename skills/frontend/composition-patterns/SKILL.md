@@ -30,6 +30,16 @@ composition, compound components, context, provider, boolean props, variants, re
 
 **Source:** Vercel Engineering
 
+
+## Installation
+
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install composition-patterns
+```
+
+
 ---
 
 ## Core Principle

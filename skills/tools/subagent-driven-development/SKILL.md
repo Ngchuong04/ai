@@ -11,6 +11,16 @@ Execute a plan by dispatching a fresh subagent per task, with two-stage review a
 
 **Core principle:** Fresh subagent per task + two-stage review = no context pollution, high quality, fast iteration.
 
+
+## Installation
+
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install subagent-driven-development
+```
+
+
 ## When to Use This Skill
 
 - You have an implementation plan with discrete, mostly independent tasks

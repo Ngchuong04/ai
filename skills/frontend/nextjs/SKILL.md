@@ -10,6 +10,16 @@ user-invocable: false
 
 Apply these patterns when building, reviewing, or debugging Next.js App Router applications.
 
+
+## Installation
+
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install nextjs
+```
+
+
 ## WHEN
 
 - Building Next.js applications with App Router

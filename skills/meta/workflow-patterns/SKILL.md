@@ -13,6 +13,16 @@ tags: [tdd, workflow, quality, testing, git, checkpoints, implementation]
 
 Implement tasks systematically using TDD (Test-Driven Development) with phase checkpoints and verification protocols. Ensures quality at every step.
 
+
+## Installation
+
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install workflow-patterns
+```
+
+
 ## WHAT This Skill Does
 
 Provides a structured approach to implementing tasks:

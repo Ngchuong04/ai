@@ -13,6 +13,16 @@ tags: [planning, context, workflow, manus, memory, complex-tasks]
 
 Use persistent markdown files as your "working memory on disk." Based on context engineering principles from Manus.
 
+
+## Installation
+
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install planning-with-files
+```
+
+
 ## WHAT This Skill Does
 
 Treats the filesystem as persistent memory to overcome context window limitations. Three files track your state:

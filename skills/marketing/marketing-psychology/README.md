@@ -26,6 +26,12 @@
 npx add https://github.com/wpank/ai/tree/main/skills/marketing/marketing-psychology
 ```
 
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install marketing-psychology
+```
+
 ### Manual Installation
 
 #### Cursor (per-project)

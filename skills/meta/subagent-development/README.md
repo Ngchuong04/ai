@@ -25,6 +25,12 @@ Execute implementation plans by dispatching fresh subagents per task, with two-s
 npx add https://github.com/wpank/ai/tree/main/skills/meta/subagent-development
 ```
 
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install subagent-development
+```
+
 ### Manual Installation
 
 #### Cursor (per-project)

@@ -35,6 +35,12 @@ Next.js App Router best practices — Server Components, data fetching, caching,
 npx add https://github.com/wpank/ai/tree/main/skills/frontend/nextjs
 ```
 
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install nextjs-guidelines
+```
+
 ### Manual Installation
 
 #### Cursor (per-project)

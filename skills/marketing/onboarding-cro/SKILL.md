@@ -26,6 +26,16 @@ Before providing recommendations, understand:
 2. **Activation Definition** — What's the "aha moment"? What action indicates a user "gets it"?
 3. **Current State** — What happens after signup? Where do users drop off?
 
+
+## Installation
+
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install onboarding-cro
+```
+
+
 ---
 
 ## Core Principles

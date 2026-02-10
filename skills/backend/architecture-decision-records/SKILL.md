@@ -18,6 +18,16 @@ Lightweight documentation capturing the context, decision, and consequences of s
 ## KEYWORDS
 ADR, architecture decision record, technical documentation, decision log, MADR, RFC, design decisions, trade-offs
 
+
+## Installation
+
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install architecture-decision-records
+```
+
+
 ---
 
 ## Quick Decision: Should I Write an ADR?

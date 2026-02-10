@@ -30,6 +30,12 @@ Expert guide for building accessible, customizable UI components with shadcn/ui,
 npx add https://github.com/wpank/ai/tree/main/skills/frontend/shadcn-ui
 ```
 
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install shadcn
+```
+
 ### Manual Installation
 
 #### Cursor (per-project)

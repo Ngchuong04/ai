@@ -25,6 +25,12 @@ Create user-centered documentation that defines who a product is for and how the
 npx add https://github.com/wpank/ai/tree/main/skills/writing/persona-docs
 ```
 
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install persona-docs
+```
+
 ### Manual Installation
 
 #### Cursor (per-project)

@@ -29,6 +29,12 @@ Safe, zero-downtime database migration strategies — schema evolution, rollback
 npx add https://github.com/wpank/ai/tree/main/skills/api/database-migrations
 ```
 
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install database-migrations
+```
+
 ### Manual Installation
 
 #### Cursor (per-project)

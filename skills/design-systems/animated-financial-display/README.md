@@ -25,6 +25,12 @@ Patterns for animating financial numbers with spring physics, formatting, and vi
 npx add https://github.com/wpank/ai/tree/main/skills/design-systems/animated-financial-display
 ```
 
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install animated-financial-display
+```
+
 ### Manual Installation
 
 #### Cursor (per-project)

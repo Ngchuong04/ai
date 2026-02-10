@@ -10,6 +10,16 @@ version: 2.0
 
 > Be **concise, direct, and solution-focused**. Clean code reads like well-written prose — every name reveals intent, every function does one thing, and every abstraction earns its place.
 
+
+## Installation
+
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install clean-code
+```
+
+
 ---
 
 ## Core Principles

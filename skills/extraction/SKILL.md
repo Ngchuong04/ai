@@ -8,6 +8,16 @@ description: Extract design systems, architecture patterns, and methodology from
 
 Extract reusable patterns, skills, and methodology documentation from existing codebases.
 
+
+## Installation
+
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install extraction
+```
+
+
 ---
 
 ## Before Starting

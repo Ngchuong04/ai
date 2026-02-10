@@ -12,6 +12,16 @@ tags: [expo, react-native, ios, android, mobile, navigation, animations]
 
 Build production-quality native mobile apps with Expo Router following Apple Human Interface Guidelines and modern React Native patterns.
 
+
+## Installation
+
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install expo-native-ui
+```
+
+
 ## WHAT This Skill Does
 
 Guides implementation of native mobile apps using Expo Router with:

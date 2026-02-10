@@ -24,6 +24,12 @@ Dual-stream event publishing combining Kafka for durability with Redis Pub/Sub f
 npx add https://github.com/wpank/ai/tree/main/skills/realtime/dual-stream-architecture
 ```
 
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install dual-stream-architecture
+```
+
 ### Manual Installation
 
 #### Cursor (per-project)

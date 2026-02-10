@@ -8,6 +8,16 @@ description: Production Go concurrency patterns — goroutines, channels, sync p
 
 Production patterns for Go concurrency including goroutines, channels, synchronization primitives, and context management.
 
+
+## Installation
+
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install go-concurrency
+```
+
+
 ## When to Use
 
 - Building concurrent Go applications

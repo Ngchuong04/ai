@@ -16,6 +16,16 @@ Orchestrate the full API development lifecycle by coordinating design, implement
 - Planning API versioning and migration
 - Running a complete API development cycle (design → build → test → document → deploy)
 
+
+## Installation
+
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install api-development
+```
+
+
 ---
 
 ## Orchestration Flow

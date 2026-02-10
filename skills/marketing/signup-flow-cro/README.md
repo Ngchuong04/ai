@@ -29,6 +29,12 @@ Optimize signup, registration, and account creation flows. Reduce friction, incr
 npx add https://github.com/wpank/ai/tree/main/skills/marketing/signup-flow-cro
 ```
 
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install signup-flow-cro
+```
+
 ### Manual Installation
 
 #### Cursor (per-project)

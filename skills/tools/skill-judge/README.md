@@ -25,6 +25,12 @@ Evaluate Agent Skill quality against official specifications. Scores skills acro
 npx add https://github.com/wpank/ai/tree/main/skills/tools/skill-judge
 ```
 
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install skill-judge
+```
+
 ### Manual Installation
 
 #### Cursor (per-project)

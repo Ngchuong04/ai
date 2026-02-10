@@ -26,6 +26,12 @@ Performance optimization guide for React and Next.js applications. Patterns acro
 npx add https://github.com/wpank/ai/tree/main/skills/frontend/react-performance
 ```
 
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install react-performance
+```
+
 ### Manual Installation
 
 #### Cursor (per-project)

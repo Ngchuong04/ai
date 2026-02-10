@@ -25,6 +25,16 @@ The definitive guide for building production-grade web interfaces. Covers the fu
 
 ui design, web design, layout, typography, color palette, spacing, visual hierarchy, responsive design, accessibility, motion design, component design, design tokens, frontend, css, tailwind
 
+
+## Installation
+
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install ui-design
+```
+
+
 ---
 
 ## Design Philosophy

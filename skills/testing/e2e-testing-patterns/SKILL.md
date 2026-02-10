@@ -11,6 +11,16 @@ keywords: [e2e, end-to-end, playwright, cypress, browser testing, integration te
 
 > Test what users do, not how code works. E2E tests prove the system works as a whole — they're your confidence to ship.
 
+
+## Installation
+
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install e2e-testing-patterns
+```
+
+
 ---
 
 ## WHAT This Skill Does

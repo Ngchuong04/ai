@@ -61,6 +61,16 @@ def sliding_window_allow(key: str, limit: int, window_sec: int) -> bool:
     return True
 ```
 
+
+## Installation
+
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install rate-limiting
+```
+
+
 ---
 
 ## Implementation Options

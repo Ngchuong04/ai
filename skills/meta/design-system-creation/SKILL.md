@@ -8,6 +8,16 @@ description: Complete workflow for creating distinctive design systems from scra
 
 Complete workflow for creating distinctive design systems with personality.
 
+
+## Installation
+
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install design-system-creation
+```
+
+
 ---
 
 ## When to Use

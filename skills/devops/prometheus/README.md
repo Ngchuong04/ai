@@ -30,6 +30,12 @@ Production Prometheus setup covering scrape configuration, service discovery, re
 npx add https://github.com/wpank/ai/tree/main/skills/devops/prometheus
 ```
 
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install prometheus-devops
+```
+
 ### Manual Installation
 
 #### Cursor (per-project)

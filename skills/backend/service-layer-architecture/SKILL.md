@@ -8,6 +8,16 @@ description: Controller-service-query layered API architecture with data enrichm
 
 Clean, performant API layers with proper separation of concerns and parallel data fetching.
 
+
+## Installation
+
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install service-layer-architecture
+```
+
+
 ---
 
 ## When to Use

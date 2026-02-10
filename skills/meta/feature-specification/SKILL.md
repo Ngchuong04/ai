@@ -8,6 +8,16 @@ description: Convert persona docs into detailed feature specifications with acce
 
 Bridge persona documentation and development. This skill translates user needs, pain points, and journeys identified in persona docs into structured, implementable feature specifications with clear acceptance criteria.
 
+
+## Installation
+
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install feature-specification
+```
+
+
 ---
 
 ## Purpose

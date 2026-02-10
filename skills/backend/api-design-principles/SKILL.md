@@ -18,6 +18,16 @@ Design intuitive, scalable REST and GraphQL APIs that developers love. Covers re
 ## KEYWORDS
 REST, GraphQL, API design, HTTP methods, pagination, error handling, versioning, OpenAPI, HATEOAS, schema design
 
+
+## Installation
+
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install api-design-principles
+```
+
+
 ---
 
 ## Decision Framework: REST vs GraphQL

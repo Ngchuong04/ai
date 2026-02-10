@@ -31,6 +31,12 @@ Caching strategies, invalidation, eviction policies, HTTP caching, distributed c
 npx add https://github.com/wpank/ai/tree/main/skills/api/caching
 ```
 
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install caching
+```
+
 ### Manual Installation
 
 #### Cursor (per-project)

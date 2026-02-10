@@ -15,6 +15,16 @@ version: 2.7.6
 
 Build system for JavaScript/TypeScript monorepos. Caches task outputs and runs tasks in parallel based on dependency graph.
 
+
+## Installation
+
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install turborepo
+```
+
+
 ## NEVER
 
 - **NEVER create root tasks** - Always create package-level tasks in each package's `package.json`

@@ -26,6 +26,12 @@ Pragmatic coding standards for writing clean, maintainable code — naming, func
 npx add https://github.com/wpank/ai/tree/main/skills/testing/clean-code
 ```
 
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install clean-code-review
+```
+
 ### Manual Installation
 
 #### Cursor (per-project)

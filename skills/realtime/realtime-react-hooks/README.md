@@ -23,6 +23,12 @@ Production patterns for real-time data in React applications using SSE, WebSocke
 npx add https://github.com/wpank/ai/tree/main/skills/realtime/realtime-react-hooks
 ```
 
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install realtime-react-hooks
+```
+
 ### Manual Installation
 
 #### Cursor (per-project)

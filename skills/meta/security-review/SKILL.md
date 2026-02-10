@@ -8,6 +8,16 @@ description: Meta-skill that orchestrates a comprehensive security review by coo
 
 Comprehensive security review by orchestrating multiple security-related skills into a single, repeatable workflow. This skill does not implement security controls itself — it routes each concern to the specialist skill best equipped to handle it.
 
+
+## Installation
+
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install security-review
+```
+
+
 ---
 
 ## Purpose

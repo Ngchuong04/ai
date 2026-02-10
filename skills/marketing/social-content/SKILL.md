@@ -28,6 +28,16 @@ Gather this context (ask if not provided):
 3. **Brand Voice** — Professional, casual, witty, authoritative? Topics to avoid?
 4. **Resources** — How much time weekly? Existing content to repurpose? Video capability?
 
+
+## Installation
+
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install social-content
+```
+
+
 ---
 
 ## Platform Quick Reference

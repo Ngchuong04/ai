@@ -33,6 +33,19 @@ npx add https://github.com/wpank/ai/tree/main/skills/api/api-design
 npx add https://github.com/wpank/ai/tree/main/skills/api/auth-patterns
 ```
 
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install api-design
+npx clawhub@latest install api-development
+npx clawhub@latest install api-versioning
+npx clawhub@latest install auth-patterns
+npx clawhub@latest install caching
+npx clawhub@latest install database-migrations
+npx clawhub@latest install error-handling
+npx clawhub@latest install rate-limiting
+```
+
 ## See Also
 
 - [All Skills](../) — Complete skills catalog

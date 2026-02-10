@@ -29,6 +29,12 @@ Error handling patterns across languages and layers — operational vs programme
 npx add https://github.com/wpank/ai/tree/main/skills/api/error-handling
 ```
 
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install error-handling
+```
+
 ### Manual Installation
 
 #### Cursor (per-project)

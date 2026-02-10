@@ -25,6 +25,12 @@ Complete workflow for creating distinctive design systems from scratch. Orchestr
 npx add https://github.com/wpank/ai/tree/main/skills/meta/design-system-creation
 ```
 
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install design-system-creation
+```
+
 ### Manual Installation
 
 #### Cursor (per-project)

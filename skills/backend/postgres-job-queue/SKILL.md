@@ -8,6 +8,16 @@ description: PostgreSQL-based job queue with priority scheduling, batch claiming
 
 Production-ready job queue using PostgreSQL with priority scheduling, batch claiming, and progress tracking.
 
+
+## Installation
+
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install postgres-job-queue
+```
+
+
 ---
 
 ## When to Use

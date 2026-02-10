@@ -31,6 +31,12 @@ Write clear, concise prose for humans — documentation, READMEs, API docs, comm
 npx add https://github.com/wpank/ai/tree/main/skills/writing/clear-writing
 ```
 
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install clear-writing
+```
+
 ### Manual Installation
 
 #### Cursor (per-project)

@@ -23,6 +23,12 @@ Patterns for building resilient API clients and real-time connections with retry
 npx add https://github.com/wpank/ai/tree/main/skills/realtime/resilient-connections
 ```
 
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install resilient-connections
+```
+
 ### Manual Installation
 
 #### Cursor (per-project)

@@ -15,6 +15,16 @@ tags: [writing, illustration, images, articles, content]
 
 Analyze articles, identify optimal illustration positions, and generate images using a Type x Style consistency system.
 
+
+## Installation
+
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install article-illustrator
+```
+
+
 ## NEVER Do
 
 - Illustrate metaphors literally (e.g., if article says "chainsaw cutting watermelon," visualize the underlying concept instead)

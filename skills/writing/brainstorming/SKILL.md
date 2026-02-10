@@ -14,6 +14,16 @@ tags: [brainstorming, design, ideation, planning, creative, specification]
 
 Turn ideas into fully formed designs and specs through natural collaborative dialogue. This skill ensures you explore the problem space before jumping to solutions.
 
+
+## Installation
+
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install brainstorming
+```
+
+
 ## When to Use
 
 Use this before any creative work:

@@ -29,6 +29,12 @@ Comprehensive guide to tracking, calculating, and optimizing key performance met
 npx add https://github.com/wpank/ai/tree/main/skills/product/startup-metrics
 ```
 
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install startup-metrics
+```
+
 ### Manual Installation
 
 #### Cursor (per-project)

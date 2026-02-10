@@ -30,6 +30,12 @@ Master advanced prompt engineering techniques to maximize LLM performance, relia
 npx add https://github.com/wpank/ai/tree/main/skills/writing/prompt-engineering
 ```
 
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install prompt-engineering
+```
+
 ### Manual Installation
 
 #### Cursor (per-project)

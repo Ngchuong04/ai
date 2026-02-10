@@ -8,6 +8,16 @@ description: Patterns for building design system components using Surface primit
 
 Build reusable components that leverage design tokens with Surface primitives and CVA (class-variance-authority).
 
+
+## Installation
+
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install design-system-components
+```
+
+
 ---
 
 ## When to Use

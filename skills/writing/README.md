@@ -31,6 +31,20 @@ npx add https://github.com/wpank/ai/tree/main/skills/writing/prompt-engineering
 npx add https://github.com/wpank/ai/tree/main/skills/writing/schema-markup
 ```
 
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install article-illustrator
+npx clawhub@latest install brainstorming
+npx clawhub@latest install clear-writing
+npx clawhub@latest install game-changing-features
+npx clawhub@latest install mermaid-diagrams
+npx clawhub@latest install persona-docs
+npx clawhub@latest install professional-communication
+npx clawhub@latest install prompt-engineering
+npx clawhub@latest install schema-markup
+```
+
 ## See Also
 
 - [All Skills](../) — Complete skills catalog

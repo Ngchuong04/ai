@@ -25,6 +25,12 @@ Patterns for skeleton loaders, shimmer effects, and loading states that match de
 npx add https://github.com/wpank/ai/tree/main/skills/design-systems/loading-state-patterns
 ```
 
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install loading-state-patterns
+```
+
 ### Manual Installation
 
 #### Cursor (per-project)

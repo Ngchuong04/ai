@@ -14,6 +14,14 @@ npx add https://github.com/wpank/ai/tree/main/skills/<category>/<skill-name>
 
 Example: `npx add https://github.com/wpank/ai/tree/main/skills/api/api-design`
 
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install <skill-name>
+```
+
+Example: `npx clawhub@latest install animated-financial-display`
+
 ### Manual Installation
 
 Clone this repo and copy skills into your project:

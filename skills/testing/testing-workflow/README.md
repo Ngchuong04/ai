@@ -31,6 +31,12 @@ Meta-skill that orchestrates comprehensive testing across a project by coordinat
 npx add https://github.com/wpank/ai/tree/main/skills/testing/testing-workflow
 ```
 
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install testing-workflow
+```
+
 ### Manual Installation
 
 #### Cursor (per-project)

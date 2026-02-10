@@ -9,6 +9,16 @@ keywords: [shadcn, shadcn/ui, radix ui, tailwind, react components, forms, react
 
 Expert guide for building accessible, customizable UI components with shadcn/ui.
 
+
+## Installation
+
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install shadcn-ui
+```
+
+
 ## WHEN
 
 - Setting up a new project with shadcn/ui

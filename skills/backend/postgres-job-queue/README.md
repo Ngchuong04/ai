@@ -23,6 +23,12 @@ Production-ready job queue using PostgreSQL with priority scheduling, batch clai
 npx add https://github.com/wpank/ai/tree/main/skills/backend/postgres-job-queue
 ```
 
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install postgres-job-queue
+```
+
 ### Manual Installation
 
 #### Cursor (per-project)

@@ -25,6 +25,12 @@ Searchable UI/UX design databases with CLI for generating complete design system
 npx add https://github.com/wpank/ai/tree/main/skills/design-systems/ui-ux-pro-max
 ```
 
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install ui-ux-pro-max
+```
+
 ### Manual Installation
 
 #### Cursor (per-project)

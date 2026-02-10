@@ -148,6 +148,16 @@ What the product does today and for whom.
 ## The Question
 What would make this 10x more valuable?
 
+
+## Installation
+
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install game-changing-features
+```
+
+
 ---
 
 ## Massive Opportunities

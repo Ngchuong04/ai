@@ -24,6 +24,12 @@ Controller-service-query layered API architecture with data enrichment and paral
 npx add https://github.com/wpank/ai/tree/main/skills/backend/service-layer-architecture
 ```
 
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install service-layer-architecture
+```
+
 ### Manual Installation
 
 #### Cursor (per-project)

@@ -27,6 +27,12 @@ Treat project context as a managed artifact alongside code. Use structured conte
 npx add https://github.com/wpank/ai/tree/main/skills/meta/context-driven-development
 ```
 
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install context-driven-development
+```
+
 ### Manual Installation
 
 #### Cursor (per-project)

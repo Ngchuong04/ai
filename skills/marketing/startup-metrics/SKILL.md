@@ -15,6 +15,16 @@ tags: [marketing, metrics, saas, startups, unit-economics]
 
 Track, calculate, and optimize key performance metrics for different startup business models from seed through Series B+.
 
+
+## Installation
+
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install startup-metrics
+```
+
+
 ## NEVER Do
 
 - Focus on vanity metrics (total users without retention, page views without engagement, downloads without activation)

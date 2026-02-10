@@ -30,6 +30,16 @@ Comprehensive responsive design techniques:
 
 responsive, container query, media query, breakpoint, mobile-first, fluid typography, clamp, css grid, flexbox, viewport, adaptive, responsive images
 
+
+## Installation
+
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install responsive-design
+```
+
+
 ---
 
 ## Breakpoint Scale (Mobile-First)

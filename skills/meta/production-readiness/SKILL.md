@@ -8,6 +8,16 @@ description: Meta-skill that orchestrates logging, monitoring, error handling, p
 
 Coordinates all operational concerns into a single readiness review. Instead of duplicating domain expertise, this skill routes to specialized skills and agents for each area, then synthesizes results into a unified go/no-go assessment.
 
+
+## Installation
+
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install production-readiness
+```
+
+
 ---
 
 ## Purpose

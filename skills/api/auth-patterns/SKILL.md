@@ -19,6 +19,16 @@ description: Authentication and authorization patterns — JWT, OAuth 2.0, sessi
 | **Magic Links** | One-time login link via email | Low-friction onboarding, B2C |
 | **Passkeys/WebAuthn** | Hardware/biometric challenge-response | High-security apps, passwordless |
 
+
+## Installation
+
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install auth-patterns
+```
+
+
 ---
 
 ## JWT Patterns

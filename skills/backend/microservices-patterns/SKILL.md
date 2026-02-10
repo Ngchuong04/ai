@@ -18,6 +18,16 @@ Patterns for building distributed systems: service decomposition, inter-service 
 ## KEYWORDS
 microservices, service mesh, event-driven, saga, circuit breaker, API gateway, service discovery, distributed transactions, eventual consistency, CQRS
 
+
+## Installation
+
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install microservices-patterns
+```
+
+
 ---
 
 ## Decision Framework: When to Use Microservices

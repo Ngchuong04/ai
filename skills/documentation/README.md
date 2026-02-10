@@ -18,6 +18,14 @@ npx add https://github.com/wpank/ai/tree/main/skills/documentation/docs-organiza
 npx add https://github.com/wpank/ai/tree/main/skills/documentation/prd-patterns
 ```
 
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install adr-patterns
+npx clawhub@latest install docs-organization
+npx clawhub@latest install prd-patterns
+```
+
 ## See Also
 
 - [All Skills](../) — Complete skills catalog

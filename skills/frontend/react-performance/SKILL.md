@@ -33,6 +33,16 @@ across 7 categories, prioritized by impact. Detailed examples in `references/`.
 | 6 | Client-Side Data     | MEDIUM     |
 | 7 | JS Performance       | LOW-MEDIUM |
 
+
+## Installation
+
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install react-performance
+```
+
+
 ---
 
 ## 1. Async — Eliminating Waterfalls (CRITICAL)

@@ -29,6 +29,12 @@ Build and manage monorepos with Turborepo, Nx, and pnpm workspaces — covering 
 npx add https://github.com/wpank/ai/tree/main/skills/backend/monorepo
 ```
 
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install monorepo
+```
+
 ### Manual Installation
 
 #### Cursor (per-project)

@@ -29,6 +29,19 @@ npx add https://github.com/wpank/ai/tree/main/skills/testing/testing-patterns
 npx add https://github.com/wpank/ai/tree/main/skills/testing/testing-workflow
 ```
 
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install clean-code
+npx clawhub@latest install code-review
+npx clawhub@latest install debugging
+npx clawhub@latest install e2e-testing-patterns
+npx clawhub@latest install quality-gates
+npx clawhub@latest install reducing-entropy
+npx clawhub@latest install testing-patterns
+npx clawhub@latest install testing-workflow
+```
+
 ## See Also
 
 - [All Skills](../) — Complete skills catalog

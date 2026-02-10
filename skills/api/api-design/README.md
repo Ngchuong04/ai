@@ -30,6 +30,12 @@ REST and GraphQL API design principles — resource modeling, HTTP semantics, pa
 npx add https://github.com/wpank/ai/tree/main/skills/api/api-design
 ```
 
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install api-design
+```
+
 ### Manual Installation
 
 #### Cursor (per-project)

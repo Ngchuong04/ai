@@ -33,6 +33,21 @@ npx add https://github.com/wpank/ai/tree/main/skills/tools/skill-judge
 npx add https://github.com/wpank/ai/tree/main/skills/tools/subagent-driven-development
 ```
 
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install command-creator
+npx clawhub@latest install find-skills
+npx clawhub@latest install finishing-branch
+npx clawhub@latest install logging-observability
+npx clawhub@latest install meme-factory
+npx clawhub@latest install release-skills
+npx clawhub@latest install session-handoff
+npx clawhub@latest install skill-creator
+npx clawhub@latest install skill-judge
+npx clawhub@latest install subagent-driven-development
+```
+
 ## See Also
 
 - [All Skills](../) — Complete skills catalog

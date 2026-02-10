@@ -30,6 +30,12 @@ Build beautiful native iOS/Android apps with Expo Router. Covers route structure
 npx add https://github.com/wpank/ai/tree/main/skills/frontend/expo-native-ui
 ```
 
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install expo-native-ui
+```
+
 ### Manual Installation
 
 #### Cursor (per-project)

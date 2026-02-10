@@ -29,6 +29,12 @@ Comprehensive Postgres performance guide — covering indexing, connection manag
 npx add https://github.com/wpank/ai/tree/main/skills/backend/supabase-postgres
 ```
 
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install supabase-postgres
+```
+
 ### Manual Installation
 
 #### Cursor (per-project)

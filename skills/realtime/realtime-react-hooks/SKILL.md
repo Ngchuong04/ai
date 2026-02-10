@@ -8,6 +8,16 @@ description: React hooks for real-time data with SSE, WebSocket, and SWR integra
 
 Production patterns for real-time data in React applications using SSE, WebSocket, and SWR.
 
+
+## Installation
+
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install realtime-react-hooks
+```
+
+
 ---
 
 ## When to Use

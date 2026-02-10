@@ -8,6 +8,16 @@ description: Dual-stream event publishing combining Kafka for durability with Re
 
 Publish events to Kafka (durability) and Redis Pub/Sub (real-time) simultaneously for systems needing both guaranteed delivery and instant updates.
 
+
+## Installation
+
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install dual-stream-architecture
+```
+
+
 ---
 
 ## When to Use

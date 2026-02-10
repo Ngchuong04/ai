@@ -8,6 +8,16 @@ description: Foundational design system architecture — token hierarchies, them
 
 Foundational architecture for scalable design systems: token hierarchies, theming infrastructure, token pipelines, and governance patterns.
 
+
+## Installation
+
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install design-system-patterns
+```
+
+
 ---
 
 ## When to Use

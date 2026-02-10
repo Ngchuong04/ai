@@ -17,6 +17,16 @@ Design intuitive, scalable, and maintainable APIs that delight developers. Cover
 - Migrating between API paradigms (REST ↔ GraphQL)
 - Optimizing APIs for specific consumers (mobile, third-party)
 
+
+## Installation
+
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install api-design
+```
+
+
 ---
 
 ## REST Design Principles

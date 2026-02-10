@@ -8,6 +8,16 @@ description: Discover and install agent skills from the open skills ecosystem. U
 
 Discover and install skills from the open agent skills ecosystem using `npx skills`.
 
+
+## Installation
+
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install find-skills
+```
+
+
 ## WHAT This Skill Does
 
 Helps users find and install modular skill packages that extend agent capabilities with specialized knowledge, workflows, and tools.

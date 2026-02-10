@@ -14,6 +14,11 @@ Skills for mining reusable patterns, design systems, and methodology documentati
 # Add individual skills
 npx add https://github.com/wpank/ai/tree/main/skills/extraction/pattern-extraction
 ```
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install extraction
+```
 
 ## See Also
 

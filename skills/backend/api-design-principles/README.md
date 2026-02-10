@@ -31,6 +31,12 @@ Design intuitive, scalable REST and GraphQL APIs that developers love. Covers re
 npx add https://github.com/wpank/ai/tree/main/skills/backend/api-design-principles
 ```
 
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install api-design-principles
+```
+
 ### Manual Installation
 
 #### Cursor (per-project)

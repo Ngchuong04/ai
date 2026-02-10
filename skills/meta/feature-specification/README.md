@@ -24,6 +24,12 @@ Convert persona docs into detailed feature specifications with acceptance criter
 npx add https://github.com/wpank/ai/tree/main/skills/meta/feature-specification
 ```
 
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install feature-specification
+```
+
 ### Manual Installation
 
 #### Cursor (per-project)

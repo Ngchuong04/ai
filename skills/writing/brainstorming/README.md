@@ -27,6 +27,12 @@ Explore ideas before implementation through collaborative dialogue. Turns ideas 
 npx add https://github.com/wpank/ai/tree/main/skills/writing/brainstorming
 ```
 
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install brainstorming
+```
+
 ### Manual Installation
 
 #### Cursor (per-project)

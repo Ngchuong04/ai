@@ -8,6 +8,16 @@ description: Patterns for building resilient API clients and real-time connectio
 
 Build API clients and real-time connections that handle failures gracefully with retries, circuit breakers, and fallbacks.
 
+
+## Installation
+
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install resilient-connections
+```
+
+
 ---
 
 ## When to Use

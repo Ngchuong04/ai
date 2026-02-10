@@ -31,6 +31,20 @@ npx add https://github.com/wpank/ai/tree/main/skills/marketing/social-content
 npx add https://github.com/wpank/ai/tree/main/skills/marketing/startup-metrics
 ```
 
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install content-strategy
+npx clawhub@latest install copywriting
+npx clawhub@latest install marketing-ideas
+npx clawhub@latest install marketing-psychology
+npx clawhub@latest install onboarding-cro
+npx clawhub@latest install page-cro
+npx clawhub@latest install signup-flow-cro
+npx clawhub@latest install social-content
+npx clawhub@latest install startup-metrics
+```
+
 ## See Also
 
 - [All Skills](../) — Complete skills catalog

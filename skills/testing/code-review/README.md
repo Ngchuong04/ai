@@ -28,6 +28,12 @@ Systematic code review patterns covering security, performance, maintainability,
 npx add https://github.com/wpank/ai/tree/main/skills/testing/code-review
 ```
 
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install code-review
+```
+
 ### Manual Installation
 
 #### Cursor (per-project)

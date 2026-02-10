@@ -26,6 +26,16 @@ This skill includes **70+ mental models** organized by application in `reference
 | Decision paralysis | Paradox of Choice, Default Effect, Nudge Theory |
 | Onboarding | Goal-Gradient, IKEA Effect, Commitment & Consistency |
 
+
+## Installation
+
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install marketing-psychology
+```
+
+
 ---
 
 ## Model Categories

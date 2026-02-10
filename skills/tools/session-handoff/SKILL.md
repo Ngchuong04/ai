@@ -24,6 +24,16 @@ Create handoff documents that enable fresh agents to continue work seamlessly.
 **Proactive suggestion?** After substantial work (5+ file edits, complex debugging, major decisions):
 > "Consider creating a handoff document to preserve this context. Say 'create handoff' when ready."
 
+
+## Installation
+
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install session-handoff
+```
+
+
 ---
 
 ## CREATE Workflow

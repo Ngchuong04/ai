@@ -13,6 +13,16 @@ tags: [prompts, llm, ai, prompt-engineering, chain-of-thought, few-shot, structu
 
 Master advanced prompt engineering techniques to maximize LLM performance, reliability, and controllability.
 
+
+## Installation
+
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install prompt-engineering
+```
+
+
 ## When to Use
 
 - Designing complex prompts for production LLM applications

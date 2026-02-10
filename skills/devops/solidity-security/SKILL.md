@@ -20,6 +20,16 @@ Smart contract security patterns, vulnerability prevention, and secure developme
 - Optimizing gas while maintaining security
 - Preparing contracts for professional audits
 
+
+## Installation
+
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install solidity-security
+```
+
+
 ---
 
 ## Critical Vulnerabilities

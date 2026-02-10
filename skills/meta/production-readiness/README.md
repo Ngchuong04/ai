@@ -25,6 +25,12 @@ Meta-skill that orchestrates logging, monitoring, error handling, performance, s
 npx add https://github.com/wpank/ai/tree/main/skills/meta/production-readiness
 ```
 
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install production-readiness
+```
+
 ### Manual Installation
 
 #### Cursor (per-project)

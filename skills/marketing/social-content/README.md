@@ -31,6 +31,12 @@ Create, schedule, and optimize social media content for LinkedIn, Twitter/X, Ins
 npx add https://github.com/wpank/ai/tree/main/skills/marketing/social-content
 ```
 
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install social-content
+```
+
 ### Manual Installation
 
 #### Cursor (per-project)

@@ -30,6 +30,12 @@ Guide to designing event stores for event-sourced applications — covering even
 npx add https://github.com/wpank/ai/tree/main/skills/backend/event-store
 ```
 
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install event-store
+```
+
 ### Manual Installation
 
 #### Cursor (per-project)

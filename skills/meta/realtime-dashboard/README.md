@@ -23,6 +23,12 @@ Complete guide to building real-time dashboards with streaming data, WebSocket/S
 npx add https://github.com/wpank/ai/tree/main/skills/meta/realtime-dashboard
 ```
 
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install realtime-dashboard
+```
+
 ### Manual Installation
 
 #### Cursor (per-project)

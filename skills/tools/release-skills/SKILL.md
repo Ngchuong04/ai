@@ -32,6 +32,16 @@ Universal release workflow supporting any project type with multi-language chang
 | `--minor` | Force minor version bump |
 | `--patch` | Force patch version bump |
 
+
+## Installation
+
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install release-skills
+```
+
+
 ---
 
 ## Workflow

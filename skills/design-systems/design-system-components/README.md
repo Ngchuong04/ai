@@ -25,6 +25,12 @@ Patterns for building design system components using Surface primitives, CVA var
 npx add https://github.com/wpank/ai/tree/main/skills/design-systems/design-system-components
 ```
 
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install design-system-components
+```
+
 ### Manual Installation
 
 #### Cursor (per-project)

@@ -8,6 +8,16 @@ description: Complete workflow for project documentation including ADRs, PRDs, p
 
 Complete workflow for setting up and maintaining project documentation.
 
+
+## Installation
+
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install project-documentation
+```
+
+
 ---
 
 ## When to Use

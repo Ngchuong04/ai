@@ -26,6 +26,12 @@ Build flexible, maintainable React components using compound components, context
 npx add https://github.com/wpank/ai/tree/main/skills/frontend/composition-patterns
 ```
 
+### OpenClaw / Moltbot / Clawbot
+
+```bash
+npx clawhub@latest install composition-patterns
+```
+
 ### Manual Installation
 
 #### Cursor (per-project)
