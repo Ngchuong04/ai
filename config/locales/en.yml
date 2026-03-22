@@ -37,3 +37,9 @@ es:
   products:
     index:
       title: "Productos"
+vn:
+  hello: "Xin chào"
+  products:
+    index:
+      title: "Sản phẩm"
+
