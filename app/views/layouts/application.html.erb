@@ -28,6 +28,71 @@
   <%= link_to "Home", root_path %>
   <%= button_to "Log out", session_path, method: :delete if authenticated? %>
 </nav>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+nav {
+  background-color: #007bff;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+nav a, nav form {
+  margin: 0 10px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+nav a:hover {
+  background-color: #0056b3;
+}
+
+nav form {
+  display: inline;
+}
+
+nav form input[type="submit"] {
+  background-color: #ff4b5c;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+nav form input[type="submit"]:hover {
+  background-color: #c0392b;
+}
+
+main {
+  flex: 1;
+  padding: 20px;
+  background-color: #fff;
+  margin: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 1200px;
+}
+</style>
 
 <main>
   <%= yield %>
