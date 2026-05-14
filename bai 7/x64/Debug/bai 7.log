@@ -1,0 +1,5 @@
+﻿  bai 7.cpp
+D:\Chuongdz\bai 7\bai 7.cpp(21,6): error C2086: 'int sodien': redefinition
+      D:\Chuongdz\bai 7\bai 7.cpp(12,25):
+      see declaration of 'sodien'
+  
